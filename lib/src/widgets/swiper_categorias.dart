@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:recipe_app/src/provider/recetas_provider.dart';
+import 'package:recipe_app/src/viewModels/categorias_listado.dart';
 
 class SwiperCategorias extends StatelessWidget {
   final controller = PageController(
@@ -13,14 +15,15 @@ class SwiperCategorias extends StatelessWidget {
       height: 110,
       child: Swiper(
         itemBuilder: (BuildContext context, int index) {
-          return PageView(
-            controller: controller,
-            children: [
-              _imageCategoria(context),
-              _imageCategoria(context),
-              _imageCategoria(context),
-              _imageCategoria(context),
-            ],
+          return FutureBuilder(
+            future: recetasProvider.cargarCategorias(),
+            initialData: [],
+            builder: (BuildContext context, AsyncSnapshot snapshot) {
+              return PageView(
+                controller: controller,
+                children: catergoriaListado(context),
+              );
+            },
           );
         },
         itemCount: 3,
@@ -28,17 +31,4 @@ class SwiperCategorias extends StatelessWidget {
       ),
     );
   }
-}
-
-Widget _imageCategoria(BuildContext context) {
-  return GestureDetector(
-    onTap: () {
-      Navigator.pushNamed(context, 'categoria');
-    },
-    child: Container(
-      child: Image(
-        image: AssetImage('images/recipe-slider1.png'),
-      ),
-    ),
-  );
 }
