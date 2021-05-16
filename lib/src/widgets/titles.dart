@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_app/src/styles/styles.dart';
 
-Widget titles(String texto) {
+Widget titles(String texto, TextStyle estilos) {
   return Container(
     padding: EdgeInsets.only(left: 20),
     alignment: Alignment.topLeft,
     child: Text(
       texto,
-      style: titlesStyle,
+      style: estilos,
     ),
   );
 }

@@ -1,9 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/src/styles/styles.dart';
 
-Widget textoReceta() {
+List<Widget> recetasListado(
+    BuildContext context, List<dynamic> recetasPopulares) {
+  final List<Widget> listadoRecetas = [];
+
+  recetasPopulares.forEach((receta) {
+    final listadoWidgetProv =
+        _cuerpoRecetaListado(context, titlesRecipeStyle, receta);
+    listadoRecetas.add(listadoWidgetProv);
+  });
+
+  return listadoRecetas;
+}
+
+Widget _cuerpoRecetaListado(
+    BuildContext context, TextStyle estilos, Map<String, dynamic> receta) {
   return Column(
     children: [
+      SizedBox(height: 20),
+      GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, 'detalle');
+        },
+        child: Container(
+          padding: EdgeInsets.only(right: 20, left: 20),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image(
+              image: NetworkImage(receta['image']),
+              fit: BoxFit.fill,
+              width: 480,
+              height: 180,
+            ),
+          ),
+        ),
+      ),
       Container(
         alignment: AlignmentDirectional.topStart,
         margin: EdgeInsets.only(left: 20, top: 0, right: 20),
@@ -11,12 +43,12 @@ Widget textoReceta() {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Tacacho con cecina de la selva',
+              receta['name'],
               textAlign: TextAlign.left,
-              style: titlesRecipeStyle,
+              style: estilos,
             ),
             Text(
-              'Es una receta típica de la selva peruana, esta hecho a base de platano frito o cocido aplastado',
+              receta['description'],
               textAlign: TextAlign.left,
               style: descriptionRecipeStyle,
             ),
@@ -34,7 +66,7 @@ Widget textoReceta() {
                         Container(
                           margin: EdgeInsets.only(left: 5),
                           child: Text(
-                            '45 min',
+                            receta['time'].toString(),
                             style: TextStyle(
                               fontFamily: 'Avenir',
                               fontWeight: FontWeight.bold,
@@ -53,7 +85,7 @@ Widget textoReceta() {
                             Container(
                               margin: EdgeInsets.only(left: 5),
                               child: Text(
-                                'Medio',
+                                receta['difficulty'].toString(),
                                 style: TextStyle(
                                   fontFamily: 'Avenir',
                                   fontWeight: FontWeight.bold,
