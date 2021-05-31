@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/src/styles/styles.dart';
 
-Widget appBarDetalle(String title) {
+Widget appBarDetalle(String image) {
   return SliverAppBar(
     backgroundColor: colorBg,
     expandedHeight: 200,
@@ -13,8 +13,8 @@ Widget appBarDetalle(String title) {
     ),
     flexibleSpace: FlexibleSpaceBar(
       background: FadeInImage(
-        placeholder: AssetImage('images/recipe1.jpg'),
-        image: AssetImage('images/recipe1.jpg'),
+        placeholder: NetworkImage(image),
+        image: NetworkImage(image),
         fadeInDuration: Duration(milliseconds: 150),
         fit: BoxFit.cover,
       ),

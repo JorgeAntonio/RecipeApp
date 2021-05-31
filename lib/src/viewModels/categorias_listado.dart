@@ -15,14 +15,14 @@ List<Widget> catergoriaListado(BuildContext context) {
 Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
   return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, 'categoria');
+        Navigator.pushNamed(context, 'categoria', arguments: categoria);
       },
       child: Stack(
         children: [
           Container(
-            width: 130,
-            height: 100,
-            margin: EdgeInsets.only(right: 10, top: 10, bottom: 10),
+            width: 170,
+            height: 180,
+            padding: EdgeInsets.only(left: 10, top: 20, right: 10),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image(
@@ -32,7 +32,7 @@ Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
             ),
           ),
           Container(
-            alignment: Alignment.bottomLeft,
+            alignment: Alignment.bottomCenter,
             padding: EdgeInsets.all(20),
             child: Text(
               categoria['name'],

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:recipe_app/src/viewModels/ingredientes_listado.dart';
 
 final controller = PageController(
   initialPage: 1,
   viewportFraction: 0.3,
 );
 
-Widget swiperIngredientes() {
+Widget swiperIngredientes(List<dynamic> ingredients) {
   return Container(
     height: 120,
     padding: EdgeInsets.only(left: 5),
@@ -16,23 +17,9 @@ Widget swiperIngredientes() {
       itemBuilder: (BuildContext context, int index) {
         return PageView(
           controller: controller,
-          children: [
-            _imagen(),
-            _imagen(),
-            _imagen(),
-            _imagen(),
-          ],
+          children: ingredientesListado(ingredients),
         );
       },
-    ),
-  );
-}
-
-Widget _imagen() {
-  return Center(
-    child: Image(
-      alignment: Alignment.topLeft,
-      image: AssetImage('images/ingredientes.jpg'),
     ),
   );
 }

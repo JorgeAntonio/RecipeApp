@@ -12,7 +12,7 @@ Drawer menuLateral(context) {
           DrawerHeader(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/recipe1.jpg'),
+                image: AssetImage('images/ingredientes.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -26,7 +26,17 @@ Drawer menuLateral(context) {
           ),
           ListTile(
             leading: Icon(
-              Icons.fastfood,
+              Icons.star,
+              color: colorIconos,
+            ),
+            title: Text('Favoritos'),
+            onTap: () {
+              Navigator.pushNamed(context, 'categoria');
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.category,
               color: colorIconos,
             ),
             title: Text('Categorias'),
@@ -36,30 +46,20 @@ Drawer menuLateral(context) {
           ),
           ListTile(
             leading: Icon(
-              Icons.fastfood,
+              Icons.person,
               color: colorIconos,
             ),
-            title: Text('Categorias'),
+            title: Text('Perfil'),
             onTap: () {
               Navigator.pushNamed(context, 'categoria');
             },
           ),
           ListTile(
             leading: Icon(
-              Icons.fastfood,
+              Icons.logout,
               color: colorIconos,
             ),
-            title: Text('Categorias'),
-            onTap: () {
-              Navigator.pushNamed(context, 'categoria');
-            },
-          ),
-          ListTile(
-            leading: Icon(
-              Icons.fastfood,
-              color: colorIconos,
-            ),
-            title: Text('Categorias'),
+            title: Text('Salir'),
             onTap: () {
               Navigator.pushNamed(context, 'categoria');
             },

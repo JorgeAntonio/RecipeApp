@@ -5,9 +5,11 @@ import 'package:recipe_app/src/provider/recetas_provider.dart';
 import 'package:recipe_app/src/viewModels/recetas_listado.dart';
 //Widgets
 import 'package:recipe_app/src/widgets/app_bar.dart';
+import 'package:recipe_app/src/widgets/card_categorias.dart';
 import 'package:recipe_app/src/widgets/menu_lateral.dart';
 import 'package:recipe_app/src/widgets/swiper_categorias.dart';
-import 'package:recipe_app/src/widgets/swiper_populares.dart';
+import 'package:recipe_app/src/widgets/swiper_populars.dart';
+//import 'package:recipe_app/src/widgets/swiper_populares.dart';
 import 'package:recipe_app/src/widgets/titles.dart';
 //Estilos
 import 'package:recipe_app/src/styles/styles.dart';
@@ -29,10 +31,13 @@ class HomePage extends StatelessWidget {
                 [
                   Column(
                     children: [
-                      SwiperPopulares(),
+                      //SwiperPopulares(),
+                      titles('Populares', titlesStyle),
+                      SizedBox(height: 10),
+                      SwiperPopulars(),
                       titles('Categorias', titlesStyle),
-                      SwiperCategorias(),
-                      titles('Recetas Populares', titlesStyle),
+                      //SwiperCategorias(),
+                      /*titles('Recetas Populares', titlesStyle),
                       FutureBuilder(
                         future: recetasProvider.cargarRecetasPopulares(),
                         initialData: [],
@@ -42,8 +47,8 @@ class HomePage extends StatelessWidget {
                             children: recetasListado(context, snapshot.data),
                           );
                         },
-                      ),
-                      //recetasListado(context),
+                      ),*/
+                      CardCategorias(),
                     ],
                   ),
                 ],

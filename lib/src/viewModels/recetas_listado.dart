@@ -21,7 +21,7 @@ Widget _cuerpoRecetaListado(
       SizedBox(height: 20),
       GestureDetector(
         onTap: () {
-          Navigator.pushNamed(context, 'detalle');
+          Navigator.pushNamed(context, 'detalle', arguments: receta);
         },
         child: Container(
           padding: EdgeInsets.only(right: 20, left: 20),

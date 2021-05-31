@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 final colorBg = Color.fromRGBO(244, 252, 255, 1);
-final colorTitle = Color.fromRGBO(15, 55, 95, 1);
-final colorDescriptionRecipes = Color.fromRGBO(183, 195, 206, 1);
+final colorTitle = Color.fromRGBO(211, 33, 45, 1);
+final colorDescriptionRecipes = Color.fromRGBO(0, 51, 51, 1);
 final colorIconos = Color.fromRGBO(243, 198, 36, 1);
 final colorIconosAppBar = Color.fromRGBO(183, 195, 206, 11);
 

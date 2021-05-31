@@ -12,15 +12,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      /*
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        primaryColor: Colors.white,
-        textTheme: TextTheme(
-          bodyText2: TextStyle(color: Colors.white),
-        ),
-      ),
-      */
       routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => HomePage(),
         'categoria': (BuildContext context) => CategoriaPage(),

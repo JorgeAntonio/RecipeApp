@@ -5,6 +5,7 @@ import 'package:flutter/services.dart' show rootBundle;
 class _RecetasProvider {
   List<dynamic> recetasPopulares = [];
   List<dynamic> categorias = [];
+  List<dynamic> recetasCategoria = [];
 
   Future<List<dynamic>> cargarRecetasPopulares() async {
     final resp = await rootBundle.loadString('data/recetas.json');
@@ -18,6 +19,13 @@ class _RecetasProvider {
     Map<String, dynamic> categoriasMap = json.decode(resp);
     categorias = categoriasMap['categorias'];
     return categorias;
+  }
+
+  Future<List<dynamic>> cargarCategoria(String nombreCategoria) async {
+    final resp = await rootBundle.loadString('data/recetas.json');
+    Map<String, dynamic> categoriaMap = json.decode(resp);
+    recetasCategoria = categoriaMap[nombreCategoria];
+    return recetasCategoria;
   }
 }
 
