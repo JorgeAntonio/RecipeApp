@@ -3,13 +3,13 @@ import 'package:recipe_app/src/styles/styles.dart';
 
 Widget appBarDetalle(String image) {
   return SliverAppBar(
-    backgroundColor: colorBg,
+    backgroundColor: rosa,
     expandedHeight: 200,
     floating: false,
     pinned: true,
     elevation: 0.0,
     iconTheme: IconThemeData(
-      color: colorIconosAppBar,
+      color: blanco,
     ),
     flexibleSpace: FlexibleSpaceBar(
       background: FadeInImage(

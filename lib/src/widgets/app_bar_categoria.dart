@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/src/styles/styles.dart';
 
-Widget appBarCategoria() {
+Widget appBarCategoria(Widget widget) {
   return SliverAppBar(
-    backgroundColor: colorBg,
+    centerTitle: true,
+    backgroundColor: rosa,
     floating: false,
     pinned: true,
-    elevation: 0.0,
+    elevation: 3,
     iconTheme: IconThemeData(
-      color: colorIconosAppBar,
+      color: blanco,
     ),
+    title: widget,
   );
 }

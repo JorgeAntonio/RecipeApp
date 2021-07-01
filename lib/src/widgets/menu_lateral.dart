@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/src/styles/styles.dart';
+import 'package:recipe_app/src/widgets/titles.dart';
 
 Drawer menuLateral(context) {
   return Drawer(
     elevation: 0,
     child: Container(
-      color: colorBg,
+      color: rosa,
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
@@ -19,50 +20,64 @@ Drawer menuLateral(context) {
             child: Container(
               alignment: Alignment.center,
               child: Text(
-                'RECETAS APP',
-                style: estiloTextoMenuLateral,
+                'Recetas Peruanas',
+                style: TextStyle(
+                  fontFamily: 'PlayfairDisplay-bold',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  decorationStyle: TextDecorationStyle.wavy,
+                  shadows: [
+                    Shadow(
+                      color: rosa,
+                      offset: Offset(1, 3),
+                      blurRadius: 3,
+                    )
+                  ],
+                  fontSize: 28,
+                ),
               ),
             ),
           ),
-          ListTile(
-            leading: Icon(
-              Icons.star,
-              color: colorIconos,
+          Expanded(
+            child: Container(
+              color: rosa,
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: Icon(
+                      Icons.favorite,
+                      color: colorIconos,
+                    ),
+                    title: titles('Favoritos', 18, blanco),
+                    onTap: () {},
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.person,
+                      color: colorIconos,
+                    ),
+                    title: titles('Perfil', 18, blanco),
+                    onTap: () {},
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.question_answer,
+                      color: colorIconos,
+                    ),
+                    title: titles('Nosotros', 18, blanco),
+                    onTap: () {},
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.logout,
+                      color: colorIconos,
+                    ),
+                    title: titles('Salir', 18, blanco),
+                    onTap: () {},
+                  ),
+                ],
+              ),
             ),
-            title: Text('Favoritos'),
-            onTap: () {
-              Navigator.pushNamed(context, 'categoria');
-            },
-          ),
-          ListTile(
-            leading: Icon(
-              Icons.category,
-              color: colorIconos,
-            ),
-            title: Text('Categorias'),
-            onTap: () {
-              Navigator.pushNamed(context, 'categoria');
-            },
-          ),
-          ListTile(
-            leading: Icon(
-              Icons.person,
-              color: colorIconos,
-            ),
-            title: Text('Perfil'),
-            onTap: () {
-              Navigator.pushNamed(context, 'categoria');
-            },
-          ),
-          ListTile(
-            leading: Icon(
-              Icons.logout,
-              color: colorIconos,
-            ),
-            title: Text('Salir'),
-            onTap: () {
-              Navigator.pushNamed(context, 'categoria');
-            },
           ),
         ],
       ),

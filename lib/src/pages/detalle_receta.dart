@@ -18,16 +18,24 @@ class DetallePage extends StatelessWidget {
           SliverList(
             delegate: SliverChildListDelegate(
               [
+                SizedBox(height: 10),
                 Padding(
-                  padding: EdgeInsets.only(right: 8.0, bottom: 8.0),
-                  child: _cuerpoReceta(receta, titlesRecipeStyleDetalle),
+                  padding: EdgeInsets.only(left: 20),
+                  child: titles(receta['name'], 22, rosa),
                 ),
-                titles('Ingredientes', titlesStyle),
-                SizedBox(height: 20),
+                _cuerpoReceta(receta),
+                SizedBox(height: 3),
+                Padding(
+                  padding: EdgeInsets.only(left: 20),
+                  child: titles('Ingredientes', 22, rosa),
+                ),
                 _textoDescripcion(receta['ingredients'].toString()),
                 //swiperIngredientes(receta['ingredients']),
                 SizedBox(height: 20),
-                titles('Preparación', titlesStyle),
+                Padding(
+                  padding: EdgeInsets.only(left: 20),
+                  child: titles('Preparación', 22, rosa),
+                ),
                 _textoDescripcion(receta['steps'].toString()),
               ],
             ),
@@ -38,7 +46,7 @@ class DetallePage extends StatelessWidget {
   }
 }
 
-Widget _cuerpoReceta(Map<String, dynamic> receta, TextStyle estilos) {
+Widget _cuerpoReceta(Map<String, dynamic> receta) {
   return Container(
     alignment: AlignmentDirectional.topStart,
     margin: EdgeInsets.only(left: 20, top: 0, right: 20),
@@ -46,14 +54,14 @@ Widget _cuerpoReceta(Map<String, dynamic> receta, TextStyle estilos) {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          receta['name'],
-          textAlign: TextAlign.left,
-          style: estilos,
-        ),
-        Text(
           receta['description'],
           textAlign: TextAlign.left,
-          style: descriptionRecipeStyle,
+          style: TextStyle(
+            fontFamily: 'Avenir',
+            fontWeight: FontWeight.bold,
+            color: colorDescriptionRecipes,
+            fontSize: 14,
+          ),
         ),
         SizedBox(height: 5),
         Container(
@@ -73,9 +81,18 @@ Widget _cuerpoReceta(Map<String, dynamic> receta, TextStyle estilos) {
                         style: TextStyle(
                           fontFamily: 'Avenir',
                           fontWeight: FontWeight.bold,
-                          color: colorTitle,
+                          color: rosa,
                           fontSize: 14,
                         ),
+                      ),
+                    ),
+                    Text(
+                      ' min',
+                      style: TextStyle(
+                        fontFamily: 'Avenir',
+                        fontWeight: FontWeight.bold,
+                        color: rosa,
+                        fontSize: 14,
                       ),
                     ),
                     SizedBox(width: 30),
@@ -92,7 +109,7 @@ Widget _cuerpoReceta(Map<String, dynamic> receta, TextStyle estilos) {
                             style: TextStyle(
                               fontFamily: 'Avenir',
                               fontWeight: FontWeight.bold,
-                              color: colorTitle,
+                              color: rosa,
                               fontSize: 14,
                             ),
                           ),
@@ -119,6 +136,16 @@ Widget _cuerpoReceta(Map<String, dynamic> receta, TextStyle estilos) {
                           ),
                         )
                       ],
+                    ),
+                    SizedBox(width: 30),
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.favorite),
+                          color: colorIconos,
+                        )
+                      ],
                     )
                   ],
                 ),
@@ -133,8 +160,21 @@ Widget _cuerpoReceta(Map<String, dynamic> receta, TextStyle estilos) {
 
 Widget _textoDescripcion(String texto) {
   return Container(
-    margin: EdgeInsets.only(top: 5, left: 20, right: 20),
-    child: Text(
+      margin: EdgeInsets.only(top: 5, left: 20, right: 20),
+      child: ListTile(
+        subtitle: Text(
+          texto,
+          textAlign: TextAlign.left,
+          style: TextStyle(
+            fontFamily: 'Avenir',
+            fontWeight: FontWeight.bold,
+            color: Color.fromRGBO(0, 51, 51, 1),
+            fontSize: 13,
+          ),
+        ),
+      )
+
+      /*Text(
       texto,
       textAlign: TextAlign.left,
       style: TextStyle(
@@ -143,6 +183,6 @@ Widget _textoDescripcion(String texto) {
         color: Color.fromRGBO(0, 51, 51, 1),
         fontSize: 13,
       ),
-    ),
-  );
+    ),*/
+      );
 }

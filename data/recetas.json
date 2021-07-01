@@ -204,6 +204,14 @@
     {
       "name": "Tragos",
       "image": "https://lavozdeperu.com/wp-content/uploads/2019/02/pisco-peruano.jpg"
+    },
+    {
+      "name": "Mariscos",
+      "image": "https://micevichedehoy.com/wp-content/uploads/2018/10/ceviche-de-marisco_700x465.jpg"
+    },
+    {
+      "name": "Postres",
+      "image": "https://www.iperu.org/wp-content/uploads/2018/08/mazamorra-morada.jpg"
     }
   ],
 
@@ -668,6 +676,97 @@
       "time": 10,
       "dinners": 3,
       "last_updated": "2018-07-25",
+      "language": "es"
+    }
+  ],
+  "Mariscos": [
+    {
+      "name": "Ceviche",
+      "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB15pybD.img?h=768&w=1366&m=6&q=60&o=f&l=f",
+      "description": "Probablemente has comido ceviche antes, este plato cuyos orígenes se remontan a la época del imperio Inca. Sin embargo, aprender a preparar en casa la auténtica receta peruana le dará un giro de alegría a tus días. ¿Qué tiene de diferente la versión peruana de este plato? Además de la frescura del pescado preparado con limón, lleva cebollas rojas y ajíes. Recuerda que se debe servir con choclo y camote.",
+      "categories": [
+        "Recetas de pescado",
+        "Recetas casera",
+        "Entrada"
+      ],
+      "ingredients": [
+        "1 ½ libra de filetes de pescado fresco y de la mejor calidad corvina, dorado, escolar, halibut.",
+        "1 cebolla colorada cortada en rodajas bien finas.",
+        "1 taza de jugo de limón recién exprimido aproximadamente 10-15 limones sutiles.",
+        "1-2 ajíes amarillos o habaneros cortados por la mitad, sin semillas y desvenados.",
+        "2-3 ramitas de cilantro fresco.",
+        "Sal al gusto.",
+        "Cilantro finamente picado al gusto.",
+        "Hojas de lechuga.",
+        "Maíz cancha o maíz tostado.",
+        "Choclo o maíz sancochado o hervido.",
+        "Camote: En forma de chifles o en rodajas gruesas sancochadas.",
+        "Chifles de plátano verde.",
+        "Aji picadito o en rodajitas – opcional y al gusto.",
+        "Aceite de oliva al gusto *opcional."
+      ],
+      "steps": [
+        "Corte el pescado en cubos pequeños y colóquelos en un recipiente de vidrio. Cubra los pedazos de pescados con agua bien fría y 1 cucharada de sal, tape y refrigere mientras se prepara la cebolla y el jugo de los limones.",
+        "Frote las rodajas de cebolla con 1/2 cucharada de sal y enjuague con agua fría.",
+        "Enjuague el pescado para eliminar la sal.",
+        "Ponga los cubos de pescado, la mitada de las rodajas de cebolla, las ramas de cilantro, y los ajíes en un recipiente de vidrio y vierta el jugo de limón sobre los ingredientes. Espolvoree con un poco de sal. Para minimizar la acidez del limón se puede agregar unos cubitos de hielo a la mezcla.",
+        "Cubra y refrigere durante unos 5-15 minutos o hasta que el pescado empiece a blanquearse. En caso de usar limón sutil el pescado se curtirá más rápido.",
+        "Retire las ramitas de cilantro y los ajíes de la mezcla del cebiche. Pruebe el cebiche de pescado y rectifique la sal si es necesario.",
+        "Para servir ponga el cebiche en cada recipiente, ya sea un plato o bol, agregue un poco de las rodajas de cebolla, el cilantro picado, y aji picadito al gusto.",
+        "Sirva inmediatamente con su elección de guarniciones."
+      ],
+      "tags": [
+        "Coste barato",
+        "Entrada"
+      ],
+      "meal_type": "Cena",
+      "difficulty": "Fácil",
+      "time": 35,
+      "dinners": 6,
+      "last_updated": "2018-08-10",
+      "language": "es"
+    }
+  ],
+  "Postres": [
+    {
+      "name": "Mazamorra Morada",
+      "image": "https://www.iperu.org/wp-content/uploads/2018/08/mazamorra-morada.jpg",
+      "description": "La mazamorra morada es un postre emblemático del Perú y típico de Lima. Se prepara con el maíz morado, ingrediente de origen peruano, con el que también se prepara la famosa chicha morada. Un postre muy preparados en las hogares peruanos e infaltable en todas las ferias gastronómicas.",
+      "categories": [
+        "Recetas Populares",
+        "Recetas casera",
+        "Postres"
+      ],
+      "ingredients": [
+        "1/2 kilo de maíz morado",
+        "1 kilo de azúcar",
+        "10 cucharadas de harina de chuño (maicena o harina de camote)",
+        "2 limones",
+        "1 manzana",
+        "1 membrillo",
+        "1 piña",
+        "2 melocotones o duraznos",
+        "1/2 taza de guindones",
+        "1/2 taza de guesillo (durazno seco)",
+        "1/2 taza de guinditas (opcional)",
+        "6 orejones",
+        "Canela entera, canela molida y clavitos de olor"
+      ],
+      "steps": [
+        "En una olla ponemos a cocer el maíz morado, previamente lavado y en parte desgranado, cuando esté bien cocido se cuela el líquido con una coladera fina y luego le agregamos más agua hasta que complete los tres litros. Luego se vuelve a colar y se pone el líquido al fuego.",
+        "Agregue el azúcar, el clavo de olor, la canela entera (uno o dos ramitos), la piña, los membrillos, los peros, los melocotones, los orejones picados en trocitos; las guinditas, los huesillos, y guindones bien lavados.",
+        "Dejamos cocer bien y luego añadir el chuño diluido en un poquito de agua fría o maicena o si es mejor harina de camote. Una vez que está a punto vertir el jugo de los limones y dejar que hierva nuevamente sin dejar de mover, es fácil reconocer cuando el dulce está a punto ya que en ese momento permite ver el fondo de la olla cuando se va moviendo.",
+        "Finalmente esperamos que este delicioso postre se enfríe, se vacía en dulceras y se sirve espolvoreado con canela molida."
+      ],
+      "tags": [
+        "Coste barato",
+        "Postres"
+      ],
+      "meal_type": "Postres",
+      "difficulty": "Fácil",
+      "time": 40,
+      "dinners": 6,
+      "last_updated": "2018-08-10",
       "language": "es"
     }
   ]

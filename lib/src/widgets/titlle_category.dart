@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
 
-Widget titles(String texto, double size, Color color) {
-  return Container(
-    //padding: EdgeInsets.all(8),
-    child: Text(
-      texto,
-      style: TextStyle(
+Widget titlesCategories(String texto, double size, Color color) {
+  return Text(
+    texto,
+    style: TextStyle(
         fontFamily: 'PlayfairDisplay-bold',
         fontWeight: FontWeight.bold,
         color: color,
         fontSize: size,
-        /*shadows: [
+        shadows: [
           Shadow(
             color: Colors.black,
             offset: Offset(1, 1),
             //blurRadius: 1,
           )
-        ],*/
-      ),
-    ),
+        ]),
   );
 }

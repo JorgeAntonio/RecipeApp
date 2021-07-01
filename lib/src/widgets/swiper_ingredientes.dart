@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:recipe_app/src/viewModels/ingredientes_listado.dart';
+import 'package:recipe_app/src/models/ingredientes_listado.dart';
 
 final controller = PageController(
   initialPage: 1,
