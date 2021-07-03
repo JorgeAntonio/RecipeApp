@@ -10,13 +10,13 @@ Widget titles(String texto, double size, Color color) {
         fontWeight: FontWeight.bold,
         color: color,
         fontSize: size,
-        /*shadows: [
+        shadows: [
           Shadow(
             color: Colors.black,
-            offset: Offset(1, 1),
+            offset: Offset(0.5, 0.5),
             //blurRadius: 1,
           )
-        ],*/
+        ],
       ),
     ),
   );

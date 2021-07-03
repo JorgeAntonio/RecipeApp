@@ -33,7 +33,7 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
                 borderRadius: BorderRadius.circular(10),
                 child: Image(
                   image: NetworkImage(receta['image']),
-                  fit: BoxFit.fill,
+                  fit: BoxFit.cover,
                   width: double.infinity,
                   height: 200,
                 ),
@@ -69,7 +69,7 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
                               color: colorIconos,
                             ),
                             Container(
-                              margin: EdgeInsets.only(left: 5),
+                              margin: EdgeInsets.only(left: 5, top: 5),
                               child: Text(
                                 receta['time'].toString(),
                                 style: TextStyle(
@@ -80,13 +80,16 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
                                 ),
                               ),
                             ),
-                            Text(
-                              ' min',
-                              style: TextStyle(
-                                fontFamily: 'Avenir',
-                                fontWeight: FontWeight.bold,
-                                color: rosa,
-                                fontSize: 14,
+                            Container(
+                              padding: EdgeInsets.only(top: 5),
+                              child: Text(
+                                ' min',
+                                style: TextStyle(
+                                  fontFamily: 'Avenir',
+                                  fontWeight: FontWeight.bold,
+                                  color: rosa,
+                                  fontSize: 14,
+                                ),
                               ),
                             ),
                             SizedBox(width: 30),
@@ -97,7 +100,7 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
                                   color: colorIconos,
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(left: 5),
+                                  margin: EdgeInsets.only(left: 5, top: 5),
                                   child: Text(
                                     receta['difficulty'].toString(),
                                     style: TextStyle(
@@ -118,7 +121,7 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
                                   color: colorIconos,
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(left: 5),
+                                  margin: EdgeInsets.only(left: 5, top: 4),
                                   child: Text(
                                     receta['dinners'].toString(),
                                     style: TextStyle(
@@ -128,6 +131,16 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
                                       fontSize: 14,
                                     ),
                                   ),
+                                )
+                              ],
+                            ),
+                            SizedBox(width: 30),
+                            Row(
+                              children: [
+                                IconButton(
+                                  onPressed: () {},
+                                  icon: Icon(Icons.favorite_border),
+                                  color: colorIconos,
                                 )
                               ],
                             )

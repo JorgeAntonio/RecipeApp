@@ -16,7 +16,7 @@ class CategoriaPage extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           appBarCategoria(
-            titlesCategories(categoria['name'], 24, blanco),
+            titlesCategories(categoria['name'], 22, blanco),
           ),
           SliverList(
             delegate: SliverChildListDelegate(

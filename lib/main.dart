@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_app/src/pages/acerca_nosotros.dart';
 import 'package:recipe_app/src/pages/categorias.dart';
 import 'package:recipe_app/src/pages/detalle_receta.dart';
 import 'package:recipe_app/src/pages/home_page.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         '/': (BuildContext context) => HomePage(),
         'categoria': (BuildContext context) => CategoriaPage(),
         'detalle': (BuildContext context) => DetallePage(),
+        'nosotros': (BuildContext context) => AcercaNosotros(),
       },
     );
   }

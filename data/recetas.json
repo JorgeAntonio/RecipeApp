@@ -311,7 +311,7 @@
         "Recomendada para vegetarianos"
       ],
       "meal_type": "Entrante",
-      "difficulty": 1,
+      "difficulty": "Fácil",
       "time": 30,
       "dinners": 6,
       "last_updated": "2018-07-25",
@@ -341,7 +341,7 @@
         "Recomendada para vegetarianos"
       ],
       "meal_type": "Entrante",
-      "difficulty": 1,
+      "difficulty": "Fácil",
       "time": 20,
       "dinners": 6,
       "last_updated": "2018-07-25",

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:recipe_app/src/styles/styles.dart';
 import 'package:recipe_app/src/widgets/titles.dart';
@@ -65,7 +67,9 @@ Drawer menuLateral(context) {
                       color: colorIconos,
                     ),
                     title: titles('Nosotros', 18, blanco),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, 'nosotros');
+                    },
                   ),
                   ListTile(
                     leading: Icon(
@@ -73,7 +77,10 @@ Drawer menuLateral(context) {
                       color: colorIconos,
                     ),
                     title: titles('Salir', 18, blanco),
-                    onTap: () {},
+                    onTap: () {
+                      exit(0);
+                      //Tooltip(message: 'Close app');
+                    },
                   ),
                 ],
               ),
