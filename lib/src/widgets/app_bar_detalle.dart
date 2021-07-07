@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//Estilos
 import 'package:recipe_app/src/styles/styles.dart';
 
 Widget appBarDetalle(String image, String title) {
@@ -26,7 +27,7 @@ Widget appBarDetalle(String image, String title) {
               Shadow(
                 color: Colors.black,
                 offset: Offset(1, 1),
-                blurRadius: 2,
+                blurRadius: 3,
               )
             ]),
         //),

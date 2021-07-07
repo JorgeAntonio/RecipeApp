@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+//Estilos
 import 'package:recipe_app/src/styles/styles.dart';
+//Widgets
 import 'package:recipe_app/src/widgets/app_bar_categoria.dart';
 
 class AcercaNosotros extends StatelessWidget {
@@ -9,22 +11,11 @@ class AcercaNosotros extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: backgroundColor,
-        //appBar:
         body: CustomScrollView(
           slivers: [
             appBarCategoria(
               Text(
-                'Acerca de nosotros',
-                style: TextStyle(
-                  fontFamily: 'PlayfairDisplay-bold',
-                  fontSize: 22,
-                  shadows: [
-                    Shadow(
-                      color: Colors.black,
-                      offset: Offset(1, 1),
-                    )
-                  ],
-                ),
+                '',
               ),
             ),
             SliverList(
@@ -33,31 +24,23 @@ class AcercaNosotros extends StatelessWidget {
                   height: 200,
                   width: double.infinity,
                   color: rosa,
-                  child: Stack(
+                  child: Column(
                     children: [
                       Container(
-                        height: 200,
-                        width: double.infinity,
+                        alignment: Alignment.center,
                         child: Image(
-                          fit: BoxFit.cover,
-                          image: AssetImage('images/ingredientes.jpg'),
+                          color: blanco,
+                          width: 100,
+                          height: 100,
+                          image: AssetImage('images/chef.png'),
                         ),
                       ),
+                      SizedBox(height: 10),
                       Container(
                         alignment: Alignment.center,
                         child: Text(
                           'Recetas Peruanas',
-                          style: TextStyle(
-                            color: blanco,
-                            fontFamily: 'PlayfairDisplay-bold',
-                            fontSize: 34,
-                            shadows: [
-                              Shadow(
-                                color: Colors.black,
-                                offset: Offset(1, 1),
-                              )
-                            ],
-                          ),
+                          style: textoBanner,
                         ),
                       ),
                     ],
@@ -73,19 +56,7 @@ class AcercaNosotros extends StatelessWidget {
                     child: Text(
                       'Esta aplicación esta hecha con amor para todos los amantes de la deliciosa comida peruana.',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Colors.black,
-                          //fontFamily: 'PlayfairDisplay-bold',
-                          fontFamily: 'Avenir',
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500
-                          /*shadows: [
-                          Shadow(
-                            color: Colors.black,
-                            offset: Offset(1, 1),
-                          )
-                        ],*/
-                          ),
+                      style: textoAcercaNosotros,
                     ),
                   ),
                   Container(
@@ -93,12 +64,7 @@ class AcercaNosotros extends StatelessWidget {
                     child: Text(
                       'Developed by CoDevPro',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Avenir',
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                      ),
+                      style: textoAcercaNosotros,
                     ),
                   ),
                   Container(
@@ -108,34 +74,29 @@ class AcercaNosotros extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image(
-                          width: 30,
-                          height: 30,
+                          width: 40,
+                          height: 40,
                           image: AssetImage('images/gmail.png'),
                         ),
                         Image(
-                          width: 30,
-                          height: 30,
+                          width: 40,
+                          height: 40,
                           image: AssetImage('images/web-outlook.png'),
                         ),
                         Image(
-                          width: 30,
-                          height: 30,
+                          width: 40,
+                          height: 40,
                           image: AssetImage('images/web-whatsapp.png'),
                         ),
                         Image(
-                          width: 30,
-                          height: 30,
+                          width: 40,
+                          height: 40,
                           image: AssetImage('images/telegram.png'),
                         ),
                         Image(
-                          width: 30,
-                          height: 30,
+                          width: 40,
+                          height: 40,
                           image: AssetImage('images/web-facebook.png'),
-                        ),
-                        Image(
-                          width: 30,
-                          height: 30,
-                          image: AssetImage('images/tweetdeck.png'),
                         ),
                       ],
                     ),

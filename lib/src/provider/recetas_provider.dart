@@ -6,6 +6,7 @@ class _RecetasProvider {
   List<dynamic> recetasPopulares = [];
   List<dynamic> categorias = [];
   List<dynamic> recetasCategoria = [];
+  List<dynamic> recetasIngredientes = [];
 
   Future<List<dynamic>> cargarRecetasPopulares() async {
     final resp = await rootBundle.loadString('data/recetas.json');

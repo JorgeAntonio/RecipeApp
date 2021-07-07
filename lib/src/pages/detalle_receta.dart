@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+//Estilos
 import 'package:recipe_app/src/styles/styles.dart';
+//Widgets
 import 'package:recipe_app/src/widgets/app_bar_detalle.dart';
 import 'package:recipe_app/src/widgets/titles.dart';
 
@@ -46,7 +48,8 @@ Widget _cuerpoReceta(Map<String, dynamic> receta) {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          color: rosa,
+          padding: EdgeInsets.only(top: 5),
+          color: Colors.transparent,
           child: Row(
             children: [
               Expanded(
@@ -61,36 +64,14 @@ Widget _cuerpoReceta(Map<String, dynamic> receta) {
                       margin: EdgeInsets.only(left: 5, top: 5),
                       child: Text(
                         receta['time'].toString(),
-                        style: TextStyle(
-                          fontFamily: 'Avenir',
-                          fontWeight: FontWeight.bold,
-                          color: blanco,
-                          fontSize: 14,
-                          shadows: [
-                            Shadow(
-                              color: Colors.black,
-                              offset: Offset(1, 1),
-                            )
-                          ],
-                        ),
+                        style: iconosRecetasListado,
                       ),
                     ),
                     Container(
                       padding: EdgeInsets.only(top: 5),
                       child: Text(
                         ' min',
-                        style: TextStyle(
-                          fontFamily: 'Avenir',
-                          fontWeight: FontWeight.bold,
-                          color: blanco,
-                          fontSize: 14,
-                          shadows: [
-                            Shadow(
-                              color: Colors.black,
-                              offset: Offset(1, 1),
-                            )
-                          ],
-                        ),
+                        style: iconosRecetasListado,
                       ),
                     ),
                     SizedBox(width: 30),
@@ -104,18 +85,7 @@ Widget _cuerpoReceta(Map<String, dynamic> receta) {
                           margin: EdgeInsets.only(left: 5, top: 5),
                           child: Text(
                             receta['difficulty'].toString(),
-                            style: TextStyle(
-                              fontFamily: 'Avenir',
-                              fontWeight: FontWeight.bold,
-                              color: blanco,
-                              fontSize: 14,
-                              shadows: [
-                                Shadow(
-                                  color: Colors.black,
-                                  offset: Offset(1, 1),
-                                )
-                              ],
-                            ),
+                            style: iconosRecetasListado,
                           ),
                         )
                       ],
@@ -131,18 +101,7 @@ Widget _cuerpoReceta(Map<String, dynamic> receta) {
                           margin: EdgeInsets.only(left: 5, top: 4),
                           child: Text(
                             receta['dinners'].toString(),
-                            style: TextStyle(
-                              fontFamily: 'Avenir',
-                              fontWeight: FontWeight.bold,
-                              color: blanco,
-                              fontSize: 14,
-                              shadows: [
-                                Shadow(
-                                  color: Colors.black,
-                                  offset: Offset(1, 1),
-                                )
-                              ],
-                            ),
+                            style: iconosRecetasListado,
                           ),
                         )
                       ],
@@ -167,7 +126,7 @@ Widget _cuerpoReceta(Map<String, dynamic> receta) {
           padding: EdgeInsets.only(left: 20, top: 10, right: 20),
           child: Text(
             receta['description'],
-            textAlign: TextAlign.left,
+            textAlign: TextAlign.justify,
             style: TextStyle(
               fontFamily: 'Avenir',
               fontWeight: FontWeight.bold,

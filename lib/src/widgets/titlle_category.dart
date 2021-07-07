@@ -12,7 +12,6 @@ Widget titlesCategories(String texto, double size, Color color) {
           Shadow(
             color: Colors.black,
             offset: Offset(1, 1),
-            //blurRadius: 1,
           )
         ]),
   );

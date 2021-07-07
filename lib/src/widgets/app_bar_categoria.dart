@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//Estilos
 import 'package:recipe_app/src/styles/styles.dart';
 
 Widget appBarCategoria(Widget widget) {

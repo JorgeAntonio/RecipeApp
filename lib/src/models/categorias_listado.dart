@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+//Provider
 import 'package:recipe_app/src/provider/recetas_provider.dart';
+//Estilos
+import 'package:recipe_app/src/styles/styles.dart';
 
 List<Widget> catergoriaListado(BuildContext context) {
   final List<Widget> listadoCategoria = [];
@@ -14,18 +17,30 @@ List<Widget> catergoriaListado(BuildContext context) {
 
 Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
   return GestureDetector(
-      onTap: () {
-        Navigator.pushNamed(context, 'categoria', arguments: categoria);
-      },
+    onTap: () {
+      Navigator.pushNamed(context, 'categoria', arguments: categoria);
+    },
+    child: Container(
+      margin: EdgeInsets.all(8),
+      decoration: BoxDecoration(
+        color: blanco,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: rosa.withOpacity(0.3),
+            offset: Offset(1, 1),
+          ),
+        ],
+      ),
       child: Stack(
         children: [
           Container(
-            width: 170,
-            height: 180,
-            padding: EdgeInsets.only(left: 10, top: 20, right: 10),
+            margin: EdgeInsets.all(5),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image(
+                width: double.infinity,
+                height: double.infinity,
                 image: NetworkImage(categoria['image']),
                 fit: BoxFit.cover,
               ),
@@ -33,7 +48,7 @@ Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
           ),
           Container(
             alignment: Alignment.bottomCenter,
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.only(left: 10, bottom: 20, right: 10),
             child: Text(
               categoria['name'],
               style: TextStyle(
@@ -45,5 +60,7 @@ Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
             ),
           )
         ],
-      ));
+      ),
+    ),
+  );
 }

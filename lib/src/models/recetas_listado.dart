@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+//Estilos
 import 'package:recipe_app/src/styles/styles.dart';
+//Widgets
 import 'package:recipe_app/src/widgets/titles.dart';
 
 List<Widget> recetasListado(
@@ -17,9 +19,17 @@ List<Widget> recetasListado(
 Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
   return Padding(
     padding: EdgeInsets.only(top: 8, left: 8, right: 8),
-    child: Card(
-      elevation: 2,
-      shadowColor: rosa,
+    child: Container(
+      decoration: BoxDecoration(
+        color: blanco,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: rosa.withOpacity(0.3),
+            offset: Offset(1, 1),
+          ),
+        ],
+      ),
       child: Column(
         children: [
           SizedBox(height: 8),
@@ -35,7 +45,7 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
                   image: NetworkImage(receta['image']),
                   fit: BoxFit.cover,
                   width: double.infinity,
-                  height: 200,
+                  height: 170,
                 ),
               ),
             ),
@@ -49,7 +59,7 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
                 titles(receta['name'], 20, rosa),
                 Text(
                   receta['description'],
-                  textAlign: TextAlign.left,
+                  textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontFamily: 'Avenir',
                     fontWeight: FontWeight.bold,
@@ -72,24 +82,14 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
                               margin: EdgeInsets.only(left: 5, top: 5),
                               child: Text(
                                 receta['time'].toString(),
-                                style: TextStyle(
-                                  fontFamily: 'Avenir',
-                                  fontWeight: FontWeight.bold,
-                                  color: rosa,
-                                  fontSize: 14,
-                                ),
+                                style: iconosRecetasListado,
                               ),
                             ),
                             Container(
                               padding: EdgeInsets.only(top: 5),
                               child: Text(
                                 ' min',
-                                style: TextStyle(
-                                  fontFamily: 'Avenir',
-                                  fontWeight: FontWeight.bold,
-                                  color: rosa,
-                                  fontSize: 14,
-                                ),
+                                style: iconosRecetasListado,
                               ),
                             ),
                             SizedBox(width: 30),
@@ -103,12 +103,7 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
                                   margin: EdgeInsets.only(left: 5, top: 5),
                                   child: Text(
                                     receta['difficulty'].toString(),
-                                    style: TextStyle(
-                                      fontFamily: 'Avenir',
-                                      fontWeight: FontWeight.bold,
-                                      color: rosa,
-                                      fontSize: 14,
-                                    ),
+                                    style: iconosRecetasListado,
                                   ),
                                 )
                               ],
@@ -124,12 +119,7 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
                                   margin: EdgeInsets.only(left: 5, top: 4),
                                   child: Text(
                                     receta['dinners'].toString(),
-                                    style: TextStyle(
-                                      fontFamily: 'Avenir',
-                                      fontWeight: FontWeight.bold,
-                                      color: rosa,
-                                      fontSize: 14,
-                                    ),
+                                    style: iconosRecetasListado,
                                   ),
                                 )
                               ],
