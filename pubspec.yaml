@@ -35,6 +35,23 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.8.0"
+  flutter_native_splash: ^0.3.2
+  flutter_launcher_name: ^0.0.1
+
+flutter_launcher_name:
+  name: "Recetas Peruanas"
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "images/app_icon.png"
+
+flutter_native_splash:
+  color: "#ff2d55"
+  image: "images/chef_logo.png"
+  android: true
+  ios: true
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
