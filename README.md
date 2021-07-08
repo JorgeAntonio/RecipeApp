@@ -3,14 +3,12 @@
 ## Table of Contents
 
 - [About](#about)
-- [Getting Started](#getting_started)
+- [Installing](#installing)
 
 ## About <a name = "about"></a>
 
 Recetas Peruanas is the a flutter app made with love for all people who like peruvian recipes.
-## Getting Started <a name = "getting_started"></a>
-
-A step by step series of examples that tell you how to get a development env running.
+## Installing <a name = "installing"></a>
 
 First, clone or download the repository from the link below.
 
