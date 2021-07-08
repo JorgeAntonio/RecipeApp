@@ -1,4 +1,4 @@
-# Project Title
+# Recetas Peruanas
 
 ## Table of Contents
 
@@ -9,7 +9,7 @@
 
 ## About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Recetas Peruanas is the a flutter app made with love for all people who like peruvian recipes.
 
 ## Getting Started <a name = "getting_started"></a>
 
@@ -27,19 +27,19 @@ Give examples
 
 A step by step series of examples that tell you how to get a development env running.
 
-Say what the step will be
+First, clone or download the repository from the link below.
 
 ```
-Give the example
+https://github.com/JorgeAntonio/RecipeApp.git
 ```
 
-And repeat
+After download the repository open your terminal in the proyect root path and run the commant line below.
 
 ```
-until finished
+flutter clean && flutter pub get 
 ```
 
-End with an example of getting some data out of the system or using it for a little demo.
+Run the proyect on your simulator or device and test the app.
 
 ## Usage <a name = "usage"></a>
 
