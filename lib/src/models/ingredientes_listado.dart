@@ -22,7 +22,8 @@ Widget _imagen(Map<String, dynamic> ingrediente) {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: Image(
-            image: NetworkImage(ingrediente['image']),
+            image: NetworkImage(
+                'https://www.comedera.com/wp-content/uploads/2013/10/aji-de-gallina.jpg'),
             fit: BoxFit.cover,
           ),
         ),

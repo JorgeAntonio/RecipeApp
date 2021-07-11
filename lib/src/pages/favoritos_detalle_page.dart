@@ -1,71 +1,40 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import 'package:recipe_app/src/adapters/favoritos_adapter.dart';
-//Estilos
 import 'package:recipe_app/src/styles/styles.dart';
-//Widgets
 import 'package:recipe_app/src/widgets/titles.dart';
 
-class DetallePage extends StatefulWidget {
-  final formKey = GlobalKey<FormState>();
+class FavoritosDetallePage extends StatefulWidget {
+  final String title;
+  final String image;
+  final String description;
+  final String ingredients;
+  final String steps;
+  final String time;
+  final String difficulty;
+  final String dinners;
+  FavoritosDetallePage(this.title, this.image, this.description,
+      this.ingredients, this.steps, this.time, this.difficulty, this.dinners,
+      {Key key})
+      : super(key: key);
+
   @override
-  _DetallePageState createState() => _DetallePageState();
+  _FavoritosDetallePageState createState() => _FavoritosDetallePageState();
 }
 
-class _DetallePageState extends State<DetallePage> {
-  String title;
-  String image;
-  String description;
-  String ingredients;
-  String steps;
-  String time;
-  String difficulty;
-  String dinners;
-
-  submitData() async {
-    if (widget.formKey.currentState.validate()) {
-      Box<Favorite> todoFavorito = Hive.box<Favorite>('favorits');
-      todoFavorito.add(Favorite(
-        title: title,
-        image: image,
-        description: description,
-        ingredients: ingredients,
-        steps: steps,
-        time: time,
-        difficulty: difficulty,
-        dinners: dinners,
-      ));
-    }
-  }
-
+class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
   @override
   Widget build(BuildContext context) {
-    final Map<String, dynamic> receta =
-        ModalRoute.of(context).settings.arguments;
-
-    return Form(
-      key: widget.formKey,
-      child: Scaffold(
-        backgroundColor: colorBg,
-        body: CustomScrollView(
-          slivers: [
-            _appBar(image = receta['image'], title = receta['name']),
-            _iconosDetalles(
-                time = receta['time'].toString(),
-                difficulty = receta['difficulty'],
-                dinners = receta['dinners'].toString(), [
-              IconButton(
-                  icon: Icon(Icons.favorite, color: colorIconos),
-                  onPressed: submitData)
-            ]),
-            _textoDescripcion(description = receta['description'].toString(),
-                titles('Descripcion', 18, rosa)),
-            _textoDescripcion(ingredients = receta['ingredients'].toString(),
-                titles('Ingredientes', 18, rosa)),
-            _textoDescripcion(steps = receta['steps'].toString(),
-                titles('Preparacion', 18, rosa)),
-          ],
-        ),
+    return Scaffold(
+      backgroundColor: backgroundColor,
+      body: CustomScrollView(
+        slivers: [
+          _appBar(widget.image, widget.title),
+          _iconosDetalles(widget.time, widget.difficulty, widget.dinners),
+          _textoDescripcion(
+              widget.description, titles('Descripcion', 18, rosa)),
+          _textoDescripcion(
+              widget.ingredients, titles('Ingredientes', 18, rosa)),
+          _textoDescripcion(widget.steps, titles('Preparacion', 18, rosa)),
+        ],
       ),
     );
   }
@@ -110,13 +79,12 @@ Widget _appBar(String image, String title) {
   );
 }
 
-Widget _iconosDetalles(
-    String time, String difficulty, String dinners, List<Widget> actions) {
+Widget _iconosDetalles(String time, String difficulty, String dinners) {
   return SliverList(
     delegate: SliverChildListDelegate(
       [
         Padding(
-          padding: EdgeInsets.only(top: 8),
+          padding: EdgeInsets.only(top: 20, bottom: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -173,7 +141,12 @@ Widget _iconosDetalles(
               ),
               SizedBox(width: 30),
               Row(
-                children: actions,
+                children: [
+                  Icon(
+                    Icons.favorite,
+                    color: colorIconos,
+                  ),
+                ],
               )
             ],
           ),

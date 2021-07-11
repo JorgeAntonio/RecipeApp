@@ -38,7 +38,8 @@ Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
             margin: EdgeInsets.all(5),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: Image(
+              child: FadeInImage(
+                placeholder: AssetImage('images/recipe1.jpg'),
                 width: double.infinity,
                 height: double.infinity,
                 image: NetworkImage(categoria['image']),

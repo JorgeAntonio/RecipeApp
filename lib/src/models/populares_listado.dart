@@ -38,7 +38,8 @@ Widget _tarjetaCollection(BuildContext context, Map<String, dynamic> receta) {
           Container(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: Image(
+              child: FadeInImage(
+                placeholder: AssetImage('images/recipe1.jpg'),
                 image: NetworkImage(receta['image']),
                 fit: BoxFit.cover,
                 width: isMobile(context) ? 150 : 200,

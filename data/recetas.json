@@ -381,8 +381,7 @@
     }
   ],
 
-  "Ensaladas":
-  [
+  "Ensaladas": [
     {
       "name": "Ensalada Rusa Peruana",
       "image": "https://img-global.cpcdn.com/recipes/3dc04e4faea058f5/680x482cq70/ensalada-rusa-peruana-foto-principal.webp",
@@ -515,8 +514,7 @@
     }
   ],
 
-  "Tragos": 
-  [
+  "Tragos": [
     {
       "name": "Pisco Sour",
       "image": "https://www.jamear.com/wp-content/uploads/2017/02/1307807.webp",
@@ -614,8 +612,7 @@
       "language": "es"
     }
   ],
-  "Entradas":
-  [
+  "Entradas": [
     {
       "name": "Ensalada fresca de tomate, pepino, choclo y queso",
       "image": "https://img-global.cpcdn.com/recipes/7f4bcce9396bcfef/680x482cq70/ensalada-fresca-de-tomate-pepino-choclo-y-queso-foto-principal.webp",
