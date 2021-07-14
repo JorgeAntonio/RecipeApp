@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
         drawer: menuLateral(context),
         backgroundColor: backgroundColor,
-        appBar: appBar(),
+        appBar: appBar(context),
         body: CustomScrollView(
           slivers: <Widget>[
             SliverList(

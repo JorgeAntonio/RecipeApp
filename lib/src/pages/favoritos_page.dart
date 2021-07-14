@@ -23,6 +23,11 @@ class _FavoritoPageState extends State<FavoritoPage> {
           centerTitle: true,
           title: Text(
             'Favoritos',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Avenir',
+              fontSize: 22,
+            ),
           ),
         ),
         body: cuerpo(context));
@@ -35,7 +40,11 @@ Widget cuerpo(BuildContext context) {
     builder: (context, Box<Favorite> box, _) {
       if (box.values.isEmpty) {
         return Center(
-          child: Text('No Data'),
+          child: Text(
+            'Elige tus recetas favoritas y se mostrarán aquí.',
+            textAlign: TextAlign.center,
+            style: textoAcercaNosotros,
+          ),
         );
       }
       return ListView.builder(
@@ -67,8 +76,9 @@ Widget cuerpo(BuildContext context) {
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: rosa.withOpacity(0.5),
-                        offset: Offset(1, 1),
+                        color: Color.fromRGBO(210, 211, 215, 1.0),
+                        offset: Offset(1, 5),
+                        blurRadius: 6.0,
                       )
                     ],
                   ),
@@ -127,7 +137,7 @@ Widget cuerpo(BuildContext context) {
                         ),
                       ),
                       Positioned(
-                        bottom: 17,
+                        bottom: 15,
                         right: 10,
                         child: GestureDetector(
                           onTap: () async {
@@ -143,7 +153,7 @@ Widget cuerpo(BuildContext context) {
                                       offset: Offset(1, 1)),
                                 ]),
                             child: Icon(
-                              Icons.remove_circle,
+                              Icons.cancel,
                               size: 30,
                               color: rosa,
                             ),

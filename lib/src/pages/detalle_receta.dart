@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:recipe_app/src/adapters/favoritos_adapter.dart';
@@ -22,7 +24,7 @@ class _DetallePageState extends State<DetallePage> {
   String difficulty;
   String dinners;
 
-  submitData() async {
+  /*submitData() async {
     if (widget.formKey.currentState.validate()) {
       Box<Favorite> todoFavorito = Hive.box<Favorite>('favorits');
       todoFavorito.add(Favorite(
@@ -36,37 +38,68 @@ class _DetallePageState extends State<DetallePage> {
         dinners: dinners,
       ));
     }
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
     final Map<String, dynamic> receta =
         ModalRoute.of(context).settings.arguments;
 
-    return Form(
-      key: widget.formKey,
-      child: Scaffold(
-        backgroundColor: colorBg,
-        body: CustomScrollView(
-          slivers: [
-            _appBar(image = receta['image'], title = receta['name']),
-            _iconosDetalles(
-                time = receta['time'].toString(),
-                difficulty = receta['difficulty'],
-                dinners = receta['dinners'].toString(), [
-              IconButton(
-                  icon: Icon(Icons.favorite, color: colorIconos),
-                  onPressed: submitData)
-            ]),
-            _textoDescripcion(description = receta['description'].toString(),
-                titles('Descripcion', 18, rosa)),
-            _textoDescripcion(ingredients = receta['ingredients'].toString(),
-                titles('Ingredientes', 18, rosa)),
-            _textoDescripcion(steps = receta['steps'].toString(),
-                titles('Preparacion', 18, rosa)),
-          ],
-        ),
-      ),
+    return ValueListenableBuilder(
+      valueListenable: Hive.box<Favorite>('favorits').listenable(),
+      builder: (context, Box<Favorite> box, _) {
+        return Form(
+          key: widget.formKey,
+          child: Scaffold(
+            backgroundColor: colorBg,
+            body: CustomScrollView(
+              slivers: [
+                _appBar(image = receta['image'], title = receta['name']),
+                _iconosDetalles(
+                    time = receta['time'].toString(),
+                    difficulty = receta['difficulty'],
+                    dinners = receta['dinners'].toString(), [
+                  IconButton(
+                    icon: Icon(
+                      box.containsKey(receta['name'])
+                          ? Icons.favorite
+                          : Icons.favorite_border,
+                      color: rosa,
+                    ),
+                    onPressed: () {
+                      if (box.containsKey(receta['name'])) {
+                        box.delete(receta['name']);
+                      } else {
+                        box.put(
+                          receta['name'],
+                          Favorite(
+                            title: title,
+                            image: image,
+                            description: description,
+                            ingredients: ingredients,
+                            steps: steps,
+                            time: time,
+                            difficulty: difficulty,
+                            dinners: dinners,
+                          ),
+                        );
+                      }
+                    },
+                  ),
+                ]),
+                _textoDescripcion(
+                    description = receta['description'].toString(),
+                    titles('Descripcion', 18, rosa)),
+                _textoDescripcion(
+                    ingredients = receta['ingredients'].toString(),
+                    titles('Ingredientes', 18, rosa)),
+                _textoDescripcion(steps = receta['steps'].toString(),
+                    titles('Preparacion', 18, rosa)),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }
@@ -88,7 +121,7 @@ Widget _appBar(String image, String title) {
       title: Text(
         title,
         style: TextStyle(
-            fontFamily: 'PlayfairDisplay-bold',
+            fontFamily: 'Avenir',
             fontWeight: FontWeight.bold,
             color: blanco,
             fontSize: 22,
@@ -116,7 +149,7 @@ Widget _iconosDetalles(
     delegate: SliverChildListDelegate(
       [
         Padding(
-          padding: EdgeInsets.only(top: 8),
+          padding: EdgeInsets.only(top: 8, right: 8, left: 8),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -206,6 +239,7 @@ Widget _textoDescripcion(String texto, Widget widget) {
               ),
             ),
           ),
+          SizedBox(height: 20),
         ],
       ),
     ]),

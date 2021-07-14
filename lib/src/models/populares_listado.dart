@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 //Responsive
 import 'package:recipe_app/src/responsive.dart';
 //Estilos
-import 'package:recipe_app/src/styles/styles.dart';
 
 List<Widget> popularesListado(
     BuildContext context, List<dynamic> recetasPopulares) {
@@ -28,8 +27,9 @@ Widget _tarjetaCollection(BuildContext context, Map<String, dynamic> receta) {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: rosa.withOpacity(0.4),
-            offset: Offset(1, 2),
+            color: Color.fromRGBO(210, 211, 215, 1.0),
+            offset: Offset(1, 5),
+            blurRadius: 5.0,
           )
         ],
       ),

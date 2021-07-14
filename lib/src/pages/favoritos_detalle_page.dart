@@ -57,7 +57,7 @@ Widget _appBar(String image, String title) {
       title: Text(
         title,
         style: TextStyle(
-            fontFamily: 'PlayfairDisplay-bold',
+            fontFamily: 'Avenir',
             fontWeight: FontWeight.bold,
             color: blanco,
             fontSize: 22,
@@ -144,7 +144,7 @@ Widget _iconosDetalles(String time, String difficulty, String dinners) {
                 children: [
                   Icon(
                     Icons.favorite,
-                    color: colorIconos,
+                    color: rosa,
                   ),
                 ],
               )

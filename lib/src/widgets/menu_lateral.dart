@@ -23,8 +23,7 @@ Drawer menuLateral(context) {
                 Image(
                   height: 90,
                   width: 90,
-                  color: blanco,
-                  image: AssetImage('images/chef.png'),
+                  image: AssetImage('images/chef_logo.png'),
                 ),
                 Text(
                   'Recetas Peruanas',
@@ -45,14 +44,14 @@ Drawer menuLateral(context) {
                   Navigator.pushNamed(context, 'favoritos');
                 },
               ),
-              ListTile(
+              /*ListTile(
                 leading: Icon(
                   Icons.person,
                   color: colorIconos,
                 ),
                 title: titles('Perfil', 18, rosa),
                 onTap: () {},
-              ),
+              ),*/
               ListTile(
                 leading: Icon(
                   Icons.question_answer,

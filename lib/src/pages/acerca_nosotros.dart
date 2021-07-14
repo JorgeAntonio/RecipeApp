@@ -29,10 +29,9 @@ class AcercaNosotros extends StatelessWidget {
                       Container(
                         alignment: Alignment.center,
                         child: Image(
-                          color: blanco,
                           width: 100,
                           height: 100,
-                          image: AssetImage('images/chef.png'),
+                          image: AssetImage('images/chef_logo.png'),
                         ),
                       ),
                       SizedBox(height: 10),
@@ -100,7 +99,8 @@ class AcercaNosotros extends StatelessWidget {
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  SizedBox(height: 30),
                 ],
               ),
             )

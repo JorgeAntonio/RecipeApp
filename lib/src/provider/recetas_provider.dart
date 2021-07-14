@@ -3,9 +3,17 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 
 class _RecetasProvider {
+  List<dynamic> recetasTodos = [];
   List<dynamic> recetasPopulares = [];
   List<dynamic> categorias = [];
   List<dynamic> recetasCategoria = [];
+
+  Future<List<dynamic>> cargarRecetasTodos() async {
+    final resp = await rootBundle.loadString('data/recetas.json');
+    Map<String, dynamic> recetasMap = json.decode(resp);
+    recetasTodos = recetasMap['todasRecetas'];
+    return recetasTodos;
+  }
 
   Future<List<dynamic>> cargarRecetasPopulares() async {
     final resp = await rootBundle.loadString('data/recetas.json');

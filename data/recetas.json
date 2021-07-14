@@ -1,5 +1,5 @@
 {
-  "recetasPopulares": [
+  "todasRecetas": [
     {
       "name": "Lomo saltado",
       "image": "https://img.buzzfeed.com/buzzfeed-static/static/2018-05/8/19/asset/buzzfeed-prod-web-04/sub-buzz-31420-1525821073-3.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto",
@@ -9,32 +9,28 @@
         "Recetas casera"
       ],
       "ingredients": [
-        "Lomo de ternera – 600 g",
-        "Cebolla roja – 1 unidad",
-        "Tomates – 2 unidades",
-        "Vinagre – 1 cucharadita",
-        "Ají amarillo – 1 unidad (opcional)",
-        "Arroz blanco – 600 g",
-        "Patatas fritas – 400 g",
-        "Salsa de soja – 4 cucharadas",
-        "Caldo de carne – 150 ml",
-        "Pimiento rojo –1 unidad",
-        "Cilantro picado – 1 cucharada",
-        "Cebollino picado – al gusto",
-        "Dientes de ajo – 1 unidad",
-        "Orégano seco – 1 cucharada",
-        "Pimienta negra – 1 cucharadita",
-        "Comino – ¼ de cucharadita",
-        "Sal – al gusto",
-        "Aceite de oliva de girasol – 2 cucharadas"
+        "------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------]\nLomo de ternera – 600 g",
+        "\nCebolla roja – 1 unidad",
+        "\nTomates – 2 unidades",
+        "\nVinagre – 1 cucharadita",
+        "\nAjí amarillo – 1 unidad (opcional)",
+        "\nArroz blanco – 600 g",
+        "\nPatatas fritas – 400 g",
+        "\nSalsa de soja – 4 cucharadas",
+        "\nCaldo de carne – 150 ml",
+        "\nPimiento rojo –1 unidad",
+        "\nCilantro picado – 1 cucharada",
+        "\nCebollino picado – al gusto",
+        "\nDientes de ajo – 1 unidad",
+        "\nOrégano seco – 1 cucharada",
+        "\nPimienta negra – 1 cucharadita",
+        "\nComino – ¼ de cucharadita",
+        "\nSal – al gusto",
+        "\nAceite de oliva de girasol – 2 cucharadas\n[------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------"
       ],
-      "steps": [
-        "Cortamos la carne en tiras alargadas de unos 3 cm. Mezclamos las especias (comino, orégano, ajo y pimienta) y sazonamos la carne junto con un poco de sal y una cucharadita de vinagre. Dejamos reposar esta mezcla tapando con un paño durante 15 minutos.",
-        "En una sartén añadimos aceite de sabor suave, cuando esté caliente freímos la carne durante poco tiempo solo para que se dore por fuera. Luego la retiramos de la sartén y reservamos.",
-        "Corta en rodajas la cebolla, el pimento, ( el ají si lo encuentras) y el tomate. En la misma sartén donde cocinamos la carne salteamos estos ingredientes durante 50 segundos. Añadir la salsa de soja y el caldo de carne. Ahora incorporamos de nuevo la carne que teníamos reservada. Mezcla y pasado unos segundos añade el cebollino y un poco de cilantro picado. Cocina la carne durante cuatro minutos, si el caldo se evapora añade un poco más para que quede jugoso.",
-        "En la sartén donde tenemos el lomo añade las patatas fritas y remueve, para que se impregnen de sabor. Volcar el contenido de la sartén en una fuente y acompañar de arroz blanco",
-        "El ají amarillo le da un sabor especial a esta receta pero no siempre es fácil de encontrar, por eso añadimos pimiento rojo. Si tienes la suerte de encontrar ají amarillo puedes usar ambos pimientos."
-      ],
+      "steps": 
+        "Paso 1: \nCortamos la carne en tiras alargadas de unos 3 cm. Mezclamos las especias (comino, orégano, ajo y pimienta) y sazonamos la carne junto con un poco de sal y una cucharadita de vinagre. Dejamos reposar esta mezcla tapando con un paño durante 15 minutos.\n\nPaso 2: \nEn una sartén añadimos aceite de sabor suave, cuando esté caliente freímos la carne durante poco tiempo solo para que se dore por fuera. Luego la retiramos de la sartén y reservamos.\nPaso 3: \nCorta en rodajas la cebolla, el pimento, ( el ají si lo encuentras) y el tomate. En la misma sartén donde cocinamos la carne salteamos estos ingredientes durante 50 segundos. Añadir la salsa de soja y el caldo de carne. Ahora incorporamos de nuevo la carne que teníamos reservada. Mezcla y pasado unos segundos añade el cebollino y un poco de cilantro picado. Cocina la carne durante cuatro minutos, si el caldo se evapora añade un poco más para que quede jugoso.\nPaso 4: \nEn la sartén donde tenemos el lomo añade las patatas fritas y remueve, para que se impregnen de sabor. Volcar el contenido de la sartén en una fuente y acompañar de arroz blanco.\nPaso 5: \nEl ají amarillo le da un sabor especial a esta receta pero no siempre es fácil de encontrar, por eso añadimos pimiento rojo. Si tienes la suerte de encontrar ají amarillo puedes usar ambos pimientos."
+      ,
       "tags": [
         "Coste medio",
         "Carbe",
@@ -48,7 +44,7 @@
       "language": "es"
     },
     {
-      "name": "Causa limeña de pollo",
+      "name": "Causa limena de pollo",
       "image": "https://img.buzzfeed.com/buzzfeed-static/static/2018-05/9/13/asset/buzzfeed-prod-web-03/sub-buzz-19641-1525887724-7.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto",
       "description": "Este clásico plato de la gastronomía peruana se disfruta frío, y consiste en un puré de patatas amarillas relleno de lo que gustes: puede ser pollo, pescado, o incluso solo vegetales. Entre los ingredientes estrella destacan: el aguacate o palta, un huevo sancochado y el ají amarillo.",
       "categories": [
@@ -56,27 +52,28 @@
         "Recetas casera"
       ],
       "ingredients": [
-        "4 libras de papas amarillas",
-        "4 cdas. de pasta de ají amarillo peruano",
-        "1 lata de 12.5 oz. de pechuga de pollo en agua",
-        "1/2 palta (aguacate)",
-        "1/2 cebolla morada grande",
-        "1 limón",
-        "2 cdas. de mayonesa (y más para adornar, opcional)",
-        "3 huevos hervidos",
-        "Sal y pimienta blanca",
-        "1 taza de aceite vegetal, aproximadamente",
-        "8 aceitunas de botija (para adornar)"
+        "------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------]\n 4 libras de papas amarillas",
+        "\n 4 cdas. de pasta de ají amarillo peruano",
+        "\n 1 lata de 12.5 oz. de pechuga de pollo en agua",
+        "\n 1/2 palta (aguacate)",
+        "\n 1/2 cebolla morada grande",
+        "\n 1 limón",
+        "\n 2 cdas. de mayonesa (y más para adornar, opcional)",
+        "\n 3 huevos hervidos",
+        "\n Sal y pimienta blanca",
+        "\n 1 taza de aceite vegetal, aproximadamente",
+        "\n 8 aceitunas de botija (para adornar)\n[------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------"
       ],
-      "steps": [
-        "En una cazuela grande, pon a hervir las papas sin sal. Unos 20-25 minutos aproximadamente. Mientras tanto, pica la cebolla a la juliana, colócala en un cuenco y alíñala con una cucharadita de sal y el jugo del limón.",
-        "Pon a hervir los huevos durante 5 minutos. Deben quedar duros. Enfríalos. Pélalos y pícalos a la mitad longitudinalmente, corta estas del mismo modo en 3 pedazos cada una",
-        "Abre la lata de pollo, escúrrela bien. Mezcla la carne con las 2 cucharadas de mayonesa japonesa y una pizca de pimienta.",
-        "Pica la masa de las aceitunas a tu gusto, deshaciéndote de las semillas.",
-        "Cuando estén las papas, escúrrelas y ponlas en un cuenco en el que puedas preparar un puré, adicionando el jugo del limón de las cebollas, la pasta de ají amarillo, sal a gusto y bastante aceite. El aceite se lo debes poner poco a poco y tanto como para que el puré quede “hecho una mantequillita”. Si puedes amasarlo un poco con las manos, mejor.",
-        "Mezcla las cebollas con el pollo y pica en dos la mitad del aguacate y de ahí en lascas de centímetro y medio de ancho.",
-        "Coloca el aro sobre el plato en el que vas a servir la causa, pon una capa de puré de papas; una aguacate dejando la parte verde hacia afuera -que toque el borde del molde-; otra capa de papa, una de pollo con cebolla y termina con otra de papa. Saca el aro con cuidado y adorna el pastel que te queda con más mayonesa, el huevo y los pedacitos de aceituna."
-      ],
+      "steps": 
+      {
+        "Paso 1":"En una cazuela grande, pon a hervir las papas sin sal. Unos 20-25 minutos aproximadamente. Mientras tanto, pica la cebolla a la juliana, colócala en un cuenco y alíñala con una cucharadita de sal y el jugo del limón.",
+        "\n\nPaso 2":"Pon a hervir los huevos durante 5 minutos. Deben quedar duros. Enfríalos. Pélalos y pícalos a la mitad longitudinalmente, corta estas del mismo modo en 3 pedazos cada una",
+        "\n\nPaso 3":"Abre la lata de pollo, escúrrela bien. Mezcla la carne con las 2 cucharadas de mayonesa japonesa y una pizca de pimienta.",
+        "\n\nPaso 4":"Pica la masa de las aceitunas a tu gusto, deshaciéndote de las semillas.",
+        "\n\nPaso 5":"Cuando estén las papas, escúrrelas y ponlas en un cuenco en el que puedas preparar un puré, adicionando el jugo del limón de las cebollas, la pasta de ají amarillo, sal a gusto y bastante aceite. El aceite se lo debes poner poco a poco y tanto como para que el puré quede “hecho una mantequillita”. Si puedes amasarlo un poco con las manos, mejor.",
+        "\n\nPaso 6":"Mezcla las cebollas con el pollo y pica en dos la mitad del aguacate y de ahí en lascas de centímetro y medio de ancho.",
+        "\n\nPaso 7":"Coloca el aro sobre el plato en el que vas a servir la causa, pon una capa de puré de papas; una aguacate dejando la parte verde hacia afuera -que toque el borde del molde-; otra capa de papa, una de pollo con cebolla y termina con otra de papa. Saca el aro con cuidado y adorna el pastel que te queda con más mayonesa, el huevo y los pedacitos de aceituna."
+      },
       "tags": [
         "Coste barato"
       ],
@@ -85,6 +82,556 @@
       "time": 35,
       "dinners": 6,
       "last_updated": "2018-08-10",
+      "language": "es"
+    },
+    {
+      "name": "Ceviche",
+      "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB15pybD.img?h=768&w=1366&m=6&q=60&o=f&l=f",
+      "description": "Probablemente has comido ceviche antes, este plato cuyos orígenes se remontan a la época del imperio Inca. Sin embargo, aprender a preparar en casa la auténtica receta peruana le dará un giro de alegría a tus días. ¿Qué tiene de diferente la versión peruana de este plato? Además de la frescura del pescado preparado con limón, lleva cebollas rojas y ajíes. Recuerda que se debe servir con choclo y camote.",
+      "categories": [
+        "Recetas de pescado",
+        "Recetas casera",
+        "Entrada"
+      ],
+      "ingredients": [
+        "------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------]\n1 ½ libra de filetes de pescado fresco y de la mejor calidad corvina, dorado, escolar, halibut.",
+        "\n1 cebolla colorada cortada en rodajas bien finas.",
+        "\n1 taza de jugo de limón recién exprimido aproximadamente 10-15 limones sutiles.",
+        "\n1-2 ajíes amarillos o habaneros cortados por la mitad, sin semillas y desvenados.",
+        "\n2-3 ramitas de cilantro fresco.",
+        "\nSal al gusto.",
+        "\nCilantro finamente picado al gusto.",
+        "\nHojas de lechuga.",
+        "\nMaíz cancha o maíz tostado.",
+        "\nChoclo o maíz sancochado o hervido.",
+        "\nCamote: En forma de chifles o en rodajas gruesas sancochadas.",
+        "\nChifles de plátano verde.",
+        "\nAji picadito o en rodajitas – opcional y al gusto.",
+        "\nAceite de oliva al gusto *opcional.\n[------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------"
+      ],
+      "steps": [
+        "Paso 1: Corte el pescado en cubos pequeños y colóquelos en un recipiente de vidrio. Cubra los pedazos de pescados con agua bien fría y 1 cucharada de sal, tape y refrigere mientras se prepara la cebolla y el jugo de los limones.",
+        "\n\nPaso 2: Frote las rodajas de cebolla con 1/2 cucharada de sal y enjuague con agua fría.",
+        "\n\nPaso 3: Enjuague el pescado para eliminar la sal.",
+        "\n\nPaso 4: Ponga los cubos de pescado, la mitada de las rodajas de cebolla, las ramas de cilantro, y los ajíes en un recipiente de vidrio y vierta el jugo de limón sobre los ingredientes. Espolvoree con un poco de sal. Para minimizar la acidez del limón se puede agregar unos cubitos de hielo a la mezcla.",
+        "\n\nPaso 5: Cubra y refrigere durante unos 5-15 minutos o hasta que el pescado empiece a blanquearse. En caso de usar limón sutil el pescado se curtirá más rápido.",
+        "\n\nPaso 6: Retire las ramitas de cilantro y los ajíes de la mezcla del cebiche. Pruebe el cebiche de pescado y rectifique la sal si es necesario.",
+        "\n\nPaso 7: Para servir ponga el cebiche en cada recipiente, ya sea un plato o bol, agregue un poco de las rodajas de cebolla, el cilantro picado, y aji picadito al gusto.",
+        "\n\nPaso 8: Sirva inmediatamente con su elección de guarniciones."
+      ],
+      "tags": [
+        "Coste barato",
+        "Entrada"
+      ],
+      "meal_type": "Cena",
+      "difficulty": "Fácil",
+      "time": 35,
+      "dinners": 6,
+      "last_updated": "2018-08-10",
+      "language": "es"
+    },
+    {
+      "name": "Ají de gallina",
+      "image": "https://www.comedera.com/wp-content/uploads/2013/10/aji-de-gallina.jpg",
+      "description": "Se trata de una deliciosa carne de gallina, o pollo, preparada con una cremosa salsa cuyo ingrediente estrella es el ají amarillo peruano. Suele venir acompañada de arroz, patatas, huevo y unas cuantas aceitunas negras.",
+      "categories": [
+        "Recetas de carne",
+        "Recetas casera",
+        "Entrada",
+        "Tradicional"
+      ],
+      "ingredients": [
+        "------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------]\n1 pechuga de gallina ó pollo entera con hueso.",
+        "\n3 ajíes amarillos peruanos.",
+        "\n1 cebolla grande.",
+        "\n3 dientes de ajo.",
+        "\n1/2 taza de leche evaporada.",
+        "\n4 mitades de nueces.",
+        "\n2 paquetes de galletas de soda ó 2 rebanadas de pan de molde.",
+        "\n2 cucharadas de queso parmesano.",
+        "\nSal al gusto.",
+        "\nPimienta al gusto.",
+        "\n2  papas cortadas en rodajas.",
+        "\n4 Aceitunas negras.",
+        "\n1 huevo sancochado.\n[------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------"
+      ],
+      "steps": [
+        "1. El primer paso para hacer esta receta de aji de gallina es poner a cocinar la pechuga entera del animal en una olla con agua, sin sal ni nada. Cuando esté lista, reserva el caldo y deja enfriar la carne. Posteriormente desméchala y reserva",
+        "\n\n2. Haz una pasta con el ají amarillo: retírale las semillas y las venas y con un poquito del caldo de la pechuga de pollo licúa hasta que tenga una textura cremosa. Reserva",
+        "\n\n3. Muele las nueces en un mortero y resérvalas también",
+        "\n\n4. Pica con las manos las galletas de soda(ó el pan) hasta que queden prácticamente hechas polvo. Puedes ayudarte con un mortero o un procesador de alimentos. Reserva (otra vez)",
+        "\n\n5. Calienta una sartén profunda y sofríe el ajo y la cebolla previamente picados pequeñitos",
+        "\n\n6. Cuando la cebolla se transparente agrega la pasta de ají, mezcla bien y agrega sal y pimienta",
+        "\n\n7. En otro recipiente junta las galletas de soda (ó el pan) con un poco de caldo de la pechuga de pollo hasta que te quede una mezcla espesa tal como se ve en la imagen",
+        "\n\n8. Incorpora esta “masa” a la sartén con el sofrito. Revuelve bien y agrega las nueces molidas y la pechuga de gallina (pollo)",
+        "\n\n9. Agrega 1 taza de caldo, y baja el fuego para que se cocine un rato",
+        "\n\n10. Mientras vas haciendo la receta, puedes limpiar y pelar las dos patatas, pícalas en rodajas y cocínalas al vapor o hervidas hasta que estén hechas. Las vas a usar al final al momento de servir el plato",
+        "\n\n11. Transcurridos unos 5 minutos agrega el queso parmesano. Deja cocinar por otros 5 minutos más",
+        "\n\n12. Si ha espesado mucho, puedes ponerle más caldo, si está muy aguado, puedes ponerle más queso",
+        "\n\n13. Cuando haya transcurrido en total 10 minutos desde que bajaste la temperatura de la cocina, retira del fuego, agrega la leche evaporada y revuelve bien",
+        "\n\n14. Sirve caliente y disfruta."
+      ],
+      "tags": [
+        "Coste barato",
+        "Entrada",
+        "Tradicional"
+      ],
+      "meal_type": "Almuerzo",
+      "difficulty": "Fácil",
+      "time": 40,
+      "dinners": 2,
+      "last_updated": "2018-08-10",
+      "language": "es"
+    },
+    {
+      "name": "Chica Morada",
+      "image": "https://cdn.statically.io/img/www.comeperuano.pe/wp-content/uploads/2020/05/receta-chicha-morada-..jpg?quality=100&f=auto",
+      "description": "La chicha morada es una de las bebidas más populares de la gastronomía peruana. Tiene su origen en la época incaica, siendo parte de ritos y ceremonias importantes. Está hecha a base de maíz, un insumo bastante identificado con la gastronomía de este país. La variedad usada es el maíz morado, y precisamente de allí proviene el nombre de esta bebida, que es infaltable en cualquier restaurante de esta región.",
+      "categories": [
+        "Bebidas",
+        "Maiz"
+      ],
+      "ingredients": [
+        "1 kilogramo de maíz morado",
+        "\n2 manzanas verdes de agua",
+        "\n1 membrillo grande",
+        "\n ¼ piña",
+        "\n4 ramas de canela",
+        "\n½ taza de zumo de limón",
+        "\n8 litros de agua",
+        "\nAzúcar",
+        "\n6 clavos de olor"
+      ],
+      "steps": [
+        "Para obtener una chicha morada perfecta, lava bien todo el maíz morado y luego trata de desgranarlo por completo. De esta forma, obtendrás el color y sabor que esconde el interior de la coronta del maíz.",
+        "\nEnjuaga las manzanas y el membrillo. De la piña solo usarás la cáscara y el corazón. Ve picando todo en pequeños trozos, como se observa en la imagen, y también alista las ramas de canela junto con los clavos de olor.",
+        "\nEn una olla grande, echa todo lo anterior: el maíz morado desgranado más las frutas y especias. Además, agrega todo el agua y deja que hierva a fuego alto durante más o menos una hora.",
+        "\n¿Cómo saber si ya estará lista la chicha morada? Vas a identificar que todos los ingredientes han soltado sus sabores y aromas cuando la cocina esté oliendo delicioso. Además, verás que se ha convertido en un líquido con mucho color. Si el líquido aún parece estar algo transparente, espera un poco más. Aquí está la imagen de referencia.",
+        "\nLlegado a este punto, apaga el fuego y deja enfriar un poco. Lo que sigue es colar todo el líquido con mucho cuidado.",
+        "\nPor último, esta bebida no puede estar completa sin el toque ácido que le aporta el limón. Vierte todo el zumo de limón en la chicha morada ya colada. También agrega azúcar al gusto y, para un mejor disfrute, recomiendo que dejes la bebida en la nevera un par de horas."
+      ],
+      "tags": [
+        "Coste barato",
+        "Recomendada para veganos"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 90,
+      "dinners": 6,
+      "last_updated": "2018-07-10",
+      "language": "es"
+    },
+    {
+      "name": "Chicha de Jora",
+      "image": "https://cdn.statically.io/img/www.comeperuano.pe/wp-content/uploads/2020/05/receta-chicha-de-jora.jpg?quality=100&f=auto",
+      "description": "Una de las bebidas más emblemáticas de nuestro país es sin duda alguna la deliciosa y refrescante chicha de jora ya que su receta a transcendido al pasar los años y a quedado grabada en la historia.La chicha de jora es una de las bebidas más populares en todo Perú pues su sabor la han hecho ganarse un merecido espacio dentro de nuestras memorias.",
+      "categories": [
+        "Bebidas"
+      ],
+      "ingredients": [
+        "1 kl Maiz germinado y molido",
+        "300 grs de quinua",
+        "200 grs de cebada tostada",
+        "5 litros de agua",
+        "clavo de olor al gusto",
+        "canela molida al gusto",
+        "200 grs de chancaca ( Piloncillo) o azúcar morena (Rubia o blanca)"
+      ],
+      "steps": [
+        "Primero en una olla colocamos 1 kl Maiz germinado y molido, 200 grs de cebada tostada, 300 grs de quinua , clavo de olor al gusto ,canela al gusto y 5 litros de agua dejándolo hervir por unos minutos a fuego alto.",
+        "Una vez hervido filtramos los ingredientes sólidos y volvemos a hervir por unos 5 minutos agregandole 200 grs de chancaca ( Piloncillo) o azúcar morena (Rubia o blanca)",
+        "Por último una vez disuelta la chancaca con el hervor colocamos la chicha en una jarra y la dejamos a enfriar y fermentar por 2 días ¡LISTO!"
+      ],
+      "tags": [
+        "Coste barato",
+        "Recomendada para vegetarianos"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 90,
+      "dinners": 6,
+      "last_updated": "2018-07-25",
+      "language": "es"
+    },
+    {
+      "name": "Refresco de cocona",
+      "image": "https://platosdelaselva.com/wp-content/uploads/receta-refresco-de-cocona.jpg",
+      "description": "El refresco de cocona, elaborado con una deliciosa fruta que crece en las zonas tropicales de la selva peruana como Tingo María, siendo entre marzo y octubre los meses en que este alimento se encuentra en temporada. Así que si deseas sorprender a tu familia, presta mucha atención a la receta del jugo de cocona.",
+      "categories": [
+        "Recetas",
+        "Entradas",
+        "Bebidas"
+      ],
+      "ingredients": [
+        "2 clavos de olor",
+        "2 ramitas pequeñas de canela",
+        "1 cocona de grande",
+        "Azúcar al gusto"
+      ],
+      "steps": [
+        "Lavar la cocona y picar en pequeños trozos. En una olla limpia y pequeña colocar el fruto, la canela y el clavo de olor. Hervir a fuego medio, por unos 45 minutos.",
+        "Luego, añadir el azúcar y remover hasta que se disuelva. Ahora, retirar la olla del fuego. Dejarlo enfriar y listo.",
+        "Para mantener su aroma, colocar el refresco en un recipiente de vidrio."
+      ],
+      "tags": [
+        "Coste barato",
+        "Recomendada para vegetarianos"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 30,
+      "dinners": 6,
+      "last_updated": "2018-07-25",
+      "language": "es"
+    },
+    {
+      "name": "Agua de manzana",
+      "image": "https://sumak.com.pe/wp-content/uploads/2021/04/Agua-de-manzana.png",
+      "description": "Aparte de ser realmente exquisita, es bastante nutritiva debido a que contribuye en la protección de nuestro organismo razón por la que actualmente es una de las bebidas más preparadas en casa. Asimismo la manzana verde ayuda a regular el azúcar en la sangre debido a que contiene un alto contenido de fibra soluble.",
+      "categories": [
+        "Recetas",
+        "Entradas",
+        "Bebidas"
+      ],
+      "ingredients": [
+        "1 litro de agua",
+        "2 manzanas verdes sin pelar sin pepas ni corazón cortada en 4 trozos",
+        "4 cucharadas de azúcar"
+      ],
+      "steps": [
+        "Como primer paso agregaremos al vaso de la licuadora 2 manzanas verdes sin pelar, sin pepas, ni corazón cortada en 4 trozos.",
+        "Luego añadiremos 1/2 taza de agua, 4 cucharadas de azúcar y licuaremos hasta que los ingredientes estén totalmente disueltos.",
+        "Finalmente combinaremos el licuado con 1 litro de agua y ¡A DISFRUTAR DE NUESTRA BEBIDA NUTRITIVA!"
+      ],
+      "tags": [
+        "Coste barato",
+        "Recomendada para vegetarianos"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 20,
+      "dinners": 6,
+      "last_updated": "2018-07-25",
+      "language": "es"
+    },
+    {
+      "name": "Limonada",
+      "image": "https://cde.peru.com//ima/0/1/9/4/9/1949349/611x458/limonada.jpg",
+      "description": "Si bien ya se encuentran bebidas de limón con gas y sin ellas en las tiendas, qué mejor que prepararlas en casa. Con pocos ingredientes y una rápida preparación, puedes tener la bebida más refrescante y deliciosa lista para tomar.",
+      "categories": [
+        "Recetas",
+        "Entradas",
+        "Bebidas"
+      ],
+      "ingredients": [
+        "6 limones",
+        "Azúcar (cantidad y endulzante al gusto)",
+        "Cubitos de hielo",
+        "1 litro de agua"
+      ],
+      "steps": [
+        "Corta los limones en cuatro pedazos, sácale las pepas y colocalos en la licuadora con 4 tazas de agua y el azúcar.",
+        "Licue los ingredientes hasta obtener una mezcla homogénea. Quedará un poco espumoso y con un color medio blanquecino.",
+        "Cuele o cierna la limonada y mezcla con el resto de agua.",
+        "Sirva acompañado de hielo y listo. ¡A disfrutar!"
+      ],
+      "tags": [
+        "Coste barato",
+        "Recomendada para vegetarianos"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 10,
+      "dinners": 6,
+      "last_updated": "2018-07-25",
+      "language": "es"
+    },
+    {
+      "name": "Ensalada Rusa Peruana",
+      "image": "https://img-global.cpcdn.com/recipes/3dc04e4faea058f5/680x482cq70/ensalada-rusa-peruana-foto-principal.webp",
+      "description": "Tenemos una ensalada muy deliciosa para acompañar todo tipo de carne, pescado, etc. Se adapta a todo ahora que estamos cerca a fiestas, es ideal y como ven les saca de apuro porque es muy rápida de preparar queda bonita para su mesa.",
+      "categories": [
+        "Recetas",
+        "Ensaladas"
+      ],
+      "ingredients": [
+        "Cantidad necesaria Beterraga",
+        "1 Zanahoria",
+        "2 Papas",
+        "Mix de arvejitas verde choclo",
+        "Al gusto Pimienta (negra)",
+        "Al gusto Mayonesa",
+        "Al gusto Sal"
+      ],
+      "steps": [
+        "Lavamos y cocinamos las beterragas, cuando estén cocidas la cortamos en cuadraditos, reservamos; cortamos la zanahoria y papas, las cocinamos juntas hasta que estén tiernas.",
+        "Cuando tengamos las arvejita verde zanahoria choclo desgranado sólo mezclar sazonándolo a su manera, esta ensalada se prepara con bastante mayonesa de su elección, nos sirve para varios acompañamiento, queda muy rica."
+      ],
+      "tags": [
+        "Coste barato",
+        "Recomendada para vegetarianos"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 20,
+      "dinners": 2,
+      "last_updated": "2018-07-25",
+      "language": "es"
+    },
+    {
+      "name": "Ensalada fresca de tomate, pepino, choclo y queso",
+      "image": "https://img-global.cpcdn.com/recipes/7f4bcce9396bcfef/680x482cq70/ensalada-fresca-de-tomate-pepino-choclo-y-queso-foto-principal.webp",
+      "description": "Una idea de ensalada fresca para estos días de calor.",
+      "categories": [
+        "Recetas",
+        "Ensaladas"
+      ],
+      "ingredients": [
+        "1 tomate mediano",
+        "Pedazo pepino",
+        "1 choclo desgranado",
+        "Pedazo queso fresco",
+        "Aliño a gusto"
+      ],
+      "steps": [
+        "Lavar el tomate, pelarlo y cortarlo en cubos, quitarle las pepas, reservar.",
+        "Lavar el pedazo de pepino, pelarlo, picarlo en cubos y quitarle las pepas, reservar.",
+        "Al queso fresco darle una enjuagada y picarlo en cubos también.",
+        "Sancochar el choclo con un clavito de olor, cuando esté cocinado, esperar a que se enfríe y desgranarlo.",
+        "En un bowl mezclar las verduras, el choclo y el queso, mezclar y aliñar a su gusto, listo!!"
+      ],
+      "tags": [
+        "Coste barato",
+        "Recomendada para vegetarianos"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 20,
+      "dinners": 2,
+      "last_updated": "2018-07-25",
+      "language": "es"
+    },
+    {
+      "name": "Ceviche ensalada vegetariana",
+      "image": "https://img-global.cpcdn.com/recipes/40e289d3a367f51b/680x482cq70/ceviche-ensalada-vegetariana-foto-principal.webp",
+      "description": "Esta receta es porque yo soy vegetariana y quería compartírselos con ustedes.",
+      "categories": [
+        "Recetas",
+        "Ensaladas"
+      ],
+      "ingredients": [
+        "1/2 taza choclo",
+        "10 aceitunas",
+        "4 rabanitos",
+        "1 cuarto un pepino",
+        "2-3 limones",
+        "Aceite",
+        "Sal y condimentos a gusto",
+        "1 cuarto un pimentón de cualquier color y un poco de apio cortado finamente."
+      ],
+      "steps": [
+        "Picamos todas las cosas las ponemos en un plató y ponemos El choclo a cocer.",
+        "Después colamos El choclo y lo ponemos en el plato no mejor es que este frío.",
+        "Ahora en un platito o en una taza exprimimos un imedio limón en el mismo plato ponemos aceite sal y el condimento Que prefieras a revolver.",
+        "Pues ponemos la vinagreta en el plato y meterlo al refrigerador por 15 minutos.",
+        "Y ya está listo!"
+      ],
+      "tags": [
+        "Coste barato",
+        "Recomendada para vegetarianos"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 20,
+      "dinners": 2,
+      "last_updated": "2018-07-25",
+      "language": "es"
+    },
+    {
+      "name": "Ensalada de Caihuas",
+      "image": "https://img-global.cpcdn.com/recipes/5312ddb40a83a79c/680x482cq70/ensalada-de-caihuas-foto-principal.webp",
+      "description": "Esta es una ensalada muy sencilla, fácil, rápida y económica de preparar. Es un buen acompañamiento para los platos con arroz, como un arroz con pollo, arroz con Costillas, arroz con chancho, etc.",
+      "categories": [
+        "Recetas",
+        "Ensaladas"
+      ],
+      "ingredients": [
+        "3 caihuas",
+        "2 limones",
+        "2 cucharadas aceite de oliva",
+        "Al gusto sal y pimienta"
+      ],
+      "steps": [
+        "Abrir las caihuas, quitarles las semillas y proceder a lavarlas y escurrirlas bien. Para quitarles todo el agua, secarlas con papel toalla. Luego cortar cada lado en dos y luego en tiras de un largo mediano.",
+        "Agregar el aceite de oliva, sal y pimienta al gusto y el jugo de 2 limones, mezclar bien y queda lista para servir."
+      ],
+      "tags": [
+        "Coste barato",
+        "Recomendada para vegetarianos"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 10,
+      "dinners": 3,
+      "last_updated": "2018-07-25",
+      "language": "es"
+    },
+    {
+      "name": "Pisco Sour",
+      "image": "https://www.jamear.com/wp-content/uploads/2017/02/1307807.webp",
+      "description": "El pisco sour es una de las bebidas peruanas más representativas. Su suave sabor a limón y el delicioso aroma del pisco hacen de este un trago para cualquier ocasión. Existen distintas maneras de prepararlo, desde la de los barmans profesionales hasta las caseras. Hoy te mostraremos una receta fácil y sencilla para preparar el pisco sour.",
+      "categories": [
+        "Recetas",
+        "Tragos"
+      ],
+      "ingredients": [
+        "12 onzas de pisco (360 ml)",
+        "4 onza de jarabe de goma (120 ml)",
+        "4 onza de jugo de limón (120 ml)",
+        "2 claras de huevo",
+        "16 cubitos de hielo"
+      ],
+      "steps": [
+        "En primer lugar, alista la licuadora y agrega el pisco. Luego echa el jarabe de goma y el jugo de limón. Finalmente las claras de huevo.",
+        "En segundo lugar, cuando hayas echado todos los ingredientes en el orden mencionado anteriormente licúa por aproximadamente 5 segundos.",
+        "En tercer lugar agrega los hielos inmediatamente y licúa por 5 segundos más.",
+        "Finalmente sirve inmediatamente el pisco sour en tres tiempos. Primero llenas la base de la copa, haces una pausa y completas hasta la mitad, vuelves a parar y finalmente la llenas."
+      ],
+      "tags": [
+        "Coste barato",
+        "Recomendada para vegetarianos"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 5,
+      "dinners": 4,
+      "last_updated": "2018-07-25",
+      "language": "es"
+    },
+    {
+      "name": "Maracuya Sour",
+      "image": "https://www.perudelights.com/wp-content/uploads/2013/09/PassionFruitSour.R..jpg",
+      "description": "Es viernes por la noche y estás cansado después de una semana larga en el trabajo. El cielo está gris y hace frío. ¿Necesitas una razón mejor para hacer uno o dos vasos de este dulce, colorido y alegre Maracuyá Sour? ¡No lo creo!",
+      "categories": [
+        "Recetas",
+        "Tragos"
+      ],
+      "ingredients": [
+        "4 maracuyás (unas 2 onzas de jugo)",
+        "1 onza de Pisco",
+        "**1 onza de jarabe de goma",
+        "5 cubos de hielo"
+      ],
+      "steps": [
+        "Corta los maracuyás por la mitad y con una cuchara retira la pulpa. Ponla en un colador sobre un tazón. Presiona con la cuchara para romper las burbujitas de jugo que envuelven las semillas. Reserva el jugo y descarta las pepitas.",
+        "En la licuadora procesa el jugo con el pisco, jarabe de goma y el hielo.",
+        "Sirve en copas o vasos.",
+        "*Nota",
+        "Para hacer el jarabe de goma combina 1 taza de azúcar y 1 taza de agua en una ollita. Lleva a ebullición y hierve, revolviendo, hasta que el azúcar se disuelva, y luego 5 minutos más.",
+        "Enfría y vierte en una jarra o en una botella y guarda por tiempo indefinido en la refrigeradora. Puedes comprar el jarabe de goma comercial, si deseas, pero no es necesario."
+      ],
+      "tags": [
+        "Coste barato",
+        "Recomendada para vegetarianos"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 10,
+      "dinners": 2,
+      "last_updated": "2018-07-25",
+      "language": "es"
+    },
+    {
+      "name": "Chilcano",
+      "image": "https://www.perudelights.com/wp-content/uploads/2016/01/chilcanos-0821.jpg",
+      "description": "El Chilcano es fácil de hacer en casa y no necesitas ser un bartender experto para preparar uno. Desafortunadamente no tenemos una historia que contarte sobre este trago. Nos encantaría narrarte algo divertido e interesante sobre sus orígenes pero la verdad es que nadie sabe a ciencia cierta cuándo o cómo se originó.",
+      "categories": [
+        "Recetas",
+        "Tragos"
+      ],
+      "ingredients": [
+        "1.5 onzas de Pisco",
+        "Ginger Ale",
+        "Amargo de Angostura.",
+        "Una rodaja de limón"
+      ],
+      "steps": [
+        "Vierte 1.5 onzas de un buen Pisco en un vaso alto lleno de hielo.",
+        "Seguido vierte Ginger Ale, muy heladita",
+        "Despues unas gotas de Amargo de Angostura.",
+        "y para terminar una rodaja de limón… y listo."
+      ],
+      "tags": [
+        "Coste barato",
+        "Recomendada para vegetarianos"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 5,
+      "dinners": 1,
+      "last_updated": "2018-07-25",
+      "language": "es"
+    },
+    {
+      "name": "Ensalada fresca de tomate, pepino, choclo y queso",
+      "image": "https://img-global.cpcdn.com/recipes/7f4bcce9396bcfef/680x482cq70/ensalada-fresca-de-tomate-pepino-choclo-y-queso-foto-principal.webp",
+      "description": "Una idea de ensalada fresca para estos días de calor.",
+      "categories": [
+        "Recetas",
+        "Ensaladas"
+      ],
+      "ingredients": [
+        "1 tomate mediano",
+        "Pedazo pepino",
+        "1 choclo desgranado",
+        "Pedazo queso fresco",
+        "Aliño a gusto"
+      ],
+      "steps": [
+        "Lavar el tomate, pelarlo y cortarlo en cubos, quitarle las pepas, reservar.",
+        "Lavar el pedazo de pepino, pelarlo, picarlo en cubos y quitarle las pepas, reservar.",
+        "Al queso fresco darle una enjuagada y picarlo en cubos también.",
+        "Sancochar el choclo con un clavito de olor, cuando esté cocinado, esperar a que se enfríe y desgranarlo.",
+        "En un bowl mezclar las verduras, el choclo y el queso, mezclar y aliñar a su gusto, listo!!"
+      ],
+      "tags": [
+        "Coste barato",
+        "Recomendada para vegetarianos"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 20,
+      "dinners": 2,
+      "last_updated": "2018-07-25",
+      "language": "es"
+    },
+    {
+      "name": "Ensalada de Caihuas",
+      "image": "https://img-global.cpcdn.com/recipes/5312ddb40a83a79c/680x482cq70/ensalada-de-caihuas-foto-principal.webp",
+      "description": "Esta es una ensalada muy sencilla, fácil, rápida y económica de preparar. Es un buen acompañamiento para los platos con arroz, como un arroz con pollo, arroz con Costillas, arroz con chancho, etc.",
+      "categories": [
+        "Recetas",
+        "Ensaladas"
+      ],
+      "ingredients": [
+        "3 caihuas",
+        "2 limones",
+        "2 cucharadas aceite de oliva",
+        "Al gusto sal y pimienta"
+      ],
+      "steps": [
+        "Abrir las caihuas, quitarles las semillas y proceder a lavarlas y escurrirlas bien. Para quitarles todo el agua, secarlas con papel toalla. Luego cortar cada lado en dos y luego en tiras de un largo mediano.",
+        "Agregar el aceite de oliva, sal y pimienta al gusto y el jugo de 2 limones, mezclar bien y queda lista para servir."
+      ],
+      "tags": [
+        "Coste barato",
+        "Recomendada para vegetarianos"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 10,
+      "dinners": 3,
+      "last_updated": "2018-07-25",
       "language": "es"
     },
     {
@@ -134,7 +681,182 @@
       "language": "es"
     },
     {
-      "name": "Ají de gallina",
+      "name": "Mazamorra Morada",
+      "image": "https://www.iperu.org/wp-content/uploads/2018/08/mazamorra-morada.jpg",
+      "description": "La mazamorra morada es un postre emblemático del Perú y típico de Lima. Se prepara con el maíz morado, ingrediente de origen peruano, con el que también se prepara la famosa chicha morada. Un postre muy preparados en las hogares peruanos e infaltable en todas las ferias gastronómicas.",
+      "categories": [
+        "Recetas Populares",
+        "Recetas casera",
+        "Postres"
+      ],
+      "ingredients": [
+        "1/2 kilo de maíz morado",
+        "1 kilo de azúcar",
+        "10 cucharadas de harina de chuño (maicena o harina de camote)",
+        "2 limones",
+        "1 manzana",
+        "1 membrillo",
+        "1 piña",
+        "2 melocotones o duraznos",
+        "1/2 taza de guindones",
+        "1/2 taza de guesillo (durazno seco)",
+        "1/2 taza de guinditas (opcional)",
+        "6 orejones",
+        "Canela entera, canela molida y clavitos de olor"
+      ],
+      "steps": [
+        "En una olla ponemos a cocer el maíz morado, previamente lavado y en parte desgranado, cuando esté bien cocido se cuela el líquido con una coladera fina y luego le agregamos más agua hasta que complete los tres litros. Luego se vuelve a colar y se pone el líquido al fuego.",
+        "Agregue el azúcar, el clavo de olor, la canela entera (uno o dos ramitos), la piña, los membrillos, los peros, los melocotones, los orejones picados en trocitos; las guinditas, los huesillos, y guindones bien lavados.",
+        "Dejamos cocer bien y luego añadir el chuño diluido en un poquito de agua fría o maicena o si es mejor harina de camote. Una vez que está a punto vertir el jugo de los limones y dejar que hierva nuevamente sin dejar de mover, es fácil reconocer cuando el dulce está a punto ya que en ese momento permite ver el fondo de la olla cuando se va moviendo.",
+        "Finalmente esperamos que este delicioso postre se enfríe, se vacía en dulceras y se sirve espolvoreado con canela molida."
+      ],
+      "tags": [
+        "Coste barato",
+        "Postres"
+      ],
+      "meal_type": "Postres",
+      "difficulty": "Fácil",
+      "time": 40,
+      "dinners": 6,
+      "last_updated": "2018-08-10",
+      "language": "es"
+    }
+
+  ],
+
+  "recetasPopulares": [
+    {
+      "name": "Lomo saltado",
+      "image": "https://img.buzzfeed.com/buzzfeed-static/static/2018-05/8/19/asset/buzzfeed-prod-web-04/sub-buzz-31420-1525821073-3.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto",
+      "description": "Este un plato típico de la comida chifa (como le llaman a los platillos y restaurantes chinos-peruanos). Lleva salsa soya y se cocina en un wok, sin embargo, hay un saborcito criollo que lo hace diferente a cualquier comida 100% cantonesa. Este lomo va acompañado con papas fritas y arroz blanco.",
+      "categories": [
+        "Recetas de carne",
+        "Recetas casera"
+      ],
+      "ingredients": [
+        "------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------]\nLomo de ternera – 600 g",
+        "\nCebolla roja – 1 unidad",
+        "\nTomates – 2 unidades",
+        "\nVinagre – 1 cucharadita",
+        "\nAjí amarillo – 1 unidad (opcional)",
+        "\nArroz blanco – 600 g",
+        "\nPatatas fritas – 400 g",
+        "\nSalsa de soja – 4 cucharadas",
+        "\nCaldo de carne – 150 ml",
+        "\nPimiento rojo –1 unidad",
+        "\nCilantro picado – 1 cucharada",
+        "\nCebollino picado – al gusto",
+        "\nDientes de ajo – 1 unidad",
+        "\nOrégano seco – 1 cucharada",
+        "\nPimienta negra – 1 cucharadita",
+        "\nComino – ¼ de cucharadita",
+        "\nSal – al gusto",
+        "\nAceite de oliva de girasol – 2 cucharadas\n[------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------"
+      ],
+      "steps": 
+        "Paso 1: \nCortamos la carne en tiras alargadas de unos 3 cm. Mezclamos las especias (comino, orégano, ajo y pimienta) y sazonamos la carne junto con un poco de sal y una cucharadita de vinagre. Dejamos reposar esta mezcla tapando con un paño durante 15 minutos.\n\nPaso 2: \nEn una sartén añadimos aceite de sabor suave, cuando esté caliente freímos la carne durante poco tiempo solo para que se dore por fuera. Luego la retiramos de la sartén y reservamos.\nPaso 3: \nCorta en rodajas la cebolla, el pimento, ( el ají si lo encuentras) y el tomate. En la misma sartén donde cocinamos la carne salteamos estos ingredientes durante 50 segundos. Añadir la salsa de soja y el caldo de carne. Ahora incorporamos de nuevo la carne que teníamos reservada. Mezcla y pasado unos segundos añade el cebollino y un poco de cilantro picado. Cocina la carne durante cuatro minutos, si el caldo se evapora añade un poco más para que quede jugoso.\nPaso 4: \nEn la sartén donde tenemos el lomo añade las patatas fritas y remueve, para que se impregnen de sabor. Volcar el contenido de la sartén en una fuente y acompañar de arroz blanco.\nPaso 5: \nEl ají amarillo le da un sabor especial a esta receta pero no siempre es fácil de encontrar, por eso añadimos pimiento rojo. Si tienes la suerte de encontrar ají amarillo puedes usar ambos pimientos."
+      ,
+      "tags": [
+        "Coste medio",
+        "Carbe",
+        "Casero"
+      ],
+      "meal_type": "Entrante",
+      "difficulty": "Fácil",
+      "time": 35,
+      "dinners": 4,
+      "last_updated": "2018-07-10",
+      "language": "es"
+    },
+    {
+      "name": "Causa limena de pollo",
+      "image": "https://img.buzzfeed.com/buzzfeed-static/static/2018-05/9/13/asset/buzzfeed-prod-web-03/sub-buzz-19641-1525887724-7.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto",
+      "description": "Este clásico plato de la gastronomía peruana se disfruta frío, y consiste en un puré de patatas amarillas relleno de lo que gustes: puede ser pollo, pescado, o incluso solo vegetales. Entre los ingredientes estrella destacan: el aguacate o palta, un huevo sancochado y el ají amarillo.",
+      "categories": [
+        "Recetas de carne",
+        "Recetas casera"
+      ],
+      "ingredients": [
+        "------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------]\n 4 libras de papas amarillas",
+        "\n 4 cdas. de pasta de ají amarillo peruano",
+        "\n 1 lata de 12.5 oz. de pechuga de pollo en agua",
+        "\n 1/2 palta (aguacate)",
+        "\n 1/2 cebolla morada grande",
+        "\n 1 limón",
+        "\n 2 cdas. de mayonesa (y más para adornar, opcional)",
+        "\n 3 huevos hervidos",
+        "\n Sal y pimienta blanca",
+        "\n 1 taza de aceite vegetal, aproximadamente",
+        "\n 8 aceitunas de botija (para adornar)\n[------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------"
+      ],
+      "steps": 
+      {
+        "Paso 1":"En una cazuela grande, pon a hervir las papas sin sal. Unos 20-25 minutos aproximadamente. Mientras tanto, pica la cebolla a la juliana, colócala en un cuenco y alíñala con una cucharadita de sal y el jugo del limón.",
+        "\n\nPaso 2":"Pon a hervir los huevos durante 5 minutos. Deben quedar duros. Enfríalos. Pélalos y pícalos a la mitad longitudinalmente, corta estas del mismo modo en 3 pedazos cada una",
+        "\n\nPaso 3":"Abre la lata de pollo, escúrrela bien. Mezcla la carne con las 2 cucharadas de mayonesa japonesa y una pizca de pimienta.",
+        "\n\nPaso 4":"Pica la masa de las aceitunas a tu gusto, deshaciéndote de las semillas.",
+        "\n\nPaso 5":"Cuando estén las papas, escúrrelas y ponlas en un cuenco en el que puedas preparar un puré, adicionando el jugo del limón de las cebollas, la pasta de ají amarillo, sal a gusto y bastante aceite. El aceite se lo debes poner poco a poco y tanto como para que el puré quede “hecho una mantequillita”. Si puedes amasarlo un poco con las manos, mejor.",
+        "\n\nPaso 6":"Mezcla las cebollas con el pollo y pica en dos la mitad del aguacate y de ahí en lascas de centímetro y medio de ancho.",
+        "\n\nPaso 7":"Coloca el aro sobre el plato en el que vas a servir la causa, pon una capa de puré de papas; una aguacate dejando la parte verde hacia afuera -que toque el borde del molde-; otra capa de papa, una de pollo con cebolla y termina con otra de papa. Saca el aro con cuidado y adorna el pastel que te queda con más mayonesa, el huevo y los pedacitos de aceituna."
+      },
+      "tags": [
+        "Coste barato"
+      ],
+      "meal_type": "Cena",
+      "difficulty": "Fácil",
+      "time": 35,
+      "dinners": 6,
+      "last_updated": "2018-08-10",
+      "language": "es"
+    },
+    {
+      "name": "Ceviche",
+      "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB15pybD.img?h=768&w=1366&m=6&q=60&o=f&l=f",
+      "description": "Probablemente has comido ceviche antes, este plato cuyos orígenes se remontan a la época del imperio Inca. Sin embargo, aprender a preparar en casa la auténtica receta peruana le dará un giro de alegría a tus días. ¿Qué tiene de diferente la versión peruana de este plato? Además de la frescura del pescado preparado con limón, lleva cebollas rojas y ajíes. Recuerda que se debe servir con choclo y camote.",
+      "categories": [
+        "Recetas de pescado",
+        "Recetas casera",
+        "Entrada"
+      ],
+      "ingredients": [
+        "------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------]\n1 ½ libra de filetes de pescado fresco y de la mejor calidad corvina, dorado, escolar, halibut.",
+        "\n1 cebolla colorada cortada en rodajas bien finas.",
+        "\n1 taza de jugo de limón recién exprimido aproximadamente 10-15 limones sutiles.",
+        "\n1-2 ajíes amarillos o habaneros cortados por la mitad, sin semillas y desvenados.",
+        "\n2-3 ramitas de cilantro fresco.",
+        "\nSal al gusto.",
+        "\nCilantro finamente picado al gusto.",
+        "\nHojas de lechuga.",
+        "\nMaíz cancha o maíz tostado.",
+        "\nChoclo o maíz sancochado o hervido.",
+        "\nCamote: En forma de chifles o en rodajas gruesas sancochadas.",
+        "\nChifles de plátano verde.",
+        "\nAji picadito o en rodajitas – opcional y al gusto.",
+        "\nAceite de oliva al gusto *opcional.\n[------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------"
+      ],
+      "steps": [
+        "Paso 1: Corte el pescado en cubos pequeños y colóquelos en un recipiente de vidrio. Cubra los pedazos de pescados con agua bien fría y 1 cucharada de sal, tape y refrigere mientras se prepara la cebolla y el jugo de los limones.",
+        "\n\nPaso 2: Frote las rodajas de cebolla con 1/2 cucharada de sal y enjuague con agua fría.",
+        "\n\nPaso 3: Enjuague el pescado para eliminar la sal.",
+        "\n\nPaso 4: Ponga los cubos de pescado, la mitada de las rodajas de cebolla, las ramas de cilantro, y los ajíes en un recipiente de vidrio y vierta el jugo de limón sobre los ingredientes. Espolvoree con un poco de sal. Para minimizar la acidez del limón se puede agregar unos cubitos de hielo a la mezcla.",
+        "\n\nPaso 5: Cubra y refrigere durante unos 5-15 minutos o hasta que el pescado empiece a blanquearse. En caso de usar limón sutil el pescado se curtirá más rápido.",
+        "\n\nPaso 6: Retire las ramitas de cilantro y los ajíes de la mezcla del cebiche. Pruebe el cebiche de pescado y rectifique la sal si es necesario.",
+        "\n\nPaso 7: Para servir ponga el cebiche en cada recipiente, ya sea un plato o bol, agregue un poco de las rodajas de cebolla, el cilantro picado, y aji picadito al gusto.",
+        "\n\nPaso 8: Sirva inmediatamente con su elección de guarniciones."
+      ],
+      "tags": [
+        "Coste barato",
+        "Entrada"
+      ],
+      "meal_type": "Cena",
+      "difficulty": "Fácil",
+      "time": 35,
+      "dinners": 6,
+      "last_updated": "2018-08-10",
+      "language": "es"
+    },
+    {
+      "name": "Aji de gallina",
       "image": "https://www.comedera.com/wp-content/uploads/2013/10/aji-de-gallina.jpg",
       "description": "Se trata de una deliciosa carne de gallina, o pollo, preparada con una cremosa salsa cuyo ingrediente estrella es el ají amarillo peruano. Suele venir acompañada de arroz, patatas, huevo y unas cuantas aceitunas negras.",
       "categories": [
@@ -144,35 +866,35 @@
         "Tradicional"
       ],
       "ingredients": [
-        "1 pechuga de gallina ó pollo entera con hueso.",
-        "3 ajíes amarillos peruanos.",
-        "1 cebolla grande.",
-        "3 dientes de ajo.",
-        "1/2 taza de leche evaporada.",
-        "4 mitades de nueces.",
-        "2 paquetes de galletas de soda ó 2 rebanadas de pan de molde.",
-        "2 cucharadas de queso parmesano.",
-        "Sal al gusto.",
-        "Pimienta al gusto.",
-        "2  papas cortadas en rodajas.",
-        "4 Aceitunas negras.",
-        "1 huevo sancochado."
+        "------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------]\n1 pechuga de gallina ó pollo entera con hueso.",
+        "\n3 ajíes amarillos peruanos.",
+        "\n1 cebolla grande.",
+        "\n3 dientes de ajo.",
+        "\n1/2 taza de leche evaporada.",
+        "\n4 mitades de nueces.",
+        "\n2 paquetes de galletas de soda ó 2 rebanadas de pan de molde.",
+        "\n2 cucharadas de queso parmesano.",
+        "\nSal al gusto.",
+        "\nPimienta al gusto.",
+        "\n2  papas cortadas en rodajas.",
+        "\n4 Aceitunas negras.",
+        "\n1 huevo sancochado.\n[------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------"
       ],
       "steps": [
-        "El primer paso para hacer esta receta de aji de gallina es poner a cocinar la pechuga entera del animal en una olla con agua, sin sal ni nada. Cuando esté lista, reserva el caldo y deja enfriar la carne. Posteriormente desméchala y reserva.",
-        "Haz una pasta con el ají amarillo: retírale las semillas y las venas y con un poquito del caldo de la pechuga de pollo licúa hasta que tenga una textura cremosa. Reserva.",
-        "Muele las nueces en un mortero y resérvalas también.",
-        "Pica con las manos las galletas de soda(ó el pan) hasta que queden prácticamente hechas polvo. Puedes ayudarte con un mortero o un procesador de alimentos. Reserva (otra vez).",
-        "Calienta una sartén profunda y sofríe el ajo y la cebolla previamente picados pequeñitos.",
-        "Cuando la cebolla se transparente agrega la pasta de ají, mezcla bien y agrega sal y pimienta.",
-        "En otro recipiente junta las galletas de soda (ó el pan) con un poco de caldo de la pechuga de pollo hasta que te quede una mezcla espesa tal como se ve en la imagen.",
-        "Incorpora esta “masa” a la sartén con el sofrito. Revuelve bien y agrega las nueces molidas y la pechuga de gallina (pollo).",
-        "Agrega 1 taza de caldo, y baja el fuego para que se cocine un rato.",
-        "Mientras vas haciendo la receta, puedes limpiar y pelar las dos patatas, pícalas en rodajas y cocínalas al vapor o hervidas hasta que estén hechas. Las vas a usar al final al momento de servir el plato.",
-        "Transcurridos unos 5 minutos agrega el queso parmesano. Deja cocinar por otros 5 minutos más.",
-        "Si ha espesado mucho, puedes ponerle más caldo, si está muy aguado, puedes ponerle más queso.",
-        "Cuando haya transcurrido en total 10 minutos desde que bajaste la temperatura de la cocina, retira del fuego, agrega la leche evaporada y revuelve bien.",
-        "Sirve caliente y disfruta."
+        "1. El primer paso para hacer esta receta de aji de gallina es poner a cocinar la pechuga entera del animal en una olla con agua, sin sal ni nada. Cuando esté lista, reserva el caldo y deja enfriar la carne. Posteriormente desméchala y reserva",
+        "\n\n2. Haz una pasta con el ají amarillo: retírale las semillas y las venas y con un poquito del caldo de la pechuga de pollo licúa hasta que tenga una textura cremosa. Reserva",
+        "\n\n3. Muele las nueces en un mortero y resérvalas también",
+        "\n\n4. Pica con las manos las galletas de soda(ó el pan) hasta que queden prácticamente hechas polvo. Puedes ayudarte con un mortero o un procesador de alimentos. Reserva (otra vez)",
+        "\n\n5. Calienta una sartén profunda y sofríe el ajo y la cebolla previamente picados pequeñitos",
+        "\n\n6. Cuando la cebolla se transparente agrega la pasta de ají, mezcla bien y agrega sal y pimienta",
+        "\n\n7. En otro recipiente junta las galletas de soda (ó el pan) con un poco de caldo de la pechuga de pollo hasta que te quede una mezcla espesa tal como se ve en la imagen",
+        "\n\n8. Incorpora esta “masa” a la sartén con el sofrito. Revuelve bien y agrega las nueces molidas y la pechuga de gallina (pollo)",
+        "\n\n9. Agrega 1 taza de caldo, y baja el fuego para que se cocine un rato",
+        "\n\n10. Mientras vas haciendo la receta, puedes limpiar y pelar las dos patatas, pícalas en rodajas y cocínalas al vapor o hervidas hasta que estén hechas. Las vas a usar al final al momento de servir el plato",
+        "\n\n11. Transcurridos unos 5 minutos agrega el queso parmesano. Deja cocinar por otros 5 minutos más",
+        "\n\n12. Si ha espesado mucho, puedes ponerle más caldo, si está muy aguado, puedes ponerle más queso",
+        "\n\n13. Cuando haya transcurrido en total 10 minutos desde que bajaste la temperatura de la cocina, retira del fuego, agrega la leche evaporada y revuelve bien",
+        "\n\n14. Sirve caliente y disfruta."
       ],
       "tags": [
         "Coste barato",
@@ -226,22 +948,22 @@
       ],
       "ingredients": [
         "1 kilogramo de maíz morado",
-        "2 manzanas verdes de agua",
-        "1 membrillo grande",
-        " ¼ piña",
-        "4 ramas de canela",
-        "½ taza de zumo de limón",
-        "8 litros de agua",
-        "Azúcar",
-        "6 clavos de olor"
+        "\n2 manzanas verdes de agua",
+        "\n1 membrillo grande",
+        "\n ¼ piña",
+        "\n4 ramas de canela",
+        "\n½ taza de zumo de limón",
+        "\n8 litros de agua",
+        "\nAzúcar",
+        "\n6 clavos de olor"
       ],
       "steps": [
         "Para obtener una chicha morada perfecta, lava bien todo el maíz morado y luego trata de desgranarlo por completo. De esta forma, obtendrás el color y sabor que esconde el interior de la coronta del maíz.",
-        "Enjuaga las manzanas y el membrillo. De la piña solo usarás la cáscara y el corazón. Ve picando todo en pequeños trozos, como se observa en la imagen, y también alista las ramas de canela junto con los clavos de olor.",
-        "En una olla grande, echa todo lo anterior: el maíz morado desgranado más las frutas y especias. Además, agrega todo el agua y deja que hierva a fuego alto durante más o menos una hora.",
-        "¿Cómo saber si ya estará lista la chicha morada? Vas a identificar que todos los ingredientes han soltado sus sabores y aromas cuando la cocina esté oliendo delicioso. Además, verás que se ha convertido en un líquido con mucho color. Si el líquido aún parece estar algo transparente, espera un poco más. Aquí está la imagen de referencia.",
-        "Llegado a este punto, apaga el fuego y deja enfriar un poco. Lo que sigue es colar todo el líquido con mucho cuidado.",
-        "Por último, esta bebida no puede estar completa sin el toque ácido que le aporta el limón. Vierte todo el zumo de limón en la chicha morada ya colada. También agrega azúcar al gusto y, para un mejor disfrute, recomiendo que dejes la bebida en la nevera un par de horas."
+        "\nEnjuaga las manzanas y el membrillo. De la piña solo usarás la cáscara y el corazón. Ve picando todo en pequeños trozos, como se observa en la imagen, y también alista las ramas de canela junto con los clavos de olor.",
+        "\nEn una olla grande, echa todo lo anterior: el maíz morado desgranado más las frutas y especias. Además, agrega todo el agua y deja que hierva a fuego alto durante más o menos una hora.",
+        "\n¿Cómo saber si ya estará lista la chicha morada? Vas a identificar que todos los ingredientes han soltado sus sabores y aromas cuando la cocina esté oliendo delicioso. Además, verás que se ha convertido en un líquido con mucho color. Si el líquido aún parece estar algo transparente, espera un poco más. Aquí está la imagen de referencia.",
+        "\nLlegado a este punto, apaga el fuego y deja enfriar un poco. Lo que sigue es colar todo el líquido con mucho cuidado.",
+        "\nPor último, esta bebida no puede estar completa sin el toque ácido que le aporta el limón. Vierte todo el zumo de limón en la chicha morada ya colada. También agrega azúcar al gusto y, para un mejor disfrute, recomiendo que dejes la bebida en la nevera un par de horas."
       ],
       "tags": [
         "Coste barato",
@@ -548,7 +1270,7 @@
       "language": "es"
     },
     {
-      "name": "Maracuyá Sour",
+      "name": "Maracuya Sour",
       "image": "https://www.perudelights.com/wp-content/uploads/2013/09/PassionFruitSour.R..jpg",
       "description": "Es viernes por la noche y estás cansado después de una semana larga en el trabajo. El cielo está gris y hace frío. ¿Necesitas una razón mejor para hacer uno o dos vasos de este dulce, colorido y alegre Maracuyá Sour? ¡No lo creo!",
       "categories": [

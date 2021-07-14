@@ -5,7 +5,7 @@ Widget titles(String texto, double size, Color color) {
     child: Text(
       texto,
       style: TextStyle(
-        fontFamily: 'PlayfairDisplay-bold',
+        fontFamily: 'Avenir',
         fontWeight: FontWeight.bold,
         color: color,
         fontSize: size,

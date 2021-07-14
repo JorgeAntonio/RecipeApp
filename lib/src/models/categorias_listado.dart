@@ -27,9 +27,10 @@ Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
-            color: rosa.withOpacity(0.3),
-            offset: Offset(1, 1),
-          ),
+            color: Color.fromRGBO(210, 211, 215, 1.0),
+            offset: Offset(1, 5),
+            blurRadius: 5.0,
+          )
         ],
       ),
       child: Stack(

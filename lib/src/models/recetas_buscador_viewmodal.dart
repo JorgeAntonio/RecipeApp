@@ -4,13 +4,15 @@ import 'package:recipe_app/src/styles/styles.dart';
 //Widgets
 import 'package:recipe_app/src/widgets/titles.dart';
 
-List<Widget> recetasListado(
-    BuildContext context, List<dynamic> recetasPopulares) {
+List<Widget> recetasListadoBuscador(
+    BuildContext context, List<dynamic> recetas, String recetaBuscada) {
   final List<Widget> listadoRecetas = [];
-
-  recetasPopulares.forEach((receta) {
-    final listadoWidgetProv = _cuerpoRecetaListado(context, receta);
-    listadoRecetas.add(listadoWidgetProv);
+  recetas.forEach((receta) {
+    var titulo = receta['name'].toString().toLowerCase();
+    if (titulo.contains(recetaBuscada)) {
+      final listadoWidgetProv = _cuerpoRecetaListado(context, receta);
+      listadoRecetas.add(listadoWidgetProv);
+    }
   });
 
   return listadoRecetas;
@@ -55,6 +57,16 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               titles(receta['name'], 20, rosa),
+              Text(
+                receta['description'],
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  fontFamily: 'Avenir',
+                  fontWeight: FontWeight.bold,
+                  color: colorDescriptionRecipes,
+                  fontSize: 14,
+                ),
+              ),
               SizedBox(height: 5),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
