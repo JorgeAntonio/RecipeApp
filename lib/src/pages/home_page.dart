@@ -69,6 +69,7 @@ Widget _sliderPopulares(BuildContext context) {
     child: Swiper(
       viewportFraction: 1.0,
       itemCount: 3,
+      index: 3,
       itemBuilder: (BuildContext context, int index) {
         return FutureBuilder(
             future: recetasProvider.cargarRecetasPopulares(),
@@ -80,7 +81,6 @@ Widget _sliderPopulares(BuildContext context) {
               );
             });
       },
-      index: 3,
     ),
   );
 }

@@ -20,6 +20,8 @@ class Favorite {
   String difficulty;
   @HiveField(7)
   String dinners;
+  @HiveField(8)
+  String video;
 
   Favorite({
     this.title,
@@ -30,5 +32,6 @@ class Favorite {
     this.time,
     this.difficulty,
     this.dinners,
+    this.video,
   });
 }

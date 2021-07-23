@@ -40,7 +40,7 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: FadeInImage(
-                placeholder: AssetImage('images/recipe1.jpg'),
+                placeholder: AssetImage('images/chef_logo.png'),
                 image: NetworkImage(receta['image']),
                 fit: BoxFit.cover,
                 width: double.infinity,

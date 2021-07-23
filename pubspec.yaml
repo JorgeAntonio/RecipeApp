@@ -26,6 +26,8 @@ dependencies:
   http: ^0.13.3
   flutter_swiper: ^1.1.6
   share: ^0.6.5+4
+  cached_network_image: ^2.5.1
+  flutter_cache_manager: ^2.1.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -34,6 +36,8 @@ dependencies:
    # hive database
   hive: ^2.0.3
   hive_flutter: ^1.0.0
+  #video player
+  youtube_player_flutter: 
 
 dev_dependencies:
   flutter_test:

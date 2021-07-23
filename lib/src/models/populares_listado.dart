@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-//Responsive
+// Responsive
 import 'package:recipe_app/src/responsive.dart';
-//Estilos
 
 List<Widget> popularesListado(
     BuildContext context, List<dynamic> recetasPopulares) {
@@ -39,7 +38,7 @@ Widget _tarjetaCollection(BuildContext context, Map<String, dynamic> receta) {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: FadeInImage(
-                placeholder: AssetImage('images/recipe1.jpg'),
+                placeholder: AssetImage('images/chef_logo.png'),
                 image: NetworkImage(receta['image']),
                 fit: BoxFit.cover,
                 width: isMobile(context) ? 150 : 200,
@@ -55,11 +54,17 @@ Widget _tarjetaCollection(BuildContext context, Map<String, dynamic> receta) {
               receta['name'],
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w600,
-                decorationColor: Colors.black,
-                decorationStyle: TextDecorationStyle.wavy,
-              ),
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  decorationColor: Colors.black,
+                  decorationStyle: TextDecorationStyle.wavy,
+                  shadows: [
+                    Shadow(
+                      color: Colors.black,
+                      offset: Offset(1, 2),
+                      blurRadius: 2.5,
+                    )
+                  ]),
             ),
           )
         ],

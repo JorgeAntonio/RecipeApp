@@ -40,7 +40,7 @@ Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: FadeInImage(
-                placeholder: AssetImage('images/recipe1.jpg'),
+                placeholder: AssetImage('images/chef_logo.png'),
                 width: double.infinity,
                 height: double.infinity,
                 image: NetworkImage(categoria['image']),
@@ -54,11 +54,17 @@ Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
             child: Text(
               categoria['name'],
               style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w600,
-                decorationColor: Colors.black,
-                decorationStyle: TextDecorationStyle.wavy,
-              ),
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  decorationColor: Colors.black,
+                  decorationStyle: TextDecorationStyle.wavy,
+                  shadows: [
+                    Shadow(
+                      color: Colors.black,
+                      offset: Offset(1, 2),
+                      blurRadius: 2.5,
+                    )
+                  ]),
             ),
           )
         ],

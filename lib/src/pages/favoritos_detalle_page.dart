@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_app/src/adapters/favoritos_adapter.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:recipe_app/src/pages/favorito_receta_video.dart';
+
 import 'package:recipe_app/src/styles/styles.dart';
 import 'package:recipe_app/src/widgets/titles.dart';
 
@@ -11,8 +15,17 @@ class FavoritosDetallePage extends StatefulWidget {
   final String time;
   final String difficulty;
   final String dinners;
-  FavoritosDetallePage(this.title, this.image, this.description,
-      this.ingredients, this.steps, this.time, this.difficulty, this.dinners,
+  final String video;
+  FavoritosDetallePage(
+      this.title,
+      this.image,
+      this.description,
+      this.ingredients,
+      this.steps,
+      this.time,
+      this.difficulty,
+      this.dinners,
+      this.video,
       {Key key})
       : super(key: key);
 
@@ -34,6 +47,7 @@ class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
           _textoDescripcion(
               widget.ingredients, titles('Ingredientes', 18, rosa)),
           _textoDescripcion(widget.steps, titles('Preparacion', 18, rosa)),
+          _btnVerVideo(context, widget.title, widget.video, widget.description),
         ],
       ),
     );
@@ -70,7 +84,7 @@ Widget _appBar(String image, String title) {
             ]),
       ),
       background: FadeInImage(
-        placeholder: AssetImage('images/recipe1.jpg'),
+        placeholder: AssetImage('images/chef_logo.png'),
         image: NetworkImage(image),
         fadeInDuration: Duration(milliseconds: 150),
         fit: BoxFit.cover,
@@ -180,6 +194,42 @@ Widget _textoDescripcion(String texto, Widget widget) {
             ),
           ),
         ],
+      ),
+    ]),
+  );
+}
+
+Widget _btnVerVideo(
+    BuildContext context, String title, String video, String description) {
+  return SliverList(
+    delegate: SliverChildListDelegate([
+      ValueListenableBuilder(
+        valueListenable: Hive.box<Favorite>('favorits').listenable(),
+        builder: (context, Box<Favorite> box, _) {
+          return Container(
+            padding: EdgeInsets.all(10),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            FavoritoVideoReceta(title, video, description)));
+              },
+              style: ElevatedButton.styleFrom(
+                primary: rosa,
+              ),
+              child: Text(
+                'Ver Video',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Avenir',
+                ),
+              ),
+            ),
+          );
+        },
       ),
     ]),
   );

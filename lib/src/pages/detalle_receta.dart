@@ -23,6 +23,7 @@ class _DetallePageState extends State<DetallePage> {
   String time;
   String difficulty;
   String dinners;
+  String video;
 
   /*submitData() async {
     if (widget.formKey.currentState.validate()) {
@@ -81,6 +82,7 @@ class _DetallePageState extends State<DetallePage> {
                             time: time,
                             difficulty: difficulty,
                             dinners: dinners,
+                            video: video,
                           ),
                         );
                       }
@@ -95,6 +97,7 @@ class _DetallePageState extends State<DetallePage> {
                     titles('Ingredientes', 18, rosa)),
                 _textoDescripcion(steps = receta['steps'].toString(),
                     titles('Preparacion', 18, rosa)),
+                _verVideoBtn(context, receta, video = receta['video']),
               ],
             ),
           ),
@@ -134,7 +137,7 @@ Widget _appBar(String image, String title) {
             ]),
       ),
       background: FadeInImage(
-        placeholder: AssetImage('images/recipe1.jpg'),
+        placeholder: AssetImage('images/chef_logo.png'),
         image: NetworkImage(image),
         fadeInDuration: Duration(milliseconds: 150),
         fit: BoxFit.cover,
@@ -239,8 +242,35 @@ Widget _textoDescripcion(String texto, Widget widget) {
               ),
             ),
           ),
-          SizedBox(height: 20),
         ],
+      ),
+    ]),
+  );
+}
+
+Widget _verVideoBtn(
+    BuildContext context, Map<String, dynamic> receta, String video) {
+  return SliverList(
+    delegate: SliverChildListDelegate([
+      Container(
+        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 20),
+        width: double.infinity,
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: rosa,
+          ),
+          onPressed: () {
+            Navigator.pushNamed(context, 'video-receta', arguments: receta);
+          },
+          child: Text(
+            'Ver Video',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Avenir',
+            ),
+          ),
+        ),
       ),
     ]),
   );
