@@ -31,13 +31,13 @@ class _VideoRecetaState extends State<VideoReceta> {
         return Scaffold(
           backgroundColor: backgroundColor,
           appBar: AppBar(
-            backgroundColor: rosa,
+            backgroundColor: primaryColor,
             title: Text(
               receta['name'],
               style: TextStyle(
                   fontFamily: 'Avenir',
                   fontWeight: FontWeight.bold,
-                  color: blanco,
+                  color: whiteColor,
                   fontSize: 22,
                   shadows: [
                     Shadow(
@@ -54,7 +54,7 @@ class _VideoRecetaState extends State<VideoReceta> {
               Container(
                 margin: EdgeInsets.only(top: 20, right: 10, left: 10),
                 decoration: BoxDecoration(
-                  color: blanco,
+                  color: whiteColor,
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
@@ -75,12 +75,7 @@ class _VideoRecetaState extends State<VideoReceta> {
                       child: Text(
                         receta['description'],
                         textAlign: TextAlign.justify,
-                        style: TextStyle(
-                          fontFamily: 'Avenir',
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromRGBO(0, 51, 51, 1),
-                          fontSize: 13,
-                        ),
+                        style: textStyle,
                       ),
                     ),
                   ],

@@ -16,7 +16,7 @@ Drawer menuLateral(context) {
         children: [
           DrawerHeader(
             decoration: BoxDecoration(
-              color: rosa,
+              color: primaryColor,
             ),
             child: Column(
               children: [
@@ -37,9 +37,9 @@ Drawer menuLateral(context) {
               ListTile(
                 leading: Icon(
                   Icons.favorite,
-                  color: colorIconos,
+                  color: iconColor,
                 ),
-                title: titles('Favoritos', 18, rosa),
+                title: titles('Favoritos', 18, primaryColor),
                 onTap: () {
                   Navigator.pushNamed(context, 'favoritos');
                 },
@@ -47,17 +47,17 @@ Drawer menuLateral(context) {
               /*ListTile(
                 leading: Icon(
                   Icons.person,
-                  color: colorIconos,
+                  color: iconColor,
                 ),
-                title: titles('Perfil', 18, rosa),
+                title: titles('Perfil', 18, primaryColor),
                 onTap: () {},
               ),*/
               ListTile(
                 leading: Icon(
                   Icons.question_answer,
-                  color: colorIconos,
+                  color: iconColor,
                 ),
-                title: titles('Nosotros', 18, rosa),
+                title: titles('Nosotros', 18, primaryColor),
                 onTap: () {
                   Navigator.pushNamed(context, 'nosotros');
                 },
@@ -65,9 +65,9 @@ Drawer menuLateral(context) {
               ListTile(
                 leading: Icon(
                   Icons.logout,
-                  color: colorIconos,
+                  color: iconColor,
                 ),
-                title: titles('Salir', 18, rosa),
+                title: titles('Salir', 18, primaryColor),
                 onTap: () {
                   exit(0);
                 },

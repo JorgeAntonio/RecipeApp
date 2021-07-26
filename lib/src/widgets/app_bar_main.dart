@@ -7,14 +7,14 @@ import 'package:recipe_app/src/styles/styles.dart';
 //Widgets
 import 'package:share/share.dart';
 
-Widget appBar(BuildContext context) {
+Widget appBarMain(BuildContext context) {
   return AppBar(
     /*title: Text(
       'Recetas Peruanas',
       style: TextStyle(
         fontFamily: 'Avenir',
         fontWeight: FontWeight.bold,
-        color: blanco,
+        color: whiteColor,
       ),
     ),*/
     //centerTitle: true,
@@ -38,6 +38,6 @@ Widget appBar(BuildContext context) {
             }),
       ),
     ],
-    backgroundColor: rosa,
+    backgroundColor: primaryColor,
   );
 }

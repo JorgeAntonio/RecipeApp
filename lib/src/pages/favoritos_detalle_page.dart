@@ -4,6 +4,9 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:recipe_app/src/pages/favorito_receta_video.dart';
 
 import 'package:recipe_app/src/styles/styles.dart';
+import 'package:recipe_app/src/widgets/app_bar_detalles_page.dart';
+import 'package:recipe_app/src/widgets/iconos_detalles.dart';
+import 'package:recipe_app/src/widgets/texto_description.dart';
 import 'package:recipe_app/src/widgets/titles.dart';
 
 class FavoritosDetallePage extends StatefulWidget {
@@ -40,13 +43,22 @@ class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
       backgroundColor: backgroundColor,
       body: CustomScrollView(
         slivers: [
-          _appBar(widget.image, widget.title),
-          _iconosDetalles(widget.time, widget.difficulty, widget.dinners),
-          _textoDescripcion(
-              widget.description, titles('Descripcion', 18, rosa)),
-          _textoDescripcion(
-              widget.ingredients, titles('Ingredientes', 18, rosa)),
-          _textoDescripcion(widget.steps, titles('Preparacion', 18, rosa)),
+          appBarDetallesPage(widget.image, widget.title),
+          _iconosDetalles(
+              widget.time,
+              widget.difficulty,
+              widget.dinners,
+              Icon(
+                Icons.favorite,
+                size: 24,
+                color: primaryColor,
+              )),
+          textoDescripcion(
+              widget.description, titles('Descripcion', 18, primaryColor)),
+          textoDescripcion(
+              widget.ingredients, titles('Ingredientes', 18, primaryColor)),
+          textoDescripcion(
+              widget.steps, titles('Preparacion', 18, primaryColor)),
           _btnVerVideo(context, widget.title, widget.video, widget.description),
         ],
       ),
@@ -54,148 +66,26 @@ class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
   }
 }
 
-Widget _appBar(String image, String title) {
-  return SliverAppBar(
-    backgroundColor: rosa,
-    expandedHeight: 270,
-    floating: false,
-    pinned: true,
-    elevation: 0.0,
-    iconTheme: IconThemeData(
-      opacity: 0.9,
-      color: blanco,
-    ),
-    flexibleSpace: FlexibleSpaceBar(
-      titlePadding: EdgeInsets.all(15),
-      centerTitle: true,
-      title: Text(
-        title,
-        style: TextStyle(
-            fontFamily: 'Avenir',
-            fontWeight: FontWeight.bold,
-            color: blanco,
-            fontSize: 22,
-            shadows: [
-              Shadow(
-                color: Colors.black,
-                offset: Offset(1, 1),
-                blurRadius: 3,
-              )
-            ]),
-      ),
-      background: FadeInImage(
-        placeholder: AssetImage('images/chef_logo.png'),
-        image: NetworkImage(image),
-        fadeInDuration: Duration(milliseconds: 150),
-        fit: BoxFit.cover,
-      ),
-    ),
-  );
-}
-
-Widget _iconosDetalles(String time, String difficulty, String dinners) {
+Widget _iconosDetalles(
+    String time, String difficulty, String dinners, Icon icon) {
   return SliverList(
     delegate: SliverChildListDelegate(
       [
         Padding(
           padding: EdgeInsets.only(top: 20, bottom: 10),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Icon(
-                Icons.alarm,
-                color: colorIconos,
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 5, top: 5),
-                child: Text(
-                  time,
-                  style: iconosRecetasListado,
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.only(top: 5),
-                child: Text(
-                  ' min',
-                  style: iconosRecetasListado,
-                ),
-              ),
-              SizedBox(width: 30),
+              iconosDetalles(time, difficulty, dinners, Row()),
               Row(
-                children: [
-                  Icon(
-                    Icons.handyman,
-                    color: colorIconos,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: 5, top: 5),
-                    child: Text(
-                      difficulty,
-                      style: iconosRecetasListado,
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(width: 30),
-              Row(
-                children: [
-                  Icon(
-                    Icons.people,
-                    color: colorIconos,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: 5, top: 4),
-                    child: Text(
-                      dinners,
-                      style: iconosRecetasListado,
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(width: 30),
-              Row(
-                children: [
-                  Icon(
-                    Icons.favorite,
-                    color: rosa,
-                  ),
-                ],
+                children: [icon],
               )
             ],
           ),
-        )
+        ),
       ],
     ),
-  );
-}
-
-Widget _textoDescripcion(String texto, Widget widget) {
-  return SliverList(
-    delegate: SliverChildListDelegate([
-      Column(
-        children: [
-          Container(
-            alignment: Alignment.centerLeft,
-            padding: EdgeInsets.all(8),
-            child: widget,
-          ),
-          Container(
-            padding: EdgeInsets.all(8),
-            child: Text(
-              texto,
-              textAlign: TextAlign.justify,
-              style: TextStyle(
-                fontFamily: 'Avenir',
-                fontWeight: FontWeight.bold,
-                color: Color.fromRGBO(0, 51, 51, 1),
-                fontSize: 13,
-              ),
-            ),
-          ),
-        ],
-      ),
-    ]),
   );
 }
 
@@ -217,7 +107,7 @@ Widget _btnVerVideo(
                             FavoritoVideoReceta(title, video, description)));
               },
               style: ElevatedButton.styleFrom(
-                primary: rosa,
+                primary: primaryColor,
               ),
               child: Text(
                 'Ver Video',

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 //Estilos
 import 'package:recipe_app/src/styles/styles.dart';
+import 'package:recipe_app/src/widgets/app_bar_with_text.dart';
 //Widgets
-import 'package:recipe_app/src/widgets/app_bar_categoria.dart';
 
 class AcercaNosotros extends StatelessWidget {
   const AcercaNosotros({key}) : super(key: key);
@@ -13,7 +13,7 @@ class AcercaNosotros extends StatelessWidget {
         backgroundColor: backgroundColor,
         body: CustomScrollView(
           slivers: [
-            appBarCategoria(
+            appBarWithText(
               Text(
                 '',
               ),
@@ -23,7 +23,7 @@ class AcercaNosotros extends StatelessWidget {
                 Container(
                   height: 200,
                   width: double.infinity,
-                  color: rosa,
+                  color: primaryColor,
                   child: Column(
                     children: [
                       Container(

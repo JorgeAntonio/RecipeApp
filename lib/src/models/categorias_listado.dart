@@ -23,7 +23,7 @@ Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
     child: Container(
       margin: EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: blanco,
+        color: whiteColor,
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(

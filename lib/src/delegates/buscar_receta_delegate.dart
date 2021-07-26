@@ -9,16 +9,16 @@ class RecetasSearchDelegate extends SearchDelegate {
     final ThemeData theme = Theme.of(context);
     return theme.copyWith(
       appBarTheme: theme.appBarTheme.copyWith(
-        color: rosa,
+        color: primaryColor,
       ),
       textTheme: theme.primaryTextTheme,
       inputDecorationTheme: theme.inputDecorationTheme.copyWith(
-        labelStyle: theme.textTheme.caption.copyWith(color: blanco),
+        labelStyle: theme.textTheme.caption.copyWith(color: whiteColor),
         focusedBorder: UnderlineInputBorder(
             borderSide:
                 BorderSide(color: Colors.transparent, style: BorderStyle.none)),
         hintStyle: TextStyle(
-          color: blanco,
+          color: whiteColor,
         ),
       ),
     );

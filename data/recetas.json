@@ -3,7 +3,7 @@
     {
       "name": "Lomo saltado",
       "image": "https://img.buzzfeed.com/buzzfeed-static/static/2018-05/8/19/asset/buzzfeed-prod-web-04/sub-buzz-31420-1525821073-3.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto",
-      "description": "Este un plato típico de la comida chifa (como le llaman a los platillos y restaurantes chinos-peruanos). Lleva salsa soya y se cocina en un wok, sin embargo, hay un saborcito criollo que lo hace diferente a cualquier comida 100% cantonesa. Este lomo va acompañado con papas fritas y arroz blanco.",
+      "description": "Este un plato típico de la comida chifa (como le llaman a los platillos y restaurantes chinos-peruanos). Lleva salsa soya y se cocina en un wok, sin embargo, hay un saborcito criollo que lo hace diferente a cualquier comida 100% cantonesa. Este lomo va acompañado con papas fritas y arroz whiteColor.",
       "categories": [
         "Recetas de carne",
         "Recetas casera"
@@ -14,7 +14,7 @@
         "\nTomates – 2 unidades",
         "\nVinagre – 1 cucharadita",
         "\nAjí amarillo – 1 unidad (opcional)",
-        "\nArroz blanco – 600 g",
+        "\nArroz whiteColor – 600 g",
         "\nPatatas fritas – 400 g",
         "\nSalsa de soja – 4 cucharadas",
         "\nCaldo de carne – 150 ml",
@@ -29,7 +29,7 @@
         "\nAceite de oliva de girasol – 2 cucharadas\n[------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------"
       ],
       "steps": 
-        "Paso 1: \nCortamos la carne en tiras alargadas de unos 3 cm. Mezclamos las especias (comino, orégano, ajo y pimienta) y sazonamos la carne junto con un poco de sal y una cucharadita de vinagre. Dejamos reposar esta mezcla tapando con un paño durante 15 minutos.\n\nPaso 2: \nEn una sartén añadimos aceite de sabor suave, cuando esté caliente freímos la carne durante poco tiempo solo para que se dore por fuera. Luego la retiramos de la sartén y reservamos.\nPaso 3: \nCorta en rodajas la cebolla, el pimento, ( el ají si lo encuentras) y el tomate. En la misma sartén donde cocinamos la carne salteamos estos ingredientes durante 50 segundos. Añadir la salsa de soja y el caldo de carne. Ahora incorporamos de nuevo la carne que teníamos reservada. Mezcla y pasado unos segundos añade el cebollino y un poco de cilantro picado. Cocina la carne durante cuatro minutos, si el caldo se evapora añade un poco más para que quede jugoso.\nPaso 4: \nEn la sartén donde tenemos el lomo añade las patatas fritas y remueve, para que se impregnen de sabor. Volcar el contenido de la sartén en una fuente y acompañar de arroz blanco.\nPaso 5: \nEl ají amarillo le da un sabor especial a esta receta pero no siempre es fácil de encontrar, por eso añadimos pimiento rojo. Si tienes la suerte de encontrar ají amarillo puedes usar ambos pimientos."
+        "Paso 1: \nCortamos la carne en tiras alargadas de unos 3 cm. Mezclamos las especias (comino, orégano, ajo y pimienta) y sazonamos la carne junto con un poco de sal y una cucharadita de vinagre. Dejamos reposar esta mezcla tapando con un paño durante 15 minutos.\n\nPaso 2: \nEn una sartén añadimos aceite de sabor suave, cuando esté caliente freímos la carne durante poco tiempo solo para que se dore por fuera. Luego la retiramos de la sartén y reservamos.\nPaso 3: \nCorta en rodajas la cebolla, el pimento, ( el ají si lo encuentras) y el tomate. En la misma sartén donde cocinamos la carne salteamos estos ingredientes durante 50 segundos. Añadir la salsa de soja y el caldo de carne. Ahora incorporamos de nuevo la carne que teníamos reservada. Mezcla y pasado unos segundos añade el cebollino y un poco de cilantro picado. Cocina la carne durante cuatro minutos, si el caldo se evapora añade un poco más para que quede jugoso.\nPaso 4: \nEn la sartén donde tenemos el lomo añade las patatas fritas y remueve, para que se impregnen de sabor. Volcar el contenido de la sartén en una fuente y acompañar de arroz whiteColor.\nPaso 5: \nEl ají amarillo le da un sabor especial a esta receta pero no siempre es fácil de encontrar, por eso añadimos pimiento rojo. Si tienes la suerte de encontrar ají amarillo puedes usar ambos pimientos."
       ,
       "tags": [
         "Coste medio",
@@ -131,7 +131,7 @@
       "language": "es"
     },
     {
-      "name": "Ají de gallina",
+      "name": "Aji de gallina",
       "image": "https://www.comedera.com/wp-content/uploads/2013/10/aji-de-gallina.jpg",
       "description": "Se trata de una deliciosa carne de gallina, o pollo, preparada con una cremosa salsa cuyo ingrediente estrella es el ají amarillo peruano. Suele venir acompañada de arroz, patatas, huevo y unas cuantas aceitunas negras.",
       "categories": [
@@ -728,7 +728,7 @@
     {
       "name": "Lomo saltado",
       "image": "https://img.buzzfeed.com/buzzfeed-static/static/2018-05/8/19/asset/buzzfeed-prod-web-04/sub-buzz-31420-1525821073-3.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto",
-      "description": "Este un plato típico de la comida chifa (como le llaman a los platillos y restaurantes chinos-peruanos). Lleva salsa soya y se cocina en un wok, sin embargo, hay un saborcito criollo que lo hace diferente a cualquier comida 100% cantonesa. Este lomo va acompañado con papas fritas y arroz blanco.",
+      "description": "Este un plato típico de la comida chifa (como le llaman a los platillos y restaurantes chinos-peruanos). Lleva salsa soya y se cocina en un wok, sin embargo, hay un saborcito criollo que lo hace diferente a cualquier comida 100% cantonesa. Este lomo va acompañado con papas fritas y arroz whiteColor.",
       "categories": [
         "Recetas de carne",
         "Recetas casera"
@@ -740,7 +740,7 @@
         "\nTomates – 2 unidades",
         "\nVinagre – 1 cucharadita",
         "\nAjí amarillo – 1 unidad (opcional)",
-        "\nArroz blanco – 600 g",
+        "\nArroz whiteColor – 600 g",
         "\nPatatas fritas – 400 g",
         "\nSalsa de soja – 4 cucharadas",
         "\nCaldo de carne – 150 ml",
@@ -755,7 +755,7 @@
         "\nAceite de oliva de girasol – 2 cucharadas\n[------ 🍒🍑🥬🥑🥕🍍🍌🍇 ------"
       ],
       "steps": 
-        "Paso 1: \nCortamos la carne en tiras alargadas de unos 3 cm. Mezclamos las especias (comino, orégano, ajo y pimienta) y sazonamos la carne junto con un poco de sal y una cucharadita de vinagre. Dejamos reposar esta mezcla tapando con un paño durante 15 minutos.\n\nPaso 2: \nEn una sartén añadimos aceite de sabor suave, cuando esté caliente freímos la carne durante poco tiempo solo para que se dore por fuera. Luego la retiramos de la sartén y reservamos.\nPaso 3: \nCorta en rodajas la cebolla, el pimento, ( el ají si lo encuentras) y el tomate. En la misma sartén donde cocinamos la carne salteamos estos ingredientes durante 50 segundos. Añadir la salsa de soja y el caldo de carne. Ahora incorporamos de nuevo la carne que teníamos reservada. Mezcla y pasado unos segundos añade el cebollino y un poco de cilantro picado. Cocina la carne durante cuatro minutos, si el caldo se evapora añade un poco más para que quede jugoso.\nPaso 4: \nEn la sartén donde tenemos el lomo añade las patatas fritas y remueve, para que se impregnen de sabor. Volcar el contenido de la sartén en una fuente y acompañar de arroz blanco.\nPaso 5: \nEl ají amarillo le da un sabor especial a esta receta pero no siempre es fácil de encontrar, por eso añadimos pimiento rojo. Si tienes la suerte de encontrar ají amarillo puedes usar ambos pimientos."
+        "Paso 1: \nCortamos la carne en tiras alargadas de unos 3 cm. Mezclamos las especias (comino, orégano, ajo y pimienta) y sazonamos la carne junto con un poco de sal y una cucharadita de vinagre. Dejamos reposar esta mezcla tapando con un paño durante 15 minutos.\n\nPaso 2: \nEn una sartén añadimos aceite de sabor suave, cuando esté caliente freímos la carne durante poco tiempo solo para que se dore por fuera. Luego la retiramos de la sartén y reservamos.\nPaso 3: \nCorta en rodajas la cebolla, el pimento, ( el ají si lo encuentras) y el tomate. En la misma sartén donde cocinamos la carne salteamos estos ingredientes durante 50 segundos. Añadir la salsa de soja y el caldo de carne. Ahora incorporamos de nuevo la carne que teníamos reservada. Mezcla y pasado unos segundos añade el cebollino y un poco de cilantro picado. Cocina la carne durante cuatro minutos, si el caldo se evapora añade un poco más para que quede jugoso.\nPaso 4: \nEn la sartén donde tenemos el lomo añade las patatas fritas y remueve, para que se impregnen de sabor. Volcar el contenido de la sartén en una fuente y acompañar de arroz whiteColor.\nPaso 5: \nEl ají amarillo le da un sabor especial a esta receta pero no siempre es fácil de encontrar, por eso añadimos pimiento rojo. Si tienes la suerte de encontrar ají amarillo puedes usar ambos pimientos."
       ,
       "tags": [
         "Coste medio",

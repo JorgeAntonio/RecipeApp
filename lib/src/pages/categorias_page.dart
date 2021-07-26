@@ -6,7 +6,7 @@ import 'package:recipe_app/src/provider/recetas_provider.dart';
 //Estilos
 import 'package:recipe_app/src/styles/styles.dart';
 //Widgets
-import 'package:recipe_app/src/widgets/app_bar_categoria.dart';
+import 'package:recipe_app/src/widgets/app_bar_with_text.dart';
 import 'package:recipe_app/src/widgets/titlle_category.dart';
 
 class CategoriaPage extends StatelessWidget {
@@ -19,8 +19,8 @@ class CategoriaPage extends StatelessWidget {
       backgroundColor: backgroundColor,
       body: CustomScrollView(
         slivers: [
-          appBarCategoria(
-            titlesCategories(categoria['name'], 22, blanco),
+          appBarWithText(
+            titlesCategories(categoria['name'], 22, whiteColor),
           ),
           SliverList(
             delegate: SliverChildListDelegate(

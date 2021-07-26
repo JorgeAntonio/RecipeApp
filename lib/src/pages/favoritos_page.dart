@@ -19,7 +19,7 @@ class _FavoritoPageState extends State<FavoritoPage> {
     return Scaffold(
         backgroundColor: backgroundColor,
         appBar: AppBar(
-          backgroundColor: rosa,
+          backgroundColor: primaryColor,
           centerTitle: true,
           title: Text(
             'Favoritos',
@@ -150,13 +150,13 @@ Widget cuerpo(BuildContext context) {
                                 borderRadius: BorderRadius.circular(50),
                                 boxShadow: [
                                   BoxShadow(
-                                      color: rosa.withOpacity(0.5),
+                                      color: primaryColor.withOpacity(0.5),
                                       offset: Offset(1, 1)),
                                 ]),
                             child: Icon(
                               Icons.cancel,
                               size: 30,
-                              color: rosa,
+                              color: primaryColor,
                             ),
                           ),
                         ),

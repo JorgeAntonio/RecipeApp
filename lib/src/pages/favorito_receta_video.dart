@@ -33,13 +33,13 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
           backgroundColor: backgroundColor,
           appBar: AppBar(
             centerTitle: true,
-            backgroundColor: rosa,
+            backgroundColor: primaryColor,
             title: Text(
               widget.title,
               style: TextStyle(
                   fontFamily: 'Avenir',
                   fontWeight: FontWeight.bold,
-                  color: blanco,
+                  color: whiteColor,
                   fontSize: 22,
                   shadows: [
                     Shadow(
@@ -56,7 +56,7 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
                 margin: EdgeInsets.only(top: 20, right: 10, left: 10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: blanco,
+                  color: whiteColor,
                   boxShadow: [
                     BoxShadow(
                       color: Color.fromRGBO(210, 211, 215, 1.0),
@@ -76,12 +76,7 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
                       child: Text(
                         widget.description,
                         textAlign: TextAlign.justify,
-                        style: TextStyle(
-                          fontFamily: 'Avenir',
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromRGBO(0, 51, 51, 1),
-                          fontSize: 13,
-                        ),
+                        style: textStyle,
                       ),
                     ),
                   ],
