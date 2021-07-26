@@ -7,7 +7,7 @@ import 'package:recipe_app/src/pages/favoritos_page.dart';
 import 'package:recipe_app/src/pages/categorias_page.dart';
 import 'package:recipe_app/src/pages/detalle_receta_page.dart';
 import 'package:recipe_app/src/pages/home_page.dart';
-import 'package:recipe_app/src/pages/receta_video.dart';
+import 'package:recipe_app/src/pages/detalle_receta_video.dart';
 
 void main() async {
   await Hive.initFlutter();
