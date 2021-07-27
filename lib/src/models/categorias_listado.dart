@@ -51,6 +51,7 @@ Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
                   image: categoria['image'],
                   width: double.infinity,
                   height: double.infinity,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),

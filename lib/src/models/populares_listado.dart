@@ -43,6 +43,9 @@ Widget _tarjetaCollection(BuildContext context, Map<String, dynamic> receta) {
                 placeholder: (context, url) => FadeInImage.memoryNetwork(
                   placeholder: kTransparentImage,
                   image: receta['image'],
+                  fit: BoxFit.cover,
+                  width: isMobile(context) ? 150 : 200,
+                  height: isMobile(context) ? 230 : 300,
                 ),
                 imageUrl: receta['image'],
                 fit: BoxFit.cover,
