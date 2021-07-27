@@ -5,12 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:recipe_app/src/styles/styles.dart';
 //Widgets
 import 'package:recipe_app/src/widgets/titles.dart';
+import 'package:share/share.dart';
 
 Drawer menuLateral(context) {
   return Drawer(
     elevation: 0,
     child: Container(
-      color: backgroundColor,
+      color: secondaryColor,
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
@@ -20,10 +21,15 @@ Drawer menuLateral(context) {
             ),
             child: Column(
               children: [
-                Image(
-                  height: 90,
-                  width: 90,
-                  image: AssetImage('images/chef_logo.png'),
+                Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: onPrimaryColor),
+                  child: Image(
+                    height: 100,
+                    width: 100,
+                    image: AssetImage('images/chef_logo.png'),
+                  ),
                 ),
                 Text(
                   'Recetas Peruanas',
@@ -37,11 +43,22 @@ Drawer menuLateral(context) {
               ListTile(
                 leading: Icon(
                   Icons.favorite,
-                  color: iconColor,
+                  color: onPrimaryColor,
                 ),
-                title: titles('Favoritos', 18, primaryColor),
+                title: titles('Favoritos', 18, onPrimaryColor),
                 onTap: () {
                   Navigator.pushNamed(context, 'favoritos');
+                },
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.share,
+                  color: onPrimaryColor,
+                ),
+                title: titles('Compartir', 18, onPrimaryColor),
+                onTap: () {
+                  Share.share(
+                      'https://play.google.com/store/apps/details?id=co.eduardo.apprecetasperuana');
                 },
               ),
               /*ListTile(
@@ -55,9 +72,9 @@ Drawer menuLateral(context) {
               ListTile(
                 leading: Icon(
                   Icons.question_answer,
-                  color: iconColor,
+                  color: onPrimaryColor,
                 ),
-                title: titles('Nosotros', 18, primaryColor),
+                title: titles('Nosotros', 18, onPrimaryColor),
                 onTap: () {
                   Navigator.pushNamed(context, 'nosotros');
                 },
@@ -65,9 +82,9 @@ Drawer menuLateral(context) {
               ListTile(
                 leading: Icon(
                   Icons.logout,
-                  color: iconColor,
+                  color: onPrimaryColor,
                 ),
-                title: titles('Salir', 18, primaryColor),
+                title: titles('Salir', 18, onPrimaryColor),
                 onTap: () {
                   exit(0);
                 },

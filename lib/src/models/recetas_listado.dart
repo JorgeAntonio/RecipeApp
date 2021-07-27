@@ -1,9 +1,11 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 //Estilos
 import 'package:recipe_app/src/styles/styles.dart';
 import 'package:recipe_app/src/widgets/iconos_detalles.dart';
 //Widgets
 import 'package:recipe_app/src/widgets/titles.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 List<Widget> recetasListado(
     BuildContext context, List<dynamic> recetasPopulares) {
@@ -40,31 +42,34 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
           child: Container(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: FadeInImage(
-                placeholder: AssetImage('images/chef_logo.png'),
-                image: NetworkImage(receta['image']),
+              child: CachedNetworkImage(
+                imageUrl: receta['image'],
                 fit: BoxFit.cover,
                 width: double.infinity,
                 height: 170,
+                placeholder: (context, url) => FadeInImage.memoryNetwork(
+                  placeholder: kTransparentImage,
+                  image: receta['image'],
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  height: 170,
+                ),
               ),
             ),
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: 20, top: 5, right: 20, bottom: 10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              titles(receta['name'], 20, primaryColor),
-              SizedBox(height: 8),
-              iconosDetalles(
-                  receta['time'].toString(),
-                  receta['difficulty'].toString(),
-                  receta['dinners'].toString(),
-                  Text(''))
-            ],
-          ),
+          alignment: Alignment.bottomLeft,
+          padding: EdgeInsets.all(8),
+          child: titles(receta['name'], 20, onPrimaryColor),
         ),
+        Container(
+            margin: EdgeInsets.only(left: 20, right: 20, bottom: 10),
+            child: iconosDetalles(
+                receta['time'].toString(),
+                receta['difficulty'].toString(),
+                receta['dinners'].toString(),
+                Text(''))),
       ],
     ),
   );

@@ -4,20 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:recipe_app/src/delegates/buscar_receta_delegate.dart';
 //Estilos
 import 'package:recipe_app/src/styles/styles.dart';
+import 'package:recipe_app/src/widgets/titles.dart';
 //Widgets
-import 'package:share/share.dart';
 
 Widget appBarMain(BuildContext context) {
   return AppBar(
-    /*title: Text(
-      'Recetas Peruanas',
-      style: TextStyle(
-        fontFamily: 'Avenir',
-        fontWeight: FontWeight.bold,
-        color: whiteColor,
-      ),
-    ),*/
-    //centerTitle: true,
+    title: titles('Recetas Peruanas', 22, whiteColor),
+    iconTheme: IconThemeData(color: whiteColor),
     actions: [
       IconButton(
           onPressed: () {
@@ -25,18 +18,8 @@ Widget appBarMain(BuildContext context) {
           },
           icon: Icon(
             Icons.search,
+            color: whiteColor,
           )),
-      Container(
-        padding: EdgeInsets.only(right: 10),
-        child: IconButton(
-            icon: Icon(
-              Icons.share,
-            ),
-            onPressed: () {
-              Share.share(
-                  'https://play.google.com/store/apps/details?id=co.eduardo.apprecetasperuana');
-            }),
-      ),
     ],
     backgroundColor: primaryColor,
   );

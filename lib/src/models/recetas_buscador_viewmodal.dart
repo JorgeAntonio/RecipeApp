@@ -1,9 +1,11 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 //Estilos
 import 'package:recipe_app/src/styles/styles.dart';
 import 'package:recipe_app/src/widgets/iconos_detalles.dart';
 //Widgets
 import 'package:recipe_app/src/widgets/titles.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 List<Widget> recetasListadoBuscador(
     BuildContext context, List<dynamic> recetas, String recetaBuscada) {
@@ -42,12 +44,18 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
           child: Container(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: FadeInImage(
-                placeholder: AssetImage('images/chef_logo.png'),
-                image: NetworkImage(receta['image']),
+              child: CachedNetworkImage(
+                imageUrl: receta['image'],
                 fit: BoxFit.cover,
                 width: double.infinity,
                 height: 170,
+                placeholder: (context, url) => FadeInImage.memoryNetwork(
+                  placeholder: kTransparentImage,
+                  image: receta['image'],
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  height: 170,
+                ),
               ),
             ),
           ),
@@ -57,12 +65,7 @@ Widget _cuerpoRecetaListado(BuildContext context, Map<String, dynamic> receta) {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              titles(receta['name'], 20, primaryColor),
-              Text(
-                receta['description'],
-                textAlign: TextAlign.justify,
-                style: textStyle,
-              ),
+              titles(receta['name'], 20, onPrimaryColor),
               SizedBox(height: 5),
               iconosDetalles(
                   receta['time'].toString(),

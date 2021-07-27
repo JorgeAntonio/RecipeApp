@@ -11,7 +11,7 @@ Widget iconosDetalles(
         children: [
           Icon(
             Icons.alarm,
-            color: iconColor,
+            color: onPrimaryColor,
             size: 24,
           ),
           Container(
@@ -35,7 +35,7 @@ Widget iconosDetalles(
         children: [
           Icon(
             Icons.handyman,
-            color: iconColor,
+            color: onPrimaryColor,
             size: 24,
           ),
           Container(
@@ -52,7 +52,7 @@ Widget iconosDetalles(
         children: [
           Icon(
             Icons.people,
-            color: iconColor,
+            color: onPrimaryColor,
             size: 24,
           ),
           Container(

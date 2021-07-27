@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:recipe_app/src/models/ingredientes_listado.dart';
 
 final controller = PageController(
@@ -11,9 +10,8 @@ Widget swiperIngredientes(List<dynamic> ingredients) {
   return Container(
     height: 120,
     padding: EdgeInsets.only(left: 5),
-    child: Swiper(
+    child: ListView.builder(
       itemCount: 1,
-      layout: SwiperLayout.DEFAULT,
       itemBuilder: (BuildContext context, int index) {
         return PageView(
           controller: controller,

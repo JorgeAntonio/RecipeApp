@@ -1,27 +1,35 @@
 import 'package:flutter/material.dart';
 
-final backgroundColor = Color.fromRGBO(247, 248, 250, 1.0);
+final backgroundColor = Color.fromRGBO(255, 255, 255, 1);
 final iconColor = Color.fromRGBO(255, 45, 85, 1.0);
-final descriptionTextColor = Color.fromRGBO(0, 51, 51, 1);
-final primaryColor = Color.fromRGBO(255, 45, 85, 1.0);
+
+final primaryColor = Color.fromRGBO(251, 90, 90, 1);
+//final primaryColor = Color.fromRGBO(251, 184, 172, 1);
+final onPrimaryColor = Color.fromRGBO(68, 44, 46, 1);
+final secondaryColor = Color.fromRGBO(254, 234, 230, 1);
+final onSecondaryColor = Color.fromRGBO(68, 44, 46, 1);
+final surfaceColor = Color.fromRGBO(255, 251, 250, 1);
+final primaryVariant = Color.fromRGBO(251, 184, 172, 1);
+final background = Color.fromRGBO(247, 248, 250, 1);
+final error = Color.fromRGBO(197, 3, 43, 1);
 final whiteColor = Colors.white;
 
 final textStyle = TextStyle(
   fontFamily: 'Avenir',
-  fontWeight: FontWeight.bold,
-  color: descriptionTextColor,
+  fontWeight: FontWeight.w500,
+  color: Colors.black,
   fontSize: 14,
 );
 
 final iconosRecetasListado = TextStyle(
-    fontFamily: 'Avenir',
-    fontWeight: FontWeight.bold,
-    color: primaryColor,
-    fontSize: 14,
-    shadows: [Shadow(color: Colors.black, offset: Offset(0.2, 0.2))]);
+  fontFamily: 'Avenir',
+  fontWeight: FontWeight.bold,
+  color: onPrimaryColor,
+  fontSize: 14,
+);
 
 final textoAcercaNosotros = TextStyle(
-  color: Colors.black,
+  color: onPrimaryColor,
   fontFamily: 'Avenir',
   fontSize: 20,
   fontWeight: FontWeight.w500,
@@ -30,14 +38,7 @@ final textoAcercaNosotros = TextStyle(
 final textoBanner = TextStyle(
   fontFamily: 'Avenir',
   fontWeight: FontWeight.bold,
-  color: Colors.white,
+  color: onPrimaryColor,
   decorationStyle: TextDecorationStyle.wavy,
   fontSize: 22,
-  shadows: [
-    Shadow(
-      color: primaryColor,
-      offset: Offset(1, 1),
-      blurRadius: 3,
-    )
-  ],
 );

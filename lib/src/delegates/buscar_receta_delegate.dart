@@ -31,7 +31,10 @@ class RecetasSearchDelegate extends SearchDelegate {
         onPressed: () {
           this.query = '';
         },
-        icon: Icon(Icons.clear),
+        icon: Icon(
+          Icons.clear,
+          color: whiteColor,
+        ),
       ),
     ];
   }
@@ -42,7 +45,10 @@ class RecetasSearchDelegate extends SearchDelegate {
       onPressed: () {
         this.close(context, null);
       },
-      icon: Icon(Icons.arrow_back),
+      icon: Icon(
+        Icons.arrow_back,
+        color: whiteColor,
+      ),
     );
   }
 

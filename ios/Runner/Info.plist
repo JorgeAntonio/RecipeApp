@@ -44,6 +44,8 @@
 		<key>UIStatusBarHidden</key>
 		<true/>
 		<key>GADApplicationIdentifier</key>
+		<key>io.flutter.embedded_views_preview</key>
+		<true/>
         <string>ca-app-pub-3940256099942544~1458002511</string>
         <key>SKAdNetworkItems</key>
           <array>

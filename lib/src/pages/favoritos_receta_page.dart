@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/src/adapters/favoritos_adapter.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:recipe_app/src/pages/favorito_receta_video.dart';
+import 'package:recipe_app/src/pages/favoritos_receta_video.dart';
 
 import 'package:recipe_app/src/styles/styles.dart';
 import 'package:recipe_app/src/widgets/app_bar_detalles_page.dart';
@@ -40,7 +40,7 @@ class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: background,
       body: CustomScrollView(
         slivers: [
           appBarDetallesPage(widget.image, widget.title),
@@ -51,14 +51,14 @@ class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
               Icon(
                 Icons.favorite,
                 size: 24,
-                color: primaryColor,
+                color: onPrimaryColor,
               )),
           textoDescripcion(
-              widget.description, titles('Descripcion', 18, primaryColor)),
+              widget.description, titles('Descripcion', 18, onPrimaryColor)),
           textoDescripcion(
-              widget.ingredients, titles('Ingredientes', 18, primaryColor)),
+              widget.ingredients, titles('Ingredientes', 18, onPrimaryColor)),
           textoDescripcion(
-              widget.steps, titles('Preparacion', 18, primaryColor)),
+              widget.steps, titles('Preparacion', 18, onPrimaryColor)),
           _btnVerVideo(context, widget.title, widget.video, widget.description),
         ],
       ),
@@ -112,6 +112,7 @@ Widget _btnVerVideo(
               child: Text(
                 'Ver Video',
                 style: TextStyle(
+                  color: whiteColor,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Avenir',

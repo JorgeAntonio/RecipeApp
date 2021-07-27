@@ -29,41 +29,26 @@ class _VideoRecetaState extends State<VideoReceta> {
       ),
       builder: (context, player) {
         return Scaffold(
-          backgroundColor: backgroundColor,
+          backgroundColor: background,
           appBar: AppBar(
             backgroundColor: primaryColor,
+            centerTitle: true,
+            iconTheme: IconThemeData(color: whiteColor),
             title: Text(
               receta['name'],
               style: TextStyle(
-                  fontFamily: 'Avenir',
-                  fontWeight: FontWeight.bold,
-                  color: whiteColor,
-                  fontSize: 22,
-                  shadows: [
-                    Shadow(
-                      color: Colors.black,
-                      offset: Offset(1, 1),
-                      blurRadius: 3,
-                    )
-                  ]),
+                fontFamily: 'Avenir',
+                fontWeight: FontWeight.bold,
+                color: whiteColor,
+                fontSize: 22,
+              ),
             ),
-            centerTitle: true,
           ),
           body: Column(
             children: [
               Container(
                 margin: EdgeInsets.only(top: 20, right: 10, left: 10),
-                decoration: BoxDecoration(
-                  color: whiteColor,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color.fromRGBO(210, 211, 215, 1.0),
-                      offset: Offset(1, 5),
-                      blurRadius: 7,
-                    )
-                  ],
-                ),
+                color: background,
                 child: Column(
                   children: [
                     Container(
@@ -71,7 +56,7 @@ class _VideoRecetaState extends State<VideoReceta> {
                       child: player,
                     ),
                     Container(
-                      padding: EdgeInsets.all(10),
+                      padding: EdgeInsets.only(top: 20),
                       child: Text(
                         receta['description'],
                         textAlign: TextAlign.justify,

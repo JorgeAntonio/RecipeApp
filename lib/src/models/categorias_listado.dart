@@ -1,8 +1,10 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 //Provider
 import 'package:recipe_app/src/provider/recetas_provider.dart';
 //Estilos
 import 'package:recipe_app/src/styles/styles.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 List<Widget> catergoriaListado(BuildContext context) {
   final List<Widget> listadoCategoria = [];
@@ -39,12 +41,17 @@ Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
             margin: EdgeInsets.all(5),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: FadeInImage(
-                placeholder: AssetImage('images/chef_logo.png'),
+              child: CachedNetworkImage(
                 width: double.infinity,
                 height: double.infinity,
-                image: NetworkImage(categoria['image']),
                 fit: BoxFit.cover,
+                imageUrl: categoria['image'],
+                placeholder: (context, url) => FadeInImage.memoryNetwork(
+                  placeholder: kTransparentImage,
+                  image: categoria['image'],
+                  width: double.infinity,
+                  height: double.infinity,
+                ),
               ),
             ),
           ),

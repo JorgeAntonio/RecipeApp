@@ -39,7 +39,7 @@ class _DetallePageState extends State<DetallePage> {
         return Form(
           key: widget.formKey,
           child: Scaffold(
-            backgroundColor: backgroundColor,
+            backgroundColor: background,
             body: CustomScrollView(
               slivers: [
                 appBarDetallesPage(
@@ -54,8 +54,8 @@ class _DetallePageState extends State<DetallePage> {
                           ? Icons.favorite
                           : Icons.favorite_border,
                       color: box.containsKey(receta['name'])
-                          ? iconColor
-                          : iconColor,
+                          ? onPrimaryColor
+                          : onPrimaryColor,
                       size: 24,
                     ),
                     onPressed: () {
@@ -81,11 +81,11 @@ class _DetallePageState extends State<DetallePage> {
                   ),
                 ]),
                 textoDescripcion(description = receta['description'].toString(),
-                    titles('Descripcion', 18, primaryColor)),
+                    titles('Descripcion', 18, onPrimaryColor)),
                 textoDescripcion(ingredients = receta['ingredients'].toString(),
-                    titles('Ingredientes', 18, primaryColor)),
+                    titles('Ingredientes', 18, onPrimaryColor)),
                 textoDescripcion(steps = receta['steps'].toString(),
-                    titles('Preparacion', 18, primaryColor)),
+                    titles('Preparacion', 18, onPrimaryColor)),
                 _verVideoBtn(context, receta, video = receta['video']),
               ],
             ),
@@ -136,6 +136,7 @@ Widget _verVideoBtn(
           child: Text(
             'Ver Video',
             style: TextStyle(
+              color: whiteColor,
               fontSize: 20,
               fontWeight: FontWeight.bold,
               fontFamily: 'Avenir',

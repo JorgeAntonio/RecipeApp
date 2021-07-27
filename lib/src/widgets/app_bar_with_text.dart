@@ -10,7 +10,6 @@ Widget appBarWithText(Widget widget) {
     pinned: true,
     elevation: 3,
     iconTheme: IconThemeData(
-      opacity: 0.9,
       color: whiteColor,
     ),
     title: widget,

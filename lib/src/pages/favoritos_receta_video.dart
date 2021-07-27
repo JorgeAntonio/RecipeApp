@@ -30,41 +30,26 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
       ),
       builder: (context, player) {
         return Scaffold(
-          backgroundColor: backgroundColor,
+          backgroundColor: background,
           appBar: AppBar(
             centerTitle: true,
             backgroundColor: primaryColor,
+            iconTheme: IconThemeData(color: whiteColor),
             title: Text(
               widget.title,
               style: TextStyle(
-                  fontFamily: 'Avenir',
-                  fontWeight: FontWeight.bold,
-                  color: whiteColor,
-                  fontSize: 22,
-                  shadows: [
-                    Shadow(
-                      color: Colors.black,
-                      offset: Offset(1, 1),
-                      blurRadius: 3,
-                    )
-                  ]),
+                fontFamily: 'Avenir',
+                fontWeight: FontWeight.bold,
+                color: whiteColor,
+                fontSize: 22,
+              ),
             ),
           ),
           body: Column(
             children: [
               Container(
+                color: background,
                 margin: EdgeInsets.only(top: 20, right: 10, left: 10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: whiteColor,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color.fromRGBO(210, 211, 215, 1.0),
-                      offset: Offset(1, 5),
-                      blurRadius: 7,
-                    )
-                  ],
-                ),
                 child: Column(
                   children: [
                     Container(
@@ -72,7 +57,7 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
                       child: player,
                     ),
                     Container(
-                      padding: EdgeInsets.all(10),
+                      padding: EdgeInsets.only(top: 20),
                       child: Text(
                         widget.description,
                         textAlign: TextAlign.justify,

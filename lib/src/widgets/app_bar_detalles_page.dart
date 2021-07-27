@@ -1,5 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:recipe_app/src/styles/styles.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 Widget appBarDetallesPage(String image, String title) {
   return SliverAppBar(
@@ -9,32 +11,39 @@ Widget appBarDetallesPage(String image, String title) {
     pinned: true,
     elevation: 0.0,
     iconTheme: IconThemeData(
-      opacity: 0.9,
       color: whiteColor,
     ),
     flexibleSpace: FlexibleSpaceBar(
-      titlePadding: EdgeInsets.all(15),
       centerTitle: true,
-      title: Text(
-        title,
-        style: TextStyle(
+      title: Container(
+        width: double.infinity,
+        child: Text(
+          title,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 22,
             fontFamily: 'Avenir',
             fontWeight: FontWeight.bold,
-            color: whiteColor,
-            fontSize: 22,
+            color: surfaceColor,
             shadows: [
               Shadow(
                 color: Colors.black,
-                offset: Offset(1, 1),
-                blurRadius: 3,
+                offset: Offset(0.5, 0.5),
+                blurRadius: 1,
               )
-            ]),
+            ],
+          ),
+        ),
       ),
-      background: FadeInImage(
-        placeholder: AssetImage('images/chef_logo.png'),
-        image: NetworkImage(image),
-        fadeInDuration: Duration(milliseconds: 150),
+      background: CachedNetworkImage(
+        imageUrl: image,
         fit: BoxFit.cover,
+        placeholder: (context, url) => FadeInImage.memoryNetwork(
+          placeholder: kTransparentImage,
+          image: image,
+          fadeInDuration: Duration(milliseconds: 150),
+          fit: BoxFit.cover,
+        ),
       ),
     ),
   );

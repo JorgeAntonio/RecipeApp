@@ -10,7 +10,7 @@ class AcercaNosotros extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: backgroundColor,
+        backgroundColor: background,
         body: CustomScrollView(
           slivers: [
             appBarWithText(
@@ -22,12 +22,13 @@ class AcercaNosotros extends StatelessWidget {
               delegate: SliverChildListDelegate([
                 Container(
                   height: 200,
-                  width: double.infinity,
                   color: primaryColor,
                   child: Column(
                     children: [
                       Container(
-                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            color: onPrimaryColor,
+                            borderRadius: BorderRadius.circular(50)),
                         child: Image(
                           width: 100,
                           height: 100,
@@ -50,6 +51,7 @@ class AcercaNosotros extends StatelessWidget {
             SliverList(
               delegate: SliverChildListDelegate(
                 [
+                  SizedBox(height: 30),
                   Container(
                     padding: EdgeInsets.all(40),
                     child: Text(

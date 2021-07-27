@@ -1,10 +1,12 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:recipe_app/src/adapters/favoritos_adapter.dart';
-import 'package:recipe_app/src/pages/favoritos_detalle_page.dart';
+import 'package:recipe_app/src/pages/favoritos_receta_page.dart';
 import 'package:recipe_app/src/responsive.dart';
 import 'package:recipe_app/src/styles/styles.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class FavoritoPage extends StatefulWidget {
   const FavoritoPage({Key key}) : super(key: key);
@@ -17,13 +19,15 @@ class _FavoritoPageState extends State<FavoritoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: backgroundColor,
+        backgroundColor: background,
         appBar: AppBar(
           backgroundColor: primaryColor,
           centerTitle: true,
+          iconTheme: IconThemeData(color: whiteColor),
           title: Text(
             'Favoritos',
             style: TextStyle(
+              color: whiteColor,
               fontWeight: FontWeight.bold,
               fontFamily: 'Avenir',
               fontSize: 22,
@@ -88,12 +92,19 @@ Widget cuerpo(BuildContext context) {
                       Container(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: FadeInImage(
-                            placeholder: AssetImage('images/chef_logo.png'),
-                            image: NetworkImage(favorite.image),
+                          child: CachedNetworkImage(
+                            imageUrl: favorite.image,
                             fit: BoxFit.cover,
                             width: double.infinity,
                             height: isMobile(context) ? 180 : 720,
+                            placeholder: (context, url) =>
+                                FadeInImage.memoryNetwork(
+                              placeholder: kTransparentImage,
+                              image: favorite.image,
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                              height: isMobile(context) ? 180 : 720,
+                            ),
                           ),
                         ),
                       ),
@@ -156,7 +167,7 @@ Widget cuerpo(BuildContext context) {
                             child: Icon(
                               Icons.cancel,
                               size: 30,
-                              color: primaryColor,
+                              color: error,
                             ),
                           ),
                         ),

@@ -1,6 +1,8 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 // Responsive
 import 'package:recipe_app/src/responsive.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 List<Widget> popularesListado(
     BuildContext context, List<dynamic> recetasPopulares) {
@@ -37,9 +39,12 @@ Widget _tarjetaCollection(BuildContext context, Map<String, dynamic> receta) {
           Container(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: FadeInImage(
-                placeholder: AssetImage('images/chef_logo.png'),
-                image: NetworkImage(receta['image']),
+              child: CachedNetworkImage(
+                placeholder: (context, url) => FadeInImage.memoryNetwork(
+                  placeholder: kTransparentImage,
+                  image: receta['image'],
+                ),
+                imageUrl: receta['image'],
                 fit: BoxFit.cover,
                 width: isMobile(context) ? 150 : 200,
                 height: isMobile(context) ? 230 : 300,

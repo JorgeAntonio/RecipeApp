@@ -10,7 +10,6 @@ import 'package:recipe_app/src/responsive.dart';
 import 'package:recipe_app/src/models/populares_listado.dart';
 import 'package:recipe_app/src/models/categorias_listado.dart';
 //Widgets
-import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:recipe_app/src/widgets/app_bar_main.dart';
 import 'package:recipe_app/src/widgets/menu_lateral.dart';
 import 'package:recipe_app/src/widgets/titles.dart';
@@ -44,7 +43,7 @@ class _HomePageState extends State<HomePage> {
     //final AdWidget adWidget = AdWidget(ad: myBanner);
     return Scaffold(
         drawer: menuLateral(context),
-        backgroundColor: backgroundColor,
+        backgroundColor: background,
         appBar: appBarMain(context),
         body: CustomScrollView(
           slivers: <Widget>[
@@ -54,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 10),
                   Padding(
                     padding: EdgeInsets.all(8.0),
-                    child: titles('Populares', 24, primaryColor),
+                    child: titles('Populares', 24, onPrimaryColor),
                   ),
                   SizedBox(height: 10),
                   _sliderPopulares(context),
@@ -67,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                 [
                   Padding(
                     padding: EdgeInsets.all(8.0),
-                    child: titles('Categorias', 24, primaryColor),
+                    child: titles('Categorias', 24, onPrimaryColor),
                   ),
                   SizedBox(height: 10),
                 ],
@@ -93,23 +92,17 @@ class _HomePageState extends State<HomePage> {
 
 Widget _sliderPopulares(BuildContext context) {
   return Container(
-    decoration: BoxDecoration(color: backgroundColor),
+    decoration: BoxDecoration(color: background),
     width: isMobile(context) ? 150 : 200,
     height: isMobile(context) ? 230 : 300,
-    child: Swiper(
-      viewportFraction: 1.0,
-      itemCount: 3,
-      index: 3,
-      itemBuilder: (BuildContext context, int index) {
-        return FutureBuilder(
-            future: recetasProvider.cargarRecetasPopulares(),
-            initialData: [],
-            builder: (BuildContext context, AsyncSnapshot snapshot) {
-              return ListView(
-                scrollDirection: Axis.horizontal,
-                children: popularesListado(context, snapshot.data),
-              );
-            });
+    child: FutureBuilder(
+      future: recetasProvider.cargarRecetasPopulares(),
+      initialData: [],
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        return ListView(
+          scrollDirection: Axis.horizontal,
+          children: popularesListado(context, snapshot.data),
+        );
       },
     ),
   );

@@ -24,7 +24,6 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^0.13.3
-  flutter_swiper: ^1.1.6
   share: ^0.6.5+4
   cached_network_image: ^2.5.1
   flutter_cache_manager: ^2.1.2
@@ -36,6 +35,8 @@ dependencies:
    # hive database
   hive: ^2.0.3
   hive_flutter: ^1.0.0
+  #background image
+  transparent_image:
   #video player
   youtube_player_flutter: 
 
@@ -58,7 +59,7 @@ flutter_icons:
   image_path: "images/app_icon.png"
 
 flutter_native_splash:
-  color: "#ff2d55"
+  color: "#FB5A5A"
   image: "images/chef_logo.png"
   android: true
   ios: true
