@@ -38,7 +38,7 @@ final textoAcercaNosotros = TextStyle(
 final textoBanner = TextStyle(
   fontFamily: 'Avenir',
   fontWeight: FontWeight.bold,
-  color: onPrimaryColor,
+  color: whiteColor,
   decorationStyle: TextDecorationStyle.wavy,
   fontSize: 22,
 );

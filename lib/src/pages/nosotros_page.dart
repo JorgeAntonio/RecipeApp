@@ -87,16 +87,6 @@ class AcercaNosotros extends StatelessWidget {
                         Image(
                           width: 40,
                           height: 40,
-                          image: AssetImage('images/web-whatsapp.png'),
-                        ),
-                        Image(
-                          width: 40,
-                          height: 40,
-                          image: AssetImage('images/telegram.png'),
-                        ),
-                        Image(
-                          width: 40,
-                          height: 40,
                           image: AssetImage('images/web-facebook.png'),
                         ),
                       ],
