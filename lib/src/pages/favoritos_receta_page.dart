@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:recipe_app/src/adapters/favoritos_adapter.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:recipe_app/src/pages/favoritos_receta_video.dart';
@@ -37,6 +38,66 @@ class FavoritosDetallePage extends StatefulWidget {
 }
 
 class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
+  int maxFailedLoadAttempts = 2;
+  InterstitialAd _interstitialAd;
+  int _numInterstitialLoadAttempts = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _createInterstitialAd();
+  }
+
+  void _createInterstitialAd() {
+    InterstitialAd.load(
+        adUnitId: 'ca-app-pub-3940256099942544/1033173712',
+        request: AdRequest(),
+        adLoadCallback: InterstitialAdLoadCallback(
+          onAdLoaded: (InterstitialAd ad) {
+            print('$ad loaded');
+            _interstitialAd = ad;
+            _numInterstitialLoadAttempts = 0;
+          },
+          onAdFailedToLoad: (LoadAdError error) {
+            print('InterstitialAd failed to load: $error.');
+            _numInterstitialLoadAttempts += 1;
+            _interstitialAd = null;
+            if (_numInterstitialLoadAttempts <= maxFailedLoadAttempts) {
+              _createInterstitialAd();
+            }
+          },
+        ));
+  }
+
+  void _showInterstitialAd() {
+    if (_interstitialAd == null) {
+      print('Warning: attempt to show interstitial before loaded.');
+      return;
+    }
+    _interstitialAd.fullScreenContentCallback = FullScreenContentCallback(
+      onAdShowedFullScreenContent: (InterstitialAd ad) =>
+          print('ad onAdShowedFullScreenContent.'),
+      onAdDismissedFullScreenContent: (InterstitialAd ad) {
+        print('$ad onAdDismissedFullScreenContent.');
+        ad.dispose();
+        _createInterstitialAd();
+      },
+      onAdFailedToShowFullScreenContent: (InterstitialAd ad, AdError error) {
+        print('$ad onAdFailedToShowFullScreenContent: $error');
+        ad.dispose();
+        _createInterstitialAd();
+      },
+    );
+    _interstitialAd.show();
+    _interstitialAd = null;
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _interstitialAd.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +120,40 @@ class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
               widget.ingredients, titles('Ingredientes', 18, onPrimaryColor)),
           textoDescripcion(
               widget.steps, titles('Preparacion', 18, onPrimaryColor)),
-          _btnVerVideo(context, widget.title, widget.video, widget.description),
+          _verVideo(
+            ValueListenableBuilder(
+              valueListenable: Hive.box<Favorite>('favorits').listenable(),
+              builder: (context, Box<Favorite> box, _) {
+                return Container(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      _showInterstitialAd();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FavoritoVideoReceta(
+                                  widget.title,
+                                  widget.video,
+                                  widget.description)));
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: primaryColor,
+                    ),
+                    child: Text(
+                      'Ver Video',
+                      style: TextStyle(
+                        color: whiteColor,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Avenir',
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+          )
         ],
       ),
     );
@@ -89,38 +183,25 @@ Widget _iconosDetalles(
   );
 }
 
-Widget _btnVerVideo(
-    BuildContext context, String title, String video, String description) {
+Widget _verVideo(Widget widget) {
   return SliverList(
     delegate: SliverChildListDelegate([
-      ValueListenableBuilder(
-        valueListenable: Hive.box<Favorite>('favorits').listenable(),
-        builder: (context, Box<Favorite> box, _) {
-          return Container(
-            padding: EdgeInsets.all(10),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            FavoritoVideoReceta(title, video, description)));
-              },
-              style: ElevatedButton.styleFrom(
-                primary: primaryColor,
-              ),
-              child: Text(
-                'Ver Video',
-                style: TextStyle(
-                  color: whiteColor,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Avenir',
-                ),
-              ),
+      Column(
+        children: [
+          Container(
+            alignment: Alignment.centerLeft,
+            padding: EdgeInsets.all(8),
+            child: widget,
+          ),
+          Container(
+            padding: EdgeInsets.all(8),
+            child: Text(
+              '',
+              textAlign: TextAlign.justify,
+              style: textStyle,
             ),
-          );
-        },
+          ),
+        ],
       ),
     ]),
   );

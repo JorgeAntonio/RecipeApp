@@ -22,25 +22,69 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final BannerAd myBanner = BannerAd(
-    adUnitId: Platform.isAndroid
-        ? 'ca-app-pub-3940256099942544/6300978111'
-        : 'ca-app-pub-3940256099942544/2934735716',
-    size: AdSize.banner,
-    request: AdRequest(),
-    listener: AdListener(),
+  static final AdRequest request = AdRequest(
+    keywords: <String>['foo', 'bar'],
+    contentUrl: 'http://foo.com/bar.html',
+    nonPersonalizedAds: true,
   );
+
+  BannerAd _anchoredBanner;
+  bool _loadingAnchoredBanner = false;
 
   @override
   void initState() {
     super.initState();
     // Load ads.
-    myBanner.load();
+  }
+
+  Future<void> _createAnchoredBanner(BuildContext context) async {
+    final AnchoredAdaptiveBannerAdSize size =
+        await AdSize.getAnchoredAdaptiveBannerAdSize(
+      Orientation.portrait,
+      MediaQuery.of(context).size.width.truncate(),
+    );
+
+    if (size == null) {
+      print('Unable to get height of anchored banner.');
+      return;
+    }
+
+    final BannerAd banner = BannerAd(
+      size: size,
+      request: request,
+      adUnitId: Platform.isAndroid
+          ? 'ca-app-pub-3940256099942544/6300978111'
+          : 'ca-app-pub-3940256099942544/2934735716',
+      listener: BannerAdListener(
+        onAdLoaded: (Ad ad) {
+          print('$BannerAd loaded.');
+          setState(() {
+            _anchoredBanner = ad as BannerAd;
+          });
+        },
+        onAdFailedToLoad: (Ad ad, LoadAdError error) {
+          print('$BannerAd failedToLoad: $error');
+          ad.dispose();
+        },
+        onAdOpened: (Ad ad) => print('$BannerAd onAdOpened.'),
+        onAdClosed: (Ad ad) => print('$BannerAd onAdClosed.'),
+      ),
+    );
+    return banner.load();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _anchoredBanner.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    //final AdWidget adWidget = AdWidget(ad: myBanner);
+    if (!_loadingAnchoredBanner) {
+      _loadingAnchoredBanner = true;
+      _createAnchoredBanner(context);
+    }
     return Scaffold(
         drawer: menuLateral(context),
         backgroundColor: background,
@@ -77,11 +121,13 @@ class _HomePageState extends State<HomePage> {
               delegate: SliverChildListDelegate(
                 [
                   SizedBox(height: 20),
-                  Container(
-                    height: 50,
-                    width: 320,
-                    child: AdWidget(ad: myBanner),
-                  )
+                  if (_anchoredBanner != null)
+                    Container(
+                      color: surfaceColor,
+                      width: _anchoredBanner.size.width.toDouble(),
+                      height: _anchoredBanner.size.height.toDouble(),
+                      child: AdWidget(ad: _anchoredBanner),
+                    ),
                 ],
               ),
             ),
