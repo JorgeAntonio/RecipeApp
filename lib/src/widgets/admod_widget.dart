@@ -3,7 +3,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:recipe_app/src/styles/styles.dart';
 
 class ShowAd extends StatefulWidget {
-  ShowAd({Key key}) : super(key: key);
+  ShowAd({Key? key}) : super(key: key);
 
   @override
   _ShowAdState createState() => _ShowAdState();
@@ -11,7 +11,7 @@ class ShowAd extends StatefulWidget {
 
 class _ShowAdState extends State<ShowAd> {
   int maxFailedLoadAttempts = 2;
-  InterstitialAd _interstitialAd;
+  late InterstitialAd _interstitialAd;
   int _numInterstitialLoadAttempts = 0;
 
   @override
@@ -33,7 +33,6 @@ class _ShowAdState extends State<ShowAd> {
           onAdFailedToLoad: (LoadAdError error) {
             print('InterstitialAd failed to load: $error.');
             _numInterstitialLoadAttempts += 1;
-            _interstitialAd = null;
             if (_numInterstitialLoadAttempts <= maxFailedLoadAttempts) {
               _createInterstitialAd();
             }
@@ -42,10 +41,6 @@ class _ShowAdState extends State<ShowAd> {
   }
 
   void _showInterstitialAd() {
-    if (_interstitialAd == null) {
-      print('Warning: attempt to show interstitial before loaded.');
-      return;
-    }
     _interstitialAd.fullScreenContentCallback = FullScreenContentCallback(
       onAdShowedFullScreenContent: (InterstitialAd ad) =>
           print('ad onAdShowedFullScreenContent.'),
@@ -61,7 +56,6 @@ class _ShowAdState extends State<ShowAd> {
       },
     );
     _interstitialAd.show();
-    _interstitialAd = null;
   }
 
   @override
@@ -72,7 +66,7 @@ class _ShowAdState extends State<ShowAd> {
 
   @override
   Widget build(BuildContext context) {
-    Map<String, dynamic> receta;
+    Map<String, dynamic>? receta;
     return SliverList(
       delegate: SliverChildListDelegate([
         Container(

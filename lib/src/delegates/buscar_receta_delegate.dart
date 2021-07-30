@@ -13,7 +13,7 @@ class RecetasSearchDelegate extends SearchDelegate {
       ),
       textTheme: theme.primaryTextTheme,
       inputDecorationTheme: theme.inputDecorationTheme.copyWith(
-        labelStyle: theme.textTheme.caption.copyWith(color: whiteColor),
+        labelStyle: theme.textTheme.caption?.copyWith(color: whiteColor),
         focusedBorder: UnderlineInputBorder(
             borderSide:
                 BorderSide(color: Colors.transparent, style: BorderStyle.none)),
@@ -58,7 +58,7 @@ class RecetasSearchDelegate extends SearchDelegate {
       future: recetasProvider.cargarRecetasTodos(),
       initialData: [],
       builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot) {
-        List<dynamic> recetas = snapshot.data;
+        List? recetas = snapshot.data;
         var recetaBuscada = this.query.toLowerCase();
         return CustomScrollView(
           slivers: [
@@ -66,8 +66,8 @@ class RecetasSearchDelegate extends SearchDelegate {
               delegate: SliverChildListDelegate(
                 [
                   Column(
-                    children:
-                        recetasListadoBuscador(context, recetas, recetaBuscada),
+                    children: recetasListadoBuscador(
+                        context, recetas!, recetaBuscada),
                   )
                 ],
               ),

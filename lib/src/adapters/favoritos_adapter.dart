@@ -24,14 +24,14 @@ class Favorite {
   String video;
 
   Favorite({
-    this.title,
-    this.image,
-    this.description,
-    this.ingredients,
-    this.steps,
-    this.time,
-    this.difficulty,
-    this.dinners,
-    this.video,
+    required this.title,
+    required this.image,
+    required this.description,
+    required this.ingredients,
+    required this.steps,
+    required this.time,
+    required this.difficulty,
+    required this.dinners,
+    required this.video,
   });
 }

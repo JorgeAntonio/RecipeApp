@@ -9,7 +9,7 @@ import 'package:recipe_app/src/styles/styles.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class FavoritoPage extends StatefulWidget {
-  const FavoritoPage({Key key}) : super(key: key);
+  const FavoritoPage({Key? key}) : super(key: key);
 
   @override
   _FavoritoPageState createState() => _FavoritoPageState();
@@ -54,7 +54,7 @@ Widget cuerpo(BuildContext context) {
       return ListView.builder(
         itemCount: box.length,
         itemBuilder: (context, index) {
-          final Favorite favorite = box.getAt(index);
+          final Favorite? favorite = box.getAt(index);
           return Column(
             children: [
               GestureDetector(
@@ -63,7 +63,7 @@ Widget cuerpo(BuildContext context) {
                       context,
                       MaterialPageRoute(
                           builder: (context) => FavoritosDetallePage(
-                                favorite.title,
+                                favorite!.title,
                                 favorite.image,
                                 favorite.description,
                                 favorite.ingredients,
@@ -93,7 +93,7 @@ Widget cuerpo(BuildContext context) {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: CachedNetworkImage(
-                            imageUrl: favorite.image,
+                            imageUrl: favorite!.image,
                             fit: BoxFit.cover,
                             width: double.infinity,
                             height: isMobile(context) ? 180 : 720,

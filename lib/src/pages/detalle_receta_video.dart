@@ -6,7 +6,7 @@ import 'package:recipe_app/src/styles/styles.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class VideoReceta extends StatefulWidget {
-  VideoReceta({Key key}) : super(key: key);
+  VideoReceta({Key? key}) : super(key: key);
 
   @override
   _VideoRecetaState createState() => _VideoRecetaState();
@@ -19,7 +19,7 @@ class _VideoRecetaState extends State<VideoReceta> {
     nonPersonalizedAds: true,
   );
 
-  BannerAd _anchoredBanner;
+  late BannerAd _anchoredBanner;
   bool _loadingAnchoredBanner = false;
 
   @override
@@ -29,7 +29,7 @@ class _VideoRecetaState extends State<VideoReceta> {
   }
 
   Future<void> _createAnchoredBanner(BuildContext context) async {
-    final AnchoredAdaptiveBannerAdSize size =
+    final AnchoredAdaptiveBannerAdSize? size =
         await AdSize.getAnchoredAdaptiveBannerAdSize(
       Orientation.portrait,
       MediaQuery.of(context).size.width.truncate(),
@@ -76,12 +76,11 @@ class _VideoRecetaState extends State<VideoReceta> {
       _loadingAnchoredBanner = true;
       _createAnchoredBanner(context);
     }
-    final Map<String, dynamic> receta =
-        ModalRoute.of(context).settings.arguments;
-    bool isUrl = receta['video'] != null;
-    var url = receta['video'];
+    Map<String, dynamic>? receta =
+        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
+    var url = receta!['video'];
     YoutubePlayerController _controller = YoutubePlayerController(
-      initialVideoId: YoutubePlayer.convertUrlToId(isUrl ? url : ''),
+      initialVideoId: url,
       flags: YoutubePlayerFlags(
         autoPlay: true,
         mute: false,
@@ -130,15 +129,14 @@ class _VideoRecetaState extends State<VideoReceta> {
                   ],
                 ),
               ),
-              if (_anchoredBanner != null)
-                Expanded(
-                  child: Container(
-                    color: surfaceColor,
-                    width: _anchoredBanner.size.width.toDouble(),
-                    height: _anchoredBanner.size.height.toDouble(),
-                    child: AdWidget(ad: _anchoredBanner),
-                  ),
-                )
+              Expanded(
+                child: Container(
+                  color: surfaceColor,
+                  width: _anchoredBanner.size.width.toDouble(),
+                  height: _anchoredBanner.size.height.toDouble(),
+                  child: AdWidget(ad: _anchoredBanner),
+                ),
+              )
             ],
           ),
         );

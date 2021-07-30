@@ -9,7 +9,7 @@ class FavoritoVideoReceta extends StatefulWidget {
   final String title;
   final String video;
   final String description;
-  FavoritoVideoReceta(this.title, this.video, this.description, {Key key})
+  FavoritoVideoReceta(this.title, this.video, this.description, {Key? key})
       : super(key: key);
 
   @override
@@ -17,9 +17,9 @@ class FavoritoVideoReceta extends StatefulWidget {
 }
 
 class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
-  YoutubePlayerController _controller;
-  TextEditingController _idController;
-  TextEditingController _seekToController;
+  late YoutubePlayerController _controller;
+  late TextEditingController _idController;
+  late TextEditingController _seekToController;
 
   double _volume = 100;
   bool _muted = false;
@@ -31,7 +31,7 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
     nonPersonalizedAds: true,
   );
 
-  BannerAd _anchoredBanner;
+  late BannerAd _anchoredBanner;
   bool _loadingAnchoredBanner = false;
 
   @override
@@ -56,7 +56,7 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
   }
 
   Future<void> _createAnchoredBanner(BuildContext context) async {
-    final AnchoredAdaptiveBannerAdSize size =
+    AnchoredAdaptiveBannerAdSize? size =
         await AdSize.getAnchoredAdaptiveBannerAdSize(
       Orientation.portrait,
       MediaQuery.of(context).size.width.truncate(),
@@ -259,15 +259,14 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
                 ),
               ),
               _space,
-              if (_anchoredBanner != null)
-                Expanded(
-                  child: Container(
-                    color: Colors.transparent,
-                    width: _anchoredBanner.size.width.toDouble(),
-                    height: _anchoredBanner.size.height.toDouble(),
-                    child: AdWidget(ad: _anchoredBanner),
-                  ),
-                )
+              Expanded(
+                child: Container(
+                  color: Colors.transparent,
+                  width: _anchoredBanner.size.width.toDouble(),
+                  height: _anchoredBanner.size.height.toDouble(),
+                  child: AdWidget(ad: _anchoredBanner),
+                ),
+              )
             ],
           ),
         );

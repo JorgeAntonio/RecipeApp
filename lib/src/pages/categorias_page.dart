@@ -12,15 +12,15 @@ import 'package:recipe_app/src/widgets/titles.dart';
 class CategoriaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Map<String, dynamic> categoria =
-        ModalRoute.of(context).settings.arguments;
+    Map<String, dynamic>? categoria =
+        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
 
     return Scaffold(
       backgroundColor: background,
       body: CustomScrollView(
         slivers: [
           appBarWithText(
-            titles(categoria['name'], 22, whiteColor),
+            titles(categoria!['name'], 22, whiteColor),
           ),
           SliverList(
             delegate: SliverChildListDelegate(

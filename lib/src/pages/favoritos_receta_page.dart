@@ -30,7 +30,7 @@ class FavoritosDetallePage extends StatefulWidget {
       this.difficulty,
       this.dinners,
       this.video,
-      {Key key})
+      {Key? key})
       : super(key: key);
 
   @override
@@ -39,7 +39,7 @@ class FavoritosDetallePage extends StatefulWidget {
 
 class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
   int maxFailedLoadAttempts = 2;
-  InterstitialAd _interstitialAd;
+  late InterstitialAd _interstitialAd;
   int _numInterstitialLoadAttempts = 0;
 
   @override
@@ -61,7 +61,6 @@ class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
           onAdFailedToLoad: (LoadAdError error) {
             print('InterstitialAd failed to load: $error.');
             _numInterstitialLoadAttempts += 1;
-            _interstitialAd = null;
             if (_numInterstitialLoadAttempts <= maxFailedLoadAttempts) {
               _createInterstitialAd();
             }
@@ -70,10 +69,6 @@ class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
   }
 
   void _showInterstitialAd() {
-    if (_interstitialAd == null) {
-      print('Warning: attempt to show interstitial before loaded.');
-      return;
-    }
     _interstitialAd.fullScreenContentCallback = FullScreenContentCallback(
       onAdShowedFullScreenContent: (InterstitialAd ad) =>
           print('ad onAdShowedFullScreenContent.'),
@@ -89,7 +84,6 @@ class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
       },
     );
     _interstitialAd.show();
-    _interstitialAd = null;
   }
 
   @override

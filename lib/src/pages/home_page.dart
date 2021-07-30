@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:io';
 //Ads
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:recipe_app/src/delegates/buscar_receta_delegate.dart';
 //Responsive
 import 'package:recipe_app/src/provider/recetas_provider.dart';
 //Provider
@@ -10,7 +11,6 @@ import 'package:recipe_app/src/responsive.dart';
 import 'package:recipe_app/src/models/populares_listado.dart';
 import 'package:recipe_app/src/models/categorias_listado.dart';
 //Widgets
-import 'package:recipe_app/src/widgets/app_bar_main.dart';
 import 'package:recipe_app/src/widgets/menu_lateral.dart';
 import 'package:recipe_app/src/widgets/titles.dart';
 //Estilos
@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
     nonPersonalizedAds: true,
   );
 
-  BannerAd _anchoredBanner;
+  late BannerAd _anchoredBanner;
   bool _loadingAnchoredBanner = false;
 
   @override
@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> _createAnchoredBanner(BuildContext context) async {
-    final AnchoredAdaptiveBannerAdSize size =
+    AnchoredAdaptiveBannerAdSize? size =
         await AdSize.getAnchoredAdaptiveBannerAdSize(
       Orientation.portrait,
       MediaQuery.of(context).size.width.truncate(),
@@ -88,7 +88,22 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         drawer: menuLateral(context),
         backgroundColor: background,
-        appBar: appBarMain(context),
+        appBar: AppBar(
+          title: titles('Recetas Peruanas', 22, whiteColor),
+          iconTheme: IconThemeData(color: whiteColor),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  showSearch(
+                      context: context, delegate: RecetasSearchDelegate());
+                },
+                icon: Icon(
+                  Icons.search,
+                  color: whiteColor,
+                )),
+          ],
+          backgroundColor: primaryColor,
+        ),
         body: CustomScrollView(
           slivers: <Widget>[
             SliverList(
@@ -121,13 +136,12 @@ class _HomePageState extends State<HomePage> {
               delegate: SliverChildListDelegate(
                 [
                   SizedBox(height: 20),
-                  if (_anchoredBanner != null)
-                    Container(
-                      color: surfaceColor,
-                      width: _anchoredBanner.size.width.toDouble(),
-                      height: _anchoredBanner.size.height.toDouble(),
-                      child: AdWidget(ad: _anchoredBanner),
-                    ),
+                  Container(
+                    color: surfaceColor,
+                    width: _anchoredBanner.size.width.toDouble(),
+                    height: _anchoredBanner.size.height.toDouble(),
+                    child: AdWidget(ad: _anchoredBanner),
+                  ),
                 ],
               ),
             ),

@@ -19,18 +19,18 @@ class DetallePage extends StatefulWidget {
 }
 
 class _DetallePageState extends State<DetallePage> {
-  String title;
-  String image;
-  String description;
-  String ingredients;
-  String steps;
-  String time;
-  String difficulty;
-  String dinners;
-  String video;
+  late String title;
+  late String image;
+  late String description;
+  late String ingredients;
+  late String steps;
+  late String time;
+  late String difficulty;
+  late String dinners;
+  late String video;
 
   int maxFailedLoadAttempts = 2;
-  InterstitialAd _interstitialAd;
+  late InterstitialAd _interstitialAd;
   int _numInterstitialLoadAttempts = 0;
 
   @override
@@ -52,7 +52,6 @@ class _DetallePageState extends State<DetallePage> {
           onAdFailedToLoad: (LoadAdError error) {
             print('InterstitialAd failed to load: $error.');
             _numInterstitialLoadAttempts += 1;
-            _interstitialAd = null;
             if (_numInterstitialLoadAttempts <= maxFailedLoadAttempts) {
               _createInterstitialAd();
             }
@@ -61,10 +60,6 @@ class _DetallePageState extends State<DetallePage> {
   }
 
   void _showInterstitialAd() {
-    if (_interstitialAd == null) {
-      print('Warning: attempt to show interstitial before loaded.');
-      return;
-    }
     _interstitialAd.fullScreenContentCallback = FullScreenContentCallback(
       onAdShowedFullScreenContent: (InterstitialAd ad) =>
           print('ad onAdShowedFullScreenContent.'),
@@ -80,7 +75,6 @@ class _DetallePageState extends State<DetallePage> {
       },
     );
     _interstitialAd.show();
-    _interstitialAd = null;
   }
 
   @override
@@ -91,8 +85,8 @@ class _DetallePageState extends State<DetallePage> {
 
   @override
   Widget build(BuildContext context) {
-    final Map<String, dynamic> receta =
-        ModalRoute.of(context).settings.arguments;
+    Map<String, dynamic>? receta =
+        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
 
     return ValueListenableBuilder(
       valueListenable: Hive.box<Favorite>('favorits').listenable(),
@@ -104,7 +98,7 @@ class _DetallePageState extends State<DetallePage> {
             body: CustomScrollView(
               slivers: [
                 appBarDetallesPage(
-                    image = receta['image'], title = receta['name']),
+                    image = receta!['image'], title = receta['name']),
                 _iconosDetalles(
                     time = receta['time'].toString(),
                     difficulty = receta['difficulty'],
