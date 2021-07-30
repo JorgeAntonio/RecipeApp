@@ -84,6 +84,7 @@ class _VideoRecetaState extends State<VideoReceta> {
       flags: YoutubePlayerFlags(
         autoPlay: true,
         mute: false,
+        forceHD: false,
       ),
     );
     return YoutubePlayerBuilder(

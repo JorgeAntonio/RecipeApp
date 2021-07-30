@@ -18,11 +18,7 @@ class FavoritoVideoReceta extends StatefulWidget {
 
 class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
   late YoutubePlayerController _controller;
-  late TextEditingController _idController;
-  late TextEditingController _seekToController;
 
-  double _volume = 100;
-  bool _muted = false;
   bool _isPlayerReady = false;
 
   static final AdRequest request = AdRequest(
@@ -50,8 +46,6 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
         enableCaption: true,
       ),
     )..addListener(listener);
-    _idController = TextEditingController();
-    _seekToController = TextEditingController();
     // Load ads.
   }
 
@@ -108,8 +102,6 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
   void dispose() {
     _anchoredBanner.dispose();
     _controller.dispose();
-    _idController.dispose();
-    _seekToController.dispose();
     super.dispose();
   }
 
@@ -186,79 +178,6 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
                   ],
                 ),
               ),
-              _space,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  IconButton(
-                    color: Colors.black.withOpacity(0.5),
-                    icon: Icon(
-                      _controller.value.isPlaying
-                          ? Icons.pause
-                          : Icons.play_arrow,
-                    ),
-                    onPressed: _isPlayerReady
-                        ? () {
-                            _controller.value.isPlaying
-                                ? _controller.pause()
-                                : _controller.play();
-                            setState(() {});
-                          }
-                        : null,
-                  ),
-                  IconButton(
-                    color: Colors.black.withOpacity(0.5),
-                    icon: Icon(_muted ? Icons.volume_off : Icons.volume_up),
-                    onPressed: _isPlayerReady
-                        ? () {
-                            _muted ? _controller.unMute() : _controller.mute();
-                            setState(() {
-                              _muted = !_muted;
-                            });
-                          }
-                        : null,
-                  ),
-                  FullScreenButton(
-                    controller: _controller,
-                    color: Colors.black.withOpacity(0.5),
-                  ),
-                ],
-              ),
-              _space,
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: <Widget>[
-                    Text(
-                      "Volume",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          color: onPrimaryColor,
-                          fontFamily: 'Avenir'),
-                    ),
-                    Expanded(
-                      child: Slider(
-                        activeColor: Colors.red,
-                        inactiveColor: Colors.transparent,
-                        value: _volume,
-                        min: 0.0,
-                        max: 100.0,
-                        divisions: 10,
-                        label: '${(_volume).round()}',
-                        onChanged: _isPlayerReady
-                            ? (value) {
-                                setState(() {
-                                  _volume = value;
-                                });
-                                _controller.setVolume(_volume.round());
-                              }
-                            : null,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              _space,
               Expanded(
                 child: Container(
                   color: Colors.transparent,
@@ -273,8 +192,6 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
       },
     );
   }
-
-  Widget get _space => const SizedBox(height: 10);
 
   void _showSnackBar(String message) {
     ScaffoldMessenger.of(context).showSnackBar(
