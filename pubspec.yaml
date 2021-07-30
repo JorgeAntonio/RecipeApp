@@ -37,14 +37,13 @@ dependencies:
   hive_flutter: ^1.0.0
   #background image
   transparent_image:
-  #video player
-  youtube_player_flutter: 
+  youtube_player_flutter:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  #flutter_launcher_icons: ^0.8.1
-  #flutter_native_splash: ^0.3.2
+  flutter_launcher_icons:
+  flutter_native_splash:
   #flutter_launcher_name: ^0.0.1
   # hive database generators
   build_runner: ^1.12.2

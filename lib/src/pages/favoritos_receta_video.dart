@@ -18,12 +18,6 @@ class FavoritoVideoReceta extends StatefulWidget {
 
 class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
   YoutubePlayerController _controller;
-  TextEditingController _idController;
-  TextEditingController _seekToController;
-
-  double _volume = 100;
-  bool _muted = false;
-  bool _isPlayerReady = false;
 
   static final AdRequest request = AdRequest(
     keywords: <String>['foo', 'bar'],
@@ -49,9 +43,7 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
         forceHD: false,
         enableCaption: true,
       ),
-    )..addListener(listener);
-    _idController = TextEditingController();
-    _seekToController = TextEditingController();
+    );
     // Load ads.
   }
 
@@ -91,12 +83,6 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
     return banner.load();
   }
 
-  void listener() {
-    if (_isPlayerReady && mounted && _controller.value.isFullScreen) {
-      setState(() {});
-    }
-  }
-
   @override
   void deactivate() {
     // Pauses video while navigating to next page.
@@ -106,10 +92,10 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
 
   @override
   void dispose() {
+    //ad
     _anchoredBanner.dispose();
+    //video
     _controller.dispose();
-    _idController.dispose();
-    _seekToController.dispose();
     super.dispose();
   }
 
@@ -139,12 +125,9 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
             ),
           ),
         ],
-        onReady: () {
-          _isPlayerReady = true;
-        },
         onEnded: (data) {
           _controller.load(widget.video);
-          _showSnackBar('Next Video Started!');
+          _showSnackBar('Gracias ver, visite el canal en YouTube');
         },
       ),
       builder: (context, player) {
@@ -186,79 +169,6 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
                   ],
                 ),
               ),
-              _space,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  IconButton(
-                    color: Colors.black.withOpacity(0.5),
-                    icon: Icon(
-                      _controller.value.isPlaying
-                          ? Icons.pause
-                          : Icons.play_arrow,
-                    ),
-                    onPressed: _isPlayerReady
-                        ? () {
-                            _controller.value.isPlaying
-                                ? _controller.pause()
-                                : _controller.play();
-                            setState(() {});
-                          }
-                        : null,
-                  ),
-                  IconButton(
-                    color: Colors.black.withOpacity(0.5),
-                    icon: Icon(_muted ? Icons.volume_off : Icons.volume_up),
-                    onPressed: _isPlayerReady
-                        ? () {
-                            _muted ? _controller.unMute() : _controller.mute();
-                            setState(() {
-                              _muted = !_muted;
-                            });
-                          }
-                        : null,
-                  ),
-                  FullScreenButton(
-                    controller: _controller,
-                    color: Colors.black.withOpacity(0.5),
-                  ),
-                ],
-              ),
-              _space,
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: <Widget>[
-                    Text(
-                      "Volume",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          color: onPrimaryColor,
-                          fontFamily: 'Avenir'),
-                    ),
-                    Expanded(
-                      child: Slider(
-                        activeColor: Colors.red,
-                        inactiveColor: Colors.transparent,
-                        value: _volume,
-                        min: 0.0,
-                        max: 100.0,
-                        divisions: 10,
-                        label: '${(_volume).round()}',
-                        onChanged: _isPlayerReady
-                            ? (value) {
-                                setState(() {
-                                  _volume = value;
-                                });
-                                _controller.setVolume(_volume.round());
-                              }
-                            : null,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              _space,
               if (_anchoredBanner != null)
                 Expanded(
                   child: Container(
@@ -275,11 +185,10 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
     );
   }
 
-  Widget get _space => const SizedBox(height: 10);
-
   void _showSnackBar(String message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
+        duration: Duration(seconds: 2),
         content: Text(
           message,
           textAlign: TextAlign.center,

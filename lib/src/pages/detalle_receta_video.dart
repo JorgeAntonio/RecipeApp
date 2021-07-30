@@ -66,8 +66,8 @@ class _VideoRecetaState extends State<VideoReceta> {
 
   @override
   void dispose() {
-    super.dispose();
     _anchoredBanner.dispose();
+    super.dispose();
   }
 
   @override
@@ -85,6 +85,7 @@ class _VideoRecetaState extends State<VideoReceta> {
       flags: YoutubePlayerFlags(
         autoPlay: true,
         mute: false,
+        forceHD: false,
       ),
     );
     return YoutubePlayerBuilder(
@@ -133,7 +134,7 @@ class _VideoRecetaState extends State<VideoReceta> {
               if (_anchoredBanner != null)
                 Expanded(
                   child: Container(
-                    color: surfaceColor,
+                    color: Colors.transparent,
                     width: _anchoredBanner.size.width.toDouble(),
                     height: _anchoredBanner.size.height.toDouble(),
                     child: AdWidget(ad: _anchoredBanner),
