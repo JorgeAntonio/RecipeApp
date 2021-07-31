@@ -27,7 +27,7 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
     nonPersonalizedAds: true,
   );
 
-  late BannerAd _anchoredBanner;
+  BannerAd? _anchoredBanner;
   bool _loadingAnchoredBanner = false;
 
   @override
@@ -50,7 +50,7 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
   }
 
   Future<void> _createAnchoredBanner(BuildContext context) async {
-    AnchoredAdaptiveBannerAdSize? size =
+    final AnchoredAdaptiveBannerAdSize? size =
         await AdSize.getAnchoredAdaptiveBannerAdSize(
       Orientation.portrait,
       MediaQuery.of(context).size.width.truncate(),
@@ -71,7 +71,7 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
         onAdLoaded: (Ad ad) {
           print('$BannerAd loaded.');
           setState(() {
-            _anchoredBanner = ad as BannerAd;
+            _anchoredBanner = ad as BannerAd?;
           });
         },
         onAdFailedToLoad: (Ad ad, LoadAdError error) {
@@ -100,7 +100,7 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
 
   @override
   void dispose() {
-    _anchoredBanner.dispose();
+    _anchoredBanner?.dispose();
     _controller.dispose();
     super.dispose();
   }
@@ -136,7 +136,7 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
         },
         onEnded: (data) {
           _controller.load(widget.video);
-          _showSnackBar('Next Video Started!');
+          _showSnackBar('Gracias por ver. Apoya el contenido en YouTube.');
         },
       ),
       builder: (context, player) {
@@ -178,13 +178,17 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
                   ],
                 ),
               ),
-              Expanded(
-                child: Container(
-                  color: Colors.transparent,
-                  width: _anchoredBanner.size.width.toDouble(),
-                  height: _anchoredBanner.size.height.toDouble(),
-                  child: AdWidget(ad: _anchoredBanner),
-                ),
+              SizedBox(height: 100),
+              Column(
+                children: [
+                  if (_anchoredBanner != null)
+                    Container(
+                      color: Colors.red,
+                      width: _anchoredBanner!.size.width.toDouble(),
+                      height: _anchoredBanner!.size.height.toDouble(),
+                      child: AdWidget(ad: _anchoredBanner!),
+                    ),
+                ],
               )
             ],
           ),

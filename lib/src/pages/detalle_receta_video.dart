@@ -19,7 +19,7 @@ class _VideoRecetaState extends State<VideoReceta> {
     nonPersonalizedAds: true,
   );
 
-  late BannerAd _anchoredBanner;
+  BannerAd? _anchoredBanner;
   bool _loadingAnchoredBanner = false;
 
   @override
@@ -50,7 +50,7 @@ class _VideoRecetaState extends State<VideoReceta> {
         onAdLoaded: (Ad ad) {
           print('$BannerAd loaded.');
           setState(() {
-            _anchoredBanner = ad as BannerAd;
+            _anchoredBanner = ad as BannerAd?;
           });
         },
         onAdFailedToLoad: (Ad ad, LoadAdError error) {
@@ -66,8 +66,8 @@ class _VideoRecetaState extends State<VideoReceta> {
 
   @override
   void dispose() {
+    _anchoredBanner?.dispose();
     super.dispose();
-    _anchoredBanner.dispose();
   }
 
   @override
@@ -130,13 +130,17 @@ class _VideoRecetaState extends State<VideoReceta> {
                   ],
                 ),
               ),
-              Expanded(
-                child: Container(
-                  color: surfaceColor,
-                  width: _anchoredBanner.size.width.toDouble(),
-                  height: _anchoredBanner.size.height.toDouble(),
-                  child: AdWidget(ad: _anchoredBanner),
-                ),
+              SizedBox(height: 100),
+              Column(
+                children: [
+                  if (_anchoredBanner != null)
+                    Container(
+                      color: Colors.red,
+                      width: _anchoredBanner!.size.width.toDouble(),
+                      height: _anchoredBanner!.size.height.toDouble(),
+                      child: AdWidget(ad: _anchoredBanner!),
+                    ),
+                ],
               )
             ],
           ),

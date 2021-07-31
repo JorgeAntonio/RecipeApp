@@ -12,6 +12,8 @@ import 'package:recipe_app/src/widgets/texto_description.dart';
 //Widgets
 import 'package:recipe_app/src/widgets/titles.dart';
 
+const int maxFailedLoadAttempts = 2;
+
 class DetallePage extends StatefulWidget {
   final formKey = GlobalKey<FormState>();
   @override
@@ -29,8 +31,13 @@ class _DetallePageState extends State<DetallePage> {
   late String dinners;
   late String video;
 
-  int maxFailedLoadAttempts = 2;
-  late InterstitialAd _interstitialAd;
+  static final AdRequest request = AdRequest(
+    keywords: <String>['foo', 'bar'],
+    contentUrl: 'http://foo.com/bar.html',
+    nonPersonalizedAds: true,
+  );
+
+  InterstitialAd? _interstitialAd;
   int _numInterstitialLoadAttempts = 0;
 
   @override
@@ -41,26 +48,32 @@ class _DetallePageState extends State<DetallePage> {
 
   void _createInterstitialAd() {
     InterstitialAd.load(
-        adUnitId: 'ca-app-pub-3940256099942544/1033173712',
-        request: AdRequest(),
-        adLoadCallback: InterstitialAdLoadCallback(
-          onAdLoaded: (InterstitialAd ad) {
-            print('$ad loaded');
-            _interstitialAd = ad;
-            _numInterstitialLoadAttempts = 0;
-          },
-          onAdFailedToLoad: (LoadAdError error) {
-            print('InterstitialAd failed to load: $error.');
-            _numInterstitialLoadAttempts += 1;
-            if (_numInterstitialLoadAttempts <= maxFailedLoadAttempts) {
-              _createInterstitialAd();
-            }
-          },
-        ));
+      adUnitId: 'ca-app-pub-3940256099942544/1033173712',
+      request: request,
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (InterstitialAd ad) {
+          print('$ad loaded');
+          _interstitialAd = ad;
+          _numInterstitialLoadAttempts = 0;
+        },
+        onAdFailedToLoad: (LoadAdError error) {
+          print('InterstitialAd failed to load: $error.');
+          _numInterstitialLoadAttempts += 1;
+          _interstitialAd = null;
+          if (_numInterstitialLoadAttempts <= maxFailedLoadAttempts) {
+            _createInterstitialAd();
+          }
+        },
+      ),
+    );
   }
 
   void _showInterstitialAd() {
-    _interstitialAd.fullScreenContentCallback = FullScreenContentCallback(
+    if (_interstitialAd == null) {
+      print('Warning: attempt to show interstitial before loaded.');
+      return;
+    }
+    _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
       onAdShowedFullScreenContent: (InterstitialAd ad) =>
           print('ad onAdShowedFullScreenContent.'),
       onAdDismissedFullScreenContent: (InterstitialAd ad) {
@@ -74,13 +87,14 @@ class _DetallePageState extends State<DetallePage> {
         _createInterstitialAd();
       },
     );
-    _interstitialAd.show();
+    _interstitialAd!.show();
+    _interstitialAd = null;
   }
 
   @override
   void dispose() {
+    _interstitialAd?.dispose();
     super.dispose();
-    _interstitialAd.dispose();
   }
 
   @override

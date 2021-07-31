@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
     nonPersonalizedAds: true,
   );
 
-  late BannerAd _anchoredBanner;
+  BannerAd? _anchoredBanner;
   bool _loadingAnchoredBanner = false;
 
   @override
@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> _createAnchoredBanner(BuildContext context) async {
-    AnchoredAdaptiveBannerAdSize? size =
+    final AnchoredAdaptiveBannerAdSize? size =
         await AdSize.getAnchoredAdaptiveBannerAdSize(
       Orientation.portrait,
       MediaQuery.of(context).size.width.truncate(),
@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
         onAdLoaded: (Ad ad) {
           print('$BannerAd loaded.');
           setState(() {
-            _anchoredBanner = ad as BannerAd;
+            _anchoredBanner = ad as BannerAd?;
           });
         },
         onAdFailedToLoad: (Ad ad, LoadAdError error) {
@@ -75,8 +75,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void dispose() {
+    _anchoredBanner?.dispose();
     super.dispose();
-    _anchoredBanner.dispose();
   }
 
   @override
@@ -136,12 +136,13 @@ class _HomePageState extends State<HomePage> {
               delegate: SliverChildListDelegate(
                 [
                   SizedBox(height: 20),
-                  Container(
-                    color: surfaceColor,
-                    width: _anchoredBanner.size.width.toDouble(),
-                    height: _anchoredBanner.size.height.toDouble(),
-                    child: AdWidget(ad: _anchoredBanner),
-                  ),
+                  if (_anchoredBanner != null)
+                    Container(
+                      color: Colors.red,
+                      width: _anchoredBanner!.size.width.toDouble(),
+                      height: _anchoredBanner!.size.height.toDouble(),
+                      child: AdWidget(ad: _anchoredBanner!),
+                    ),
                 ],
               ),
             ),
