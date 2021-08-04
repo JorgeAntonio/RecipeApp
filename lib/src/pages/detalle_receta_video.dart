@@ -90,6 +90,10 @@ class _VideoRecetaState extends State<VideoReceta> {
     return YoutubePlayerBuilder(
       player: YoutubePlayer(
         controller: _controller,
+        onEnded: (data) {
+          _controller.load(receta['video']);
+          _showSnackBar('Gracias por ver. Apoya el contenido en YouTube.');
+        },
       ),
       builder: (context, player) {
         return Scaffold(
@@ -111,7 +115,7 @@ class _VideoRecetaState extends State<VideoReceta> {
           body: Column(
             children: [
               Container(
-                margin: EdgeInsets.only(top: 20, right: 10, left: 10),
+                margin: EdgeInsets.only(top: 20, right: 16, left: 16),
                 color: background,
                 child: Column(
                   children: [
@@ -135,7 +139,7 @@ class _VideoRecetaState extends State<VideoReceta> {
                 children: [
                   if (_anchoredBanner != null)
                     Container(
-                      color: Colors.red,
+                      color: Colors.transparent,
                       width: _anchoredBanner!.size.width.toDouble(),
                       height: _anchoredBanner!.size.height.toDouble(),
                       child: AdWidget(ad: _anchoredBanner!),
@@ -146,6 +150,27 @@ class _VideoRecetaState extends State<VideoReceta> {
           ),
         );
       },
+    );
+  }
+
+  void _showSnackBar(String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          message,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontWeight: FontWeight.w300,
+            fontSize: 16.0,
+          ),
+        ),
+        backgroundColor: Colors.red,
+        behavior: SnackBarBehavior.floating,
+        elevation: 1.0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50.0),
+        ),
+      ),
     );
   }
 }

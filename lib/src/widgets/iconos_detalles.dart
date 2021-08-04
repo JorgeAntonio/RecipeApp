@@ -4,7 +4,7 @@ import 'package:recipe_app/src/styles/styles.dart';
 Widget iconosDetalles(
     String time, String difficulty, String dinners, Widget widget) {
   return Row(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    mainAxisAlignment: MainAxisAlignment.center,
     crossAxisAlignment: CrossAxisAlignment.center,
     children: [
       Row(

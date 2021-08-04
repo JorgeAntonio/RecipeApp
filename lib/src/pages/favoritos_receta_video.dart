@@ -160,7 +160,7 @@ class _FavoritoVideoRecetaState extends State<FavoritoVideoReceta> {
             children: [
               Container(
                 color: background,
-                margin: EdgeInsets.only(top: 20, right: 10, left: 10),
+                margin: EdgeInsets.only(top: 20, right: 16, left: 16),
                 child: Column(
                   children: [
                     Container(

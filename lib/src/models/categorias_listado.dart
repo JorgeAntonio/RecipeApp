@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 //Provider
 import 'package:recipe_app/src/provider/recetas_provider.dart';
+import 'package:recipe_app/src/responsive.dart';
 //Estilos
 import 'package:recipe_app/src/styles/styles.dart';
 import 'package:transparent_image/transparent_image.dart';
@@ -61,9 +62,11 @@ Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
             padding: EdgeInsets.only(left: 10, bottom: 20, right: 10),
             child: Text(
               categoria['name'],
+              textAlign: TextAlign.center,
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
+                  fontSize: isDesktop(context) ? 18 : 18,
                   decorationColor: Colors.black,
                   decorationStyle: TextDecorationStyle.wavy,
                   shadows: [

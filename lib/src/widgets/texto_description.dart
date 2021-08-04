@@ -8,11 +8,11 @@ Widget textoDescripcion(String texto, Widget widget) {
         children: [
           Container(
             alignment: Alignment.centerLeft,
-            padding: EdgeInsets.all(8),
+            padding: EdgeInsets.all(16),
             child: widget,
           ),
           Container(
-            padding: EdgeInsets.all(8),
+            padding: EdgeInsets.only(left: 16, right: 16),
             child: Text(
               texto,
               textAlign: TextAlign.justify,

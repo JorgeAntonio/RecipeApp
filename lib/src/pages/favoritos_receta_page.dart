@@ -113,15 +113,14 @@ class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
       body: CustomScrollView(
         slivers: [
           appBarDetallesPage(widget.image, widget.title),
-          _iconosDetalles(
-              widget.time,
-              widget.difficulty,
-              widget.dinners,
-              Icon(
-                Icons.favorite,
-                size: 24,
-                color: onPrimaryColor,
-              )),
+          _iconosDetalles(widget.time, widget.difficulty, widget.dinners, [
+            SizedBox(width: 30),
+            Icon(
+              Icons.favorite,
+              size: 24,
+              color: onPrimaryColor,
+            )
+          ]),
           textoDescripcion(
               widget.description, titles('Descripcion', 18, onPrimaryColor)),
           textoDescripcion(
@@ -134,27 +133,29 @@ class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
               builder: (context, Box<Favorite> box, _) {
                 return Container(
                   width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      _showInterstitialAd();
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => FavoritoVideoReceta(
-                                  widget.title,
-                                  widget.video,
-                                  widget.description)));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary: primaryColor,
-                    ),
-                    child: Text(
-                      'Ver Video',
-                      style: TextStyle(
-                        color: whiteColor,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Avenir',
+                  child: Container(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        _showInterstitialAd();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FavoritoVideoReceta(
+                                    widget.title,
+                                    widget.video,
+                                    widget.description)));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: primaryColor,
+                      ),
+                      child: Text(
+                        'Ver Video',
+                        style: TextStyle(
+                          color: whiteColor,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Avenir',
+                        ),
                       ),
                     ),
                   ),
@@ -169,19 +170,19 @@ class _FavoritosDetallePageState extends State<FavoritosDetallePage> {
 }
 
 Widget _iconosDetalles(
-    String time, String difficulty, String dinners, Icon icon) {
+    String time, String difficulty, String dinners, List<Widget> actions) {
   return SliverList(
     delegate: SliverChildListDelegate(
       [
         Padding(
           padding: EdgeInsets.only(top: 20, bottom: 10),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               iconosDetalles(time, difficulty, dinners, Row()),
               Row(
-                children: [icon],
+                children: actions,
               )
             ],
           ),
@@ -197,17 +198,9 @@ Widget _verVideo(Widget widget) {
       Column(
         children: [
           Container(
+            padding: EdgeInsets.all(16),
             alignment: Alignment.centerLeft,
-            padding: EdgeInsets.all(8),
             child: widget,
-          ),
-          Container(
-            padding: EdgeInsets.all(8),
-            child: Text(
-              '',
-              textAlign: TextAlign.justify,
-              style: textStyle,
-            ),
           ),
         ],
       ),

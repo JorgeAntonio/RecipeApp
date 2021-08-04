@@ -18,7 +18,7 @@ final textStyle = TextStyle(
   fontFamily: 'Avenir',
   fontWeight: FontWeight.w500,
   color: Colors.black,
-  fontSize: 14,
+  fontSize: 16,
 );
 
 final iconosRecetasListado = TextStyle(

@@ -117,6 +117,7 @@ class _DetallePageState extends State<DetallePage> {
                     time = receta['time'].toString(),
                     difficulty = receta['difficulty'],
                     dinners = receta['dinners'].toString(), [
+                  SizedBox(width: 30),
                   IconButton(
                     icon: Icon(
                       box.containsKey(receta['name'])
@@ -147,7 +148,7 @@ class _DetallePageState extends State<DetallePage> {
                         );
                       }
                     },
-                  ),
+                  )
                 ]),
                 textoDescripcion(description = receta['description'].toString(),
                     titles('Descripcion', 18, onPrimaryColor)),
@@ -195,12 +196,12 @@ Widget _iconosDetalles(
     delegate: SliverChildListDelegate(
       [
         Padding(
-          padding: EdgeInsets.only(top: 8, right: 8, left: 8),
+          padding: EdgeInsets.only(top: 20, bottom: 10),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              iconosDetalles(time, difficulty, dinners, Row()),
+              iconosDetalles(time, difficulty, dinners, Text('')),
               Row(
                 children: actions,
               )
@@ -219,16 +220,8 @@ Widget _verVideo(String texto, Widget widget) {
         children: [
           Container(
             alignment: Alignment.centerLeft,
-            padding: EdgeInsets.all(8),
+            padding: EdgeInsets.all(16),
             child: widget,
-          ),
-          Container(
-            padding: EdgeInsets.all(8),
-            child: Text(
-              '',
-              textAlign: TextAlign.justify,
-              style: textStyle,
-            ),
           ),
         ],
       ),

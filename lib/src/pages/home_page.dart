@@ -109,14 +109,11 @@ class _HomePageState extends State<HomePage> {
             SliverList(
               delegate: SliverChildListDelegate(
                 [
-                  SizedBox(height: 10),
                   Padding(
-                    padding: EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(20),
                     child: titles('Populares', 24, onPrimaryColor),
                   ),
-                  SizedBox(height: 10),
                   _sliderPopulares(context),
-                  SizedBox(height: 10),
                 ],
               ),
             ),
@@ -124,10 +121,9 @@ class _HomePageState extends State<HomePage> {
               delegate: SliverChildListDelegate(
                 [
                   Padding(
-                    padding: EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(20),
                     child: titles('Categorias', 24, onPrimaryColor),
                   ),
-                  SizedBox(height: 10),
                 ],
               ),
             ),
@@ -138,7 +134,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 20),
                   if (_anchoredBanner != null)
                     Container(
-                      color: Colors.red,
+                      color: Colors.transparent,
                       width: _anchoredBanner!.size.width.toDouble(),
                       height: _anchoredBanner!.size.height.toDouble(),
                       child: AdWidget(ad: _anchoredBanner!),
@@ -178,7 +174,7 @@ Widget _gridCategorias(BuildContext context) {
         return SliverGrid.count(
           mainAxisSpacing: 1,
           crossAxisSpacing: 1,
-          crossAxisCount: 3,
+          crossAxisCount: isMobile(context) ? 3 : 5,
           children: catergoriaListado(context),
         );
       },

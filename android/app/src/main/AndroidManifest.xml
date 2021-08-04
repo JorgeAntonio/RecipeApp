@@ -38,7 +38,6 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-       <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
        <!-- Este es mio: ca-app-pub-4116051825111706~1680296766 -->
        <meta-data
            android:name="com.google.android.gms.ads.APPLICATION_ID"

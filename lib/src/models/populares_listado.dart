@@ -64,6 +64,7 @@ Widget _tarjetaCollection(BuildContext context, Map<String, dynamic> receta) {
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
+                  fontSize: 18,
                   decorationColor: Colors.black,
                   decorationStyle: TextDecorationStyle.wavy,
                   shadows: [
