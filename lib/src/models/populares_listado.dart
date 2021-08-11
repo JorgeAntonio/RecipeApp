@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 // Responsive
@@ -55,10 +56,28 @@ Widget _tarjetaCollection(BuildContext context, Map<String, dynamic> receta) {
             ),
           ),
           Container(
-            width: isMobile(context) ? 150 : 200,
-            alignment: Alignment.bottomCenter,
-            padding: EdgeInsets.all(20),
-            child: Text(
+              width: isMobile(context) ? 150 : 200,
+              alignment: Alignment.bottomCenter,
+              padding: EdgeInsets.all(20),
+              child: AutoSizeText(
+                receta['name'],
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                    //fontSize: 18,
+                    decorationColor: Colors.black,
+                    decorationStyle: TextDecorationStyle.wavy,
+                    shadows: [
+                      Shadow(
+                        color: Colors.black,
+                        offset: Offset(1, 2),
+                        blurRadius: 2.5,
+                      )
+                    ]),
+              )
+
+              /*Text(
               receta['name'],
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -74,8 +93,8 @@ Widget _tarjetaCollection(BuildContext context, Map<String, dynamic> receta) {
                       blurRadius: 2.5,
                     )
                   ]),
-            ),
-          )
+            ),*/
+              )
         ],
       ),
     ),

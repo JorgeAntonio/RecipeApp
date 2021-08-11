@@ -1,8 +1,8 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 //Provider
 import 'package:recipe_app/src/provider/recetas_provider.dart';
-import 'package:recipe_app/src/responsive.dart';
 //Estilos
 import 'package:recipe_app/src/styles/styles.dart';
 import 'package:transparent_image/transparent_image.dart';
@@ -58,9 +58,27 @@ Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
             ),
           ),
           Container(
-            alignment: Alignment.bottomCenter,
-            padding: EdgeInsets.only(left: 10, bottom: 20, right: 10),
-            child: Text(
+              alignment: Alignment.bottomCenter,
+              padding: EdgeInsets.only(left: 10, bottom: 20, right: 10),
+              child: AutoSizeText(
+                categoria['name'],
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                    //fontSize: isDesktop(context) ? 18 : 18,
+                    decorationColor: Colors.black,
+                    decorationStyle: TextDecorationStyle.wavy,
+                    shadows: [
+                      Shadow(
+                        color: Colors.black,
+                        offset: Offset(1, 2),
+                        blurRadius: 2.5,
+                      )
+                    ]),
+              )
+
+              /* Text(
               categoria['name'],
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -76,8 +94,8 @@ Widget _imageCategoria(BuildContext context, Map<String, dynamic> categoria) {
                       blurRadius: 2.5,
                     )
                   ]),
-            ),
-          )
+            ),*/
+              )
         ],
       ),
     ),
